@@ -1,0 +1,3689 @@
+[
+  {
+    "ff": "Polvo para solución inyectable",
+    "id": "1775148515942",
+    "pp": "11.76",
+    "pu": "11.76",
+    "rs": "5633-MEE-1120",
+    "amp": "Nitroprusiato 50 mg Polvo para solución inyectable (Hospimedikka)",
+    "atc": "C02DD01",
+    "sns": "No",
+    "via": "intravenosa",
+    "vmp": "Nitroprusiato 50 mg Polvo para solución inyectable",
+    "vol": "2",
+    "vtm": "Nitroprusiato",
+    "ampp": "Nitroprusiato 50 mg Polvo para solución inyectable (Hospimedikka), ampolla 2 mL",
+    "cnmb": "Sí",
+    "conc": "50 mg",
+    "vias": [
+      "intravenosa"
+    ],
+    "vmpp": "Nitroprusiato 50 mg Polvo para solución inyectable, ampolla 2 mL",
+    "rango": "Solo 1 fuente",
+    "subId": "s1775145355295",
+    "units": "1",
+    "atclbl": "Nitroprusiato de sodio",
+    "chapId": "c01",
+    "envase": "ampolla",
+    "estado": "autorizado",
+    "nombre": "Nitroprusiato",
+    "volStr": "2 mL",
+    "esCombo": false,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "Sí",
+    "comboData": null,
+    "farmPrices": {
+      "fybeca": 11.76,
+      "farmaprecios": 11.76
+    },
+    "laboratorio": "Hospimedikka"
+  },
+  {
+    "ff": "Comprimidos",
+    "id": "1775152717668",
+    "pp": "7.92",
+    "pu": "0.23",
+    "rs": "1420-MEE-0915",
+    "amp": "Eurocor D 2,5 mg + 6,25 mg Comprimidos (Saval)",
+    "atc": "C07BB07",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Bisoprolol 2,5 mg + Hidroclorotiazida 6,25 mg Comprimidos",
+    "vol": "",
+    "vtm": "Bisoprolol + Hidroclorotiazida",
+    "ampp": "Eurocor D 2,5 mg + 6,25 mg Comprimidos (Saval), caja 35",
+    "cnmb": "No",
+    "conc": "2,5 mg + 6,25 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Bisoprolol 2,5 mg + Hidroclorotiazida 6,25 mg Comprimidos, caja 35",
+    "rango": "$7.84 — $8.91",
+    "subId": "s1775149335589",
+    "units": "35",
+    "atclbl": "Bisoprolol y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Eurocor D",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Bisoprolol",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "2,5 mg",
+        "6,25 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 7.84,
+      "cruzazul": 7.92,
+      "pharmacys": 8.91,
+      "farmaprecios": 9.9
+    },
+    "laboratorio": "Saval"
+  },
+  {
+    "ff": "Comprimidos",
+    "id": "1775153134467",
+    "pp": "13.50",
+    "pu": "0.39",
+    "rs": "928-MEE-0415",
+    "amp": "Eurocor D 5 mg + 6,25 mg Comprimidos (Saval)",
+    "atc": "C07BB07",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Bisoprolol 5 mg + Hidroclorotiazida 6,25 mg Comprimidos",
+    "vol": "",
+    "vtm": "Bisoprolol + Hidroclorotiazida",
+    "ampp": "Eurocor D 5 mg + 6,25 mg Comprimidos (Saval), caja 35",
+    "cnmb": "No",
+    "conc": "5 mg + 6,25 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Bisoprolol 5 mg + Hidroclorotiazida 6,25 mg Comprimidos, caja 35",
+    "rango": "$11.76 — $15.00",
+    "subId": "s1775149335589",
+    "units": "35",
+    "atclbl": "Bisoprolol y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Eurocor D",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Bisoprolol",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "5 mg",
+        "6,25 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 11.76,
+      "cruzazul": 15,
+      "pharmacys": 13.5,
+      "farmaprecios": 15
+    },
+    "laboratorio": "Saval"
+  },
+  {
+    "ff": "Comprimidos",
+    "id": "1775153626257",
+    "pp": "8.30",
+    "pu": "0.28",
+    "rs": "00689-MAE-2-01-12",
+    "amp": "Ziac 2,5 mg + 6,25 mg Comprimidos (Merck)",
+    "atc": "C07BB07",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Bisoprolol 2,5 mg + Hidroclorotiazida 6,25 mg Comprimidos",
+    "vol": "",
+    "vtm": "Bisoprolol + Hidroclorotiazida",
+    "ampp": "Ziac 2,5 mg + 6,25 mg Comprimidos (Merck), caja 30",
+    "cnmb": "No",
+    "conc": "2,5 mg + 6,25 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Bisoprolol 2,5 mg + Hidroclorotiazida 6,25 mg Comprimidos, caja 30",
+    "rango": "$8.16 — $9.34",
+    "subId": "s1775149335589",
+    "units": "30",
+    "atclbl": "Bisoprolol y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Ziac",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Bisoprolol",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "2,5 mg",
+        "6,25 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 8.16,
+      "cruzazul": 8.3,
+      "pharmacys": 9.34,
+      "farmaprecios": 10.5
+    },
+    "laboratorio": "Merck"
+  },
+  {
+    "ff": "Comprimidos",
+    "id": "1775153999899",
+    "pp": "13.14",
+    "pu": "0.44",
+    "rs": "00699-1-MAE-10-06",
+    "amp": "Ziac 5 mg + 6,25 mg Comprimidos (Merck)",
+    "atc": "C07BB07",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Bisoprolol 5 mg + Hidroclorotiazida 6,25 mg Comprimidos",
+    "vol": "",
+    "vtm": "Bisoprolol + Hidroclorotiazida",
+    "ampp": "Ziac 5 mg + 6,25 mg Comprimidos (Merck), caja 30",
+    "cnmb": "No",
+    "conc": "5 mg + 6,25 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Bisoprolol 5 mg + Hidroclorotiazida 6,25 mg Comprimidos, caja 30",
+    "rango": "$12.96 — $14.72",
+    "subId": "s1775149335589",
+    "units": "30",
+    "atclbl": "Bisoprolol y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Ziac",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Bisoprolol",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "5 mg",
+        "6,25 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 12.96,
+      "cruzazul": 13.09,
+      "medicity": 13.2,
+      "pharmacys": 14.72,
+      "farmaprecios": 16.5
+    },
+    "laboratorio": "Merck"
+  },
+  {
+    "ff": "Comprimidos",
+    "id": "1775155010068",
+    "pp": "19.76",
+    "pu": "0.71",
+    "rs": "853-MEE-0315",
+    "amp": "Carvedil D 25 mg + 12,5 mg Comprimidos (Bagó)",
+    "atc": "C07BG",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Carvedilol 25 mg + Hidroclorotiazida 12,5 mg Comprimidos",
+    "vol": "",
+    "vtm": "Carvedilol + Hidroclorotiazida",
+    "ampp": "Carvedil D 25 mg + 12,5 mg Comprimidos (Bagó), caja 28",
+    "cnmb": "No",
+    "conc": "25 mg + 12,5 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Carvedilol 25 mg + Hidroclorotiazida 12,5 mg Comprimidos, caja 28",
+    "rango": "$18.59 — $21.28",
+    "subId": "s1775149335589",
+    "units": "28",
+    "atclbl": "Betabloqueantes alfa y beta con tiazidas",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Carvedil D",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Carvedilol",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "25 mg",
+        "12,5 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 18.59,
+      "cruzazul": 18.59,
+      "medicity": 21.28,
+      "pharmacys": 20.92,
+      "farmaprecios": 23.24
+    },
+    "laboratorio": "Bagó"
+  },
+  {
+    "ff": "Comprimidos",
+    "id": "1775156396843",
+    "pp": "21.60",
+    "pu": "0.72",
+    "rs": "H5910713",
+    "amp": "Concor AM 5 mg + 5 mg Comprimidos (Merck)",
+    "atc": "C07FB07",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Bisoprolol 5 mg + Amlodipino 5 mg Comprimidos",
+    "vol": "",
+    "vtm": "Bisoprolol + Amlodipino",
+    "ampp": "Concor AM 5 mg + 5 mg Comprimidos (Merck), caja 30",
+    "cnmb": "No",
+    "conc": "5 mg + 5 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Bisoprolol 5 mg + Amlodipino 5 mg Comprimidos, caja 30",
+    "rango": "$21.60 — $24.30",
+    "subId": "s1775155638388",
+    "units": "30",
+    "atclbl": "Bisoprolol y amlodipino",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Concor AM",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Bisoprolol",
+        "Amlodipino"
+      ],
+      "concs": [
+        "5 mg",
+        "5 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 21.6,
+      "cruzazul": 21.6,
+      "pharmacys": 24.3,
+      "farmaprecios": 27
+    },
+    "laboratorio": "Merck"
+  },
+  {
+    "ff": "Comprimidos",
+    "id": "1775156849613",
+    "pp": "20.64",
+    "pu": "0.69",
+    "rs": "H5890713",
+    "amp": "Concor AM 5 mg + 10 mg Comprimidos (Merck)",
+    "atc": "C07FB07",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Bisoprolol 5 mg + Amlodipino 10 mg Comprimidos",
+    "vol": "",
+    "vtm": "Bisoprolol + Amlodipino",
+    "ampp": "Concor AM 5 mg + 10 mg Comprimidos (Merck), caja 30",
+    "cnmb": "No",
+    "conc": "5 mg + 10 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Bisoprolol 5 mg + Amlodipino 10 mg Comprimidos, caja 30",
+    "rango": "$20.64 — $29.97",
+    "subId": "s1775155638388",
+    "units": "30",
+    "atclbl": "Bisoprolol y amlodipino",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Concor AM",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Bisoprolol",
+        "Amlodipino"
+      ],
+      "concs": [
+        "5 mg",
+        "10 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 20.64,
+      "cruzazul": 20.64,
+      "pharmacys": 29.97,
+      "farmaprecios": 25.8
+    },
+    "laboratorio": "Merck"
+  },
+  {
+    "ff": "Comprimidos",
+    "id": "1775157169031",
+    "pp": "26.64",
+    "pu": "0.89",
+    "rs": "H5900713",
+    "amp": "Concor AM 10 mg + 5 mg Comprimidos (Merck)",
+    "atc": "C07FB07",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Bisoprolol 10 mg + Amlodipino 5 mg Comprimidos",
+    "vol": "",
+    "vtm": "Bisoprolol + Amlodipino",
+    "ampp": "Concor AM 10 mg + 5 mg Comprimidos (Merck), caja 30",
+    "cnmb": "No",
+    "conc": "10 mg + 5 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Bisoprolol 10 mg + Amlodipino 5 mg Comprimidos, caja 30",
+    "rango": "$26.64 — $29.97",
+    "subId": "s1775155638388",
+    "units": "30",
+    "atclbl": "Bisoprolol y amlodipino",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Concor AM",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Bisoprolol",
+        "Amlodipino"
+      ],
+      "concs": [
+        "10 mg",
+        "5 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 26.64,
+      "cruzazul": 26.64,
+      "pharmacys": 29.97,
+      "farmaprecios": 33.3
+    },
+    "laboratorio": "Merck"
+  },
+  {
+    "ff": "Comprimidos",
+    "id": "91bdb720-de49-4f77-9f49-4268db5a2e5b",
+    "pp": "17.10",
+    "pu": "0.86",
+    "rs": "02053-MAC-07-02",
+    "amp": "Angioretic Forte 100 mg + 25 mg Comprimidos (Life)",
+    "atc": "C09DA01",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Losartán 100 mg + Hidroclorotiazida 25 mg Comprimidos",
+    "vol": "",
+    "vtm": "Losartán + Hidroclorotiazida",
+    "ampp": "Angioretic Forte 100 mg + 25 mg Comprimidos (Life), caja 20",
+    "cnmb": "No",
+    "conc": "100 mg + 25 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Losartán 100 mg + Hidroclorotiazida 25 mg Comprimidos, caja 20",
+    "rango": "$16.80 — $18.90",
+    "subId": "s1775203249108",
+    "units": "20",
+    "atclbl": "Losartan y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Angioretic Forte",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Losartán",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "100 mg",
+        "25 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 16.8,
+      "cruzazul": 16.8,
+      "medicity": 17.4,
+      "pharmacys": 18.9,
+      "farmaprecios": 21
+    },
+    "laboratorio": "Life"
+  },
+  {
+    "ff": "Comprimidos",
+    "id": "f146bfd2-fdfc-4e87-8ba3-91cef4e62530",
+    "pp": "5.04",
+    "pu": "0.50",
+    "rs": "2883-MEE-0617",
+    "amp": "Convertal D 50 mg + 12,50 Comprimidos (Roemmers)",
+    "atc": "C09DA01",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Losartán 50 mg + Hidroclorotiazida 12,50 Comprimidos",
+    "vol": "",
+    "vtm": "Losartán + Hidroclorotiazida",
+    "ampp": "Convertal D 50 mg + 12,50 Comprimidos (Roemmers), caja 10",
+    "cnmb": "No",
+    "conc": "50 mg + 12,50",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Losartán 50 mg + Hidroclorotiazida 12,50 Comprimidos, caja 10",
+    "rango": "$5.04 — $5.67",
+    "subId": "s1775165965665",
+    "units": "10",
+    "atclbl": "Losartan y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Convertal D",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Losartán",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "50 mg",
+        "12,50"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 5.04,
+      "cruzazul": 5.04,
+      "pharmacys": 5.67,
+      "farmaprecios": 6.3
+    },
+    "laboratorio": "Roemmers"
+  },
+  {
+    "ff": "Comprimidos",
+    "id": "650224b0-a2c4-4eb3-a2a6-ab74ceb87210",
+    "pp": "10.48",
+    "pu": "0.52",
+    "rs": "01580-MAC-1-09-11",
+    "amp": "Angioretic 50 mg + 25 mg Comprimidos (Life)",
+    "atc": "C09DA01",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Losartán 50 mg + Hidroclorotiazida 25 mg Comprimidos",
+    "vol": "",
+    "vtm": "Losartán + Hidroclorotiazida",
+    "ampp": "Angioretic 50 mg + 25 mg Comprimidos (Life), caja 20",
+    "cnmb": "No",
+    "conc": "50 mg + 25 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Losartán 50 mg + Hidroclorotiazida 25 mg Comprimidos, caja 20",
+    "rango": "$10.08 — $11.43",
+    "subId": "s1775203249108",
+    "units": "20",
+    "atclbl": "Losartan y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Angioretic",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Losartán",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "50 mg",
+        "25 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 10.08,
+      "cruzazul": 10.16,
+      "medicity": 10.8,
+      "pharmacys": 11.43,
+      "farmaprecios": 12.7
+    },
+    "laboratorio": "Life"
+  },
+  {
+    "ff": "Comprimidos",
+    "id": "755592d9-3e58-4d5b-a661-c3e203927306",
+    "pp": "7.98",
+    "pu": "0.80",
+    "rs": "3261-MEE-0518",
+    "amp": "Convertal D 100 mg + 25 mg Comprimidos (Roemmers)",
+    "atc": "C09DA01",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Losartán 100 mg + Hidroclorotiazida 25 mg Comprimidos",
+    "vol": "",
+    "vtm": "Losartán + Hidroclorotiazida",
+    "ampp": "Convertal D 100 mg + 25 mg Comprimidos (Roemmers), caja 10",
+    "cnmb": "No",
+    "conc": "100 mg + 25 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Losartán 100 mg + Hidroclorotiazida 25 mg Comprimidos, caja 10",
+    "rango": "$7.76 — $8.73",
+    "subId": "s1775203249108",
+    "units": "10",
+    "atclbl": "Losartan y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Convertal D",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Losartán",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "100 mg",
+        "25 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 7.76,
+      "cruzazul": 7.76,
+      "medicity": 8.2,
+      "pharmacys": 8.73,
+      "farmaprecios": 9.7
+    },
+    "laboratorio": "Roemmers"
+  },
+  {
+    "ff": "Comprimidos",
+    "id": "1775204305244",
+    "pp": "8.96",
+    "pu": "0.30",
+    "rs": "18.323-2-03-05",
+    "amp": "Enalten D 10 mg + 25 mg Comprimidos (Saval)",
+    "atc": "C09BA02",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Enalapril 10 mg + Hidroclorotiazida 25 mg Comprimidos",
+    "vol": "",
+    "vtm": "Enalapril + Hidroclorotiazida",
+    "ampp": "Enalten D 10 mg + 25 mg Comprimidos (Saval), caja 30",
+    "cnmb": "No",
+    "conc": "10 mg + 25 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Enalapril 10 mg + Hidroclorotiazida 25 mg Comprimidos, caja 30",
+    "rango": "$7.92 — $9.90",
+    "subId": "s1775165965665",
+    "units": "30",
+    "atclbl": "Enalapril y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Enalten D",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Enalapril",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "10 mg",
+        "25 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 9.9,
+      "cruzazul": 7.92,
+      "medicity": 9,
+      "pharmacys": 8.91,
+      "farmaprecios": 9.9
+    },
+    "laboratorio": "Saval"
+  },
+  {
+    "ff": "Comprimidos",
+    "id": "1775204641794",
+    "pp": "14.22",
+    "pu": "0.47",
+    "rs": "22.500-1-03-06",
+    "amp": "Enalten DN 20 mg + 12,5 mg Comprimidos (Saval)",
+    "atc": "C09BA02",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Enalapril 20 mg + Hidroclorotiazida 12,5 mg Comprimidos",
+    "vol": "",
+    "vtm": "Enalapril + Hidroclorotiazida",
+    "ampp": "Enalten DN 20 mg + 12,5 mg Comprimidos (Saval), caja 30",
+    "cnmb": "No",
+    "conc": "20 mg + 12,5 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Enalapril 20 mg + Hidroclorotiazida 12,5 mg Comprimidos, caja 30",
+    "rango": "$12.48 — $15.60",
+    "subId": "s1775165965665",
+    "units": "30",
+    "atclbl": "Enalapril y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Enalten DN",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Enalapril",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "20 mg",
+        "12,5 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 15.6,
+      "cruzazul": 12.48,
+      "medicity": 14.4,
+      "pharmacys": 14.04,
+      "farmaprecios": 15.6
+    },
+    "laboratorio": "Saval"
+  },
+  {
+    "ff": "Comprimidos",
+    "id": "1775205570666",
+    "pp": "35.19",
+    "pu": "1.17",
+    "rs": "28790-03-09",
+    "amp": "Preterax 5 mg + 1,25 mg Comprimidos (Servier)",
+    "atc": "C09BA04",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Perindopril 5 mg + Indapamida 1,25 mg Comprimidos",
+    "vol": "",
+    "vtm": "Perindopril + Indapamida",
+    "ampp": "Preterax 5 mg + 1,25 mg Comprimidos (Servier), caja 30",
+    "cnmb": "No",
+    "conc": "5 mg + 1,25 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Perindopril 5 mg + Indapamida 1,25 mg Comprimidos, caja 30",
+    "rango": "$33.12 — $41.40",
+    "subId": "s1775165965665",
+    "units": "30",
+    "atclbl": "Perindopril y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Preterax",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Perindopril",
+        "Indapamida"
+      ],
+      "concs": [
+        "5 mg",
+        "1,25 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 41.4,
+      "cruzazul": 33.12,
+      "medicity": 33.12,
+      "pharmacys": 37.26,
+      "farmaprecios": 41.4
+    },
+    "laboratorio": "Servier"
+  },
+  {
+    "ff": "Comprimidos",
+    "id": "1775205904918",
+    "pp": "44.71",
+    "pu": "1.49",
+    "rs": "29952-08-11",
+    "amp": "Preterax 10 mg + 2,5 mg Comprimidos (Servier)",
+    "atc": "C09BA04",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Perindopril 10 mg + Indapamida 2,5 mg Comprimidos",
+    "vol": "",
+    "vtm": "Perindopril + Indapamida",
+    "ampp": "Preterax 10 mg + 2,5 mg Comprimidos (Servier), caja 30",
+    "cnmb": "No",
+    "conc": "10 mg + 2,5 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Perindopril 10 mg + Indapamida 2,5 mg Comprimidos, caja 30",
+    "rango": "$39.74 — $49.68",
+    "subId": "s1775165965665",
+    "units": "30",
+    "atclbl": "Perindopril y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Preterax",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Perindopril",
+        "Indapamida"
+      ],
+      "concs": [
+        "10 mg",
+        "2,5 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 49.68,
+      "cruzazul": 39.74,
+      "pharmacys": 44.71,
+      "farmaprecios": 47
+    },
+    "laboratorio": "Servier"
+  },
+  {
+    "ff": "Comprimidos",
+    "id": "1775206574254",
+    "pp": "8.46",
+    "pu": "0.85",
+    "rs": "3261-MEE-0518",
+    "amp": "Convertal D 100 mg + 25 Comprimidos (Roemmers)",
+    "atc": "C09DA01",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Losartán 100 mg + Hidroclorotiazida 25 Comprimidos",
+    "vol": "",
+    "vtm": "Losartán + Hidroclorotiazida",
+    "ampp": "Convertal D 100 mg + 25 Comprimidos (Roemmers), caja 10",
+    "cnmb": "No",
+    "conc": "100 mg + 25",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Losartán 100 mg + Hidroclorotiazida 25 Comprimidos, caja 10",
+    "rango": "$7.76 — $9.50",
+    "subId": "s1775203249108",
+    "units": "10",
+    "atclbl": "Losartán y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Convertal D",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Losartán",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "100 mg",
+        "25"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 9.5,
+      "cruzazul": 7.76,
+      "medicity": 8.2,
+      "pharmacys": 8.73,
+      "farmaprecios": 9.7
+    },
+    "laboratorio": "Roemmers"
+  },
+  {
+    "ff": "Comprimidos recubiertos",
+    "id": "1775207148530",
+    "pp": "",
+    "pu": "",
+    "rs": "27.812-08-07",
+    "amp": "Simperten 50 mg + 12,5 mg Comprimidos recubiertos (Laboratorio Chile)",
+    "atc": "C09DA01",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Losartán 50 mg + Hidroclorotiazida 12,5 mg Comprimidos recubiertos",
+    "vol": "",
+    "vtm": "Losartán + Hidroclorotiazida",
+    "ampp": "Simperten 50 mg + 12,5 mg Comprimidos recubiertos (Laboratorio Chile), caja 30",
+    "cnmb": "No",
+    "conc": "50 mg + 12,5 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Losartán 50 mg + Hidroclorotiazida 12,5 mg Comprimidos recubiertos, caja 30",
+    "rango": "",
+    "subId": "s1775203249108",
+    "units": "30",
+    "atclbl": "Losartán y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Simperten",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Losartán",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "50 mg",
+        "12,5 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "farmaprecios": 19.05
+    },
+    "laboratorio": "Laboratorio Chile"
+  },
+  {
+    "ff": "Comprimidos recubiertos",
+    "id": "1775207342342",
+    "pp": "",
+    "pu": "",
+    "rs": "28472-05-08",
+    "amp": "Simperten 100 mg + 25 mg Comprimidos recubiertos (Laboratorio Chile)",
+    "atc": "C09DA01",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Losartán 100 mg + Hidroclorotiazida 25 mg Comprimidos recubiertos",
+    "vol": "",
+    "vtm": "Losartán + Hidroclorotiazida",
+    "ampp": "Simperten 100 mg + 25 mg Comprimidos recubiertos (Laboratorio Chile), caja 30",
+    "cnmb": "No",
+    "conc": "100 mg + 25 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Losartán 100 mg + Hidroclorotiazida 25 mg Comprimidos recubiertos, caja 30",
+    "rango": "",
+    "subId": "s1775203249108",
+    "units": "30",
+    "atclbl": "Losartán y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Simperten",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Losartán",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "100 mg",
+        "25 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "farmaprecios": 27.96
+    },
+    "laboratorio": "Laboratorio Chile"
+  },
+  {
+    "ff": "Comprimidos",
+    "id": "1775207833870",
+    "pp": "14.05",
+    "pu": "0.50",
+    "rs": "02251-MAC-11-02",
+    "amp": "Cardiovasc H 50 mg + 12,5 mg Comprimidos (Rocnarf)",
+    "atc": "C09DA01",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Losartán 50 mg + Hidroclorotiazida 12,5 mg Comprimidos",
+    "vol": "",
+    "vtm": "Losartán + Hidroclorotiazida",
+    "ampp": "Cardiovasc H 50 mg + 12,5 mg Comprimidos (Rocnarf), caja 28",
+    "cnmb": "No",
+    "conc": "50 mg + 12,5 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Losartán 50 mg + Hidroclorotiazida 12,5 mg Comprimidos, caja 28",
+    "rango": "$14.00 — $15.88",
+    "subId": "s1775203249108",
+    "units": "28",
+    "atclbl": "Losartán y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Cardiovasc H",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Losartán",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "50 mg",
+        "12,5 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 14,
+      "cruzazul": 14.11,
+      "medicity": 14,
+      "pharmacys": 15.88,
+      "farmaprecios": 17.64
+    },
+    "laboratorio": "Rocnarf"
+  },
+  {
+    "ff": "Comprimidos",
+    "id": "1775208070118",
+    "pp": "21.42",
+    "pu": "0.77",
+    "rs": "5262-MAN-09-08",
+    "amp": "Cardiovasc H 100 mg + 12,5 mg Comprimidos (Rocnarf)",
+    "atc": "C09DA01",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Losartán 100 mg + Hidroclorotiazida 12,5 mg Comprimidos",
+    "vol": "",
+    "vtm": "Losartán + Hidroclorotiazida",
+    "ampp": "Cardiovasc H 100 mg + 12,5 mg Comprimidos (Rocnarf), caja 28",
+    "cnmb": "No",
+    "conc": "100 mg + 12,5 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Losartán 100 mg + Hidroclorotiazida 12,5 mg Comprimidos, caja 28",
+    "rango": "$20.44 — $22.40",
+    "subId": "s1775203249108",
+    "units": "28",
+    "atclbl": "Losartán y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Cardiovasc H",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Losartán",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "100 mg",
+        "12,5 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 22.4,
+      "medicity": 20.44,
+      "farmaprecios": 25.48
+    },
+    "laboratorio": "Rocnarf"
+  },
+  {
+    "ff": "Comprimidos",
+    "id": "1775208541071",
+    "pp": "20.44",
+    "pu": "0.73",
+    "rs": "04376-MAN-08-06",
+    "amp": "Cardiovasc Forte 100 mg + 25 mg Comprimidos (Rocnarf)",
+    "atc": "C09DA01",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Losartán 100 mg + Hidroclorotiazida 25 mg Comprimidos",
+    "vol": "",
+    "vtm": "Losartán + Hidroclorotiazida",
+    "ampp": "Cardiovasc Forte 100 mg + 25 mg Comprimidos (Rocnarf), caja 28",
+    "cnmb": "No",
+    "conc": "100 mg + 25 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Losartán 100 mg + Hidroclorotiazida 25 mg Comprimidos, caja 28",
+    "rango": "$20.38 — $22.93",
+    "subId": "s1775203249108",
+    "units": "28",
+    "atclbl": "Losartán y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Cardiovasc Forte",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Losartán",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "100 mg",
+        "25 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 20.44,
+      "cruzazul": 20.38,
+      "medicity": 20.44,
+      "pharmacys": 22.93,
+      "farmaprecios": 25.48
+    },
+    "laboratorio": "Rocnarf"
+  },
+  {
+    "ff": "Comprimidos recubiertos",
+    "id": "1775210780339",
+    "pp": "17.15",
+    "pu": "0.57",
+    "rs": "5042-MAN-09-07",
+    "amp": "Arados HCT 50 mg + 12,5 mg Comprimidos recubiertos (PharmaBrand)",
+    "atc": "C09DA01",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Losartán 50 mg + Hidroclorotiazida 12,5 mg Comprimidos recubiertos",
+    "vol": "",
+    "vtm": "Losartán + Hidroclorotiazida",
+    "ampp": "Arados HCT 50 mg + 12,5 mg Comprimidos recubiertos (PharmaBrand), caja 30",
+    "cnmb": "No",
+    "conc": "50 mg + 12,5 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Losartán 50 mg + Hidroclorotiazida 12,5 mg Comprimidos recubiertos, caja 30",
+    "rango": "$15.24 — $18.90",
+    "subId": "s1775203249108",
+    "units": "30",
+    "atclbl": "Losartán y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Arados HCT",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Losartán",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "50 mg",
+        "12,5 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 18.9,
+      "cruzazul": 15.24,
+      "pharmacys": 17.15,
+      "farmaprecios": 19.05
+    },
+    "laboratorio": "PharmaBrand"
+  },
+  {
+    "ff": "Comprimidos recubiertos",
+    "id": "1775210994264",
+    "pp": "25.91",
+    "pu": "0.86",
+    "rs": "5041-MAN-09-07",
+    "amp": "Arados HCT 100 mg + 25 mg Comprimidos recubiertos (PharmaBrand)",
+    "atc": "C09DA01",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Losartán 100 mg + Hidroclorotiazida 25 mg Comprimidos recubiertos",
+    "vol": "",
+    "vtm": "Losartán + Hidroclorotiazida",
+    "ampp": "Arados HCT 100 mg + 25 mg Comprimidos recubiertos (PharmaBrand), caja 30",
+    "cnmb": "No",
+    "conc": "100 mg + 25 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Losartán 100 mg + Hidroclorotiazida 25 mg Comprimidos recubiertos, caja 30",
+    "rango": "$23.66 — $29.40",
+    "subId": "s1775203249108",
+    "units": "30",
+    "atclbl": "Losartán y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Arados HCT",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Losartán",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "100 mg",
+        "25 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 29.4,
+      "cruzazul": 23.66,
+      "medicity": 25.2,
+      "pharmacys": 26.61,
+      "farmaprecios": 29.57
+    },
+    "laboratorio": "PharmaBrand"
+  },
+  {
+    "ff": "Comprimidos recubiertos",
+    "id": "1775211385908",
+    "pp": "17.15",
+    "pu": "0.57",
+    "rs": "366200613",
+    "amp": "Hyzaar 50 mg + 12,5 mg Comprimidos recubiertos (Organon Pharma)",
+    "atc": "C09DA01",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Losartán 50 mg + Hidroclorotiazida 12,5 mg Comprimidos recubiertos",
+    "vol": "",
+    "vtm": "Losartán + Hidroclorotiazida",
+    "ampp": "Hyzaar 50 mg + 12,5 mg Comprimidos recubiertos (Organon Pharma), caja 30",
+    "cnmb": "No",
+    "conc": "50 mg + 12,5 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Losartán 50 mg + Hidroclorotiazida 12,5 mg Comprimidos recubiertos, caja 30",
+    "rango": "$15.24 — $18.90",
+    "subId": "s1775203249108",
+    "units": "30",
+    "atclbl": "Losartán y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Hyzaar",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Losartán",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "50 mg",
+        "12,5 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 18.9,
+      "cruzazul": 15.24,
+      "pharmacys": 17.15,
+      "farmaprecios": 19.05
+    },
+    "laboratorio": "Organon Pharma"
+  },
+  {
+    "ff": "Comprimidos recubiertos",
+    "id": "1775211673918",
+    "pp": "29.54",
+    "pu": "0.98",
+    "rs": "29410-10-10",
+    "amp": "Hyzaar 100 mg + 12,5 mg Comprimidos recubiertos (Organon Pharma)",
+    "atc": "C09DA01",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Losartán 100 mg + Hidroclorotiazida 12,5 mg Comprimidos recubiertos",
+    "vol": "",
+    "vtm": "Losartán + Hidroclorotiazida",
+    "ampp": "Hyzaar 100 mg + 12,5 mg Comprimidos recubiertos (Organon Pharma), caja 30",
+    "cnmb": "No",
+    "conc": "100 mg + 12,5 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Losartán 100 mg + Hidroclorotiazida 12,5 mg Comprimidos recubiertos, caja 30",
+    "rango": "$26.64 — $33.30",
+    "subId": "s1775203249108",
+    "units": "30",
+    "atclbl": "Losartán y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Hyzaar",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Losartán",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "100 mg",
+        "12,5 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 33.3,
+      "cruzazul": 26.64,
+      "medicity": 29.1,
+      "pharmacys": 29.97,
+      "farmaprecios": 33.3
+    },
+    "laboratorio": "Organon Pharma"
+  },
+  {
+    "ff": "Comprimidos recubiertos",
+    "id": "1775211866096",
+    "pp": "35.51",
+    "pu": "1.18",
+    "rs": "29375-1-09-10",
+    "amp": "Hyzaar Forte 100 mg + 25 mg Comprimidos recubiertos (Organon Pharma)",
+    "atc": "C09DA01",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Losartán 100 mg + Hidroclorotiazida 25 mg Comprimidos recubiertos",
+    "vol": "",
+    "vtm": "Losartán + Hidroclorotiazida",
+    "ampp": "Hyzaar Forte 100 mg + 25 mg Comprimidos recubiertos (Organon Pharma), caja 30",
+    "cnmb": "No",
+    "conc": "100 mg + 25 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Losartán 100 mg + Hidroclorotiazida 25 mg Comprimidos recubiertos, caja 30",
+    "rango": "$31.56 — $39.30",
+    "subId": "s1775203249108",
+    "units": "30",
+    "atclbl": "Losartán y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Hyzaar Forte",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Losartán",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "100 mg",
+        "25 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 39.3,
+      "cruzazul": 31.56,
+      "pharmacys": 35.51,
+      "farmaprecios": 39.45
+    },
+    "laboratorio": "Organon Pharma"
+  },
+  {
+    "ff": "Comprimidos",
+    "id": "1775212830130",
+    "pp": "18.63",
+    "pu": "0.62",
+    "rs": "26.445-06-05",
+    "amp": "Blox D 8 mg + 12,5 mg Comprimidos (Saval)",
+    "atc": "C09DA06",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Candesartán 8 mg + Hidroclorotiazida 12,5 mg Comprimidos",
+    "vol": "",
+    "vtm": "Candesartán + Hidroclorotiazida",
+    "ampp": "Blox D 8 mg + 12,5 mg Comprimidos (Saval), caja 30",
+    "cnmb": "No",
+    "conc": "8 mg + 12,5 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Candesartán 8 mg + Hidroclorotiazida 12,5 mg Comprimidos, caja 30",
+    "rango": "$16.32 — $20.40",
+    "subId": "s1775203249108",
+    "units": "30",
+    "atclbl": "Candesartán y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Blox D",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Candesartán",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "8 mg",
+        "12,5 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 20.4,
+      "cruzazul": 16.32,
+      "medicity": 18.9,
+      "pharmacys": 18.36,
+      "farmaprecios": 20.48
+    },
+    "laboratorio": "Saval"
+  },
+  {
+    "ff": "Comprimidos",
+    "id": "1775213055035",
+    "pp": "23.13",
+    "pu": "0.77",
+    "rs": "26.330-04-05",
+    "amp": "Blox D 16 + 12,5 mg Comprimidos (Saval)",
+    "atc": "C09DA06",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Candesartán 16 + Hidroclorotiazida 12,5 mg Comprimidos",
+    "vol": "",
+    "vtm": "Candesartán + Hidroclorotiazida",
+    "ampp": "Blox D 16 + 12,5 mg Comprimidos (Saval), caja 30",
+    "cnmb": "No",
+    "conc": "16 + 12,5 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Candesartán 16 + Hidroclorotiazida 12,5 mg Comprimidos, caja 30",
+    "rango": "$21.12 — $24.30",
+    "subId": "s1775203249108",
+    "units": "30",
+    "atclbl": "Candesartán y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Blox D",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Candesartán",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "16",
+        "12,5 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 22.5,
+      "cruzazul": 21.12,
+      "medicity": 24.3,
+      "pharmacys": 23.76,
+      "farmaprecios": 22.28
+    },
+    "laboratorio": "Saval"
+  },
+  {
+    "ff": "Comprimidos",
+    "id": "1775213253399",
+    "pp": "",
+    "pu": "",
+    "rs": "26.120-12-04",
+    "amp": "Blox D 32 mg + 12,5 mg Comprimidos (Saval)",
+    "atc": "C09DA06",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Candesartán 32 mg + Hidroclorotiazida 12,5 mg Comprimidos",
+    "vol": "",
+    "vtm": "Candesartán + Hidroclorotiazida",
+    "ampp": "Blox D 32 mg + 12,5 mg Comprimidos (Saval), caja 30",
+    "cnmb": "No",
+    "conc": "32 mg + 12,5 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Candesartán 32 mg + Hidroclorotiazida 12,5 mg Comprimidos, caja 30",
+    "rango": "",
+    "subId": "s1775203249108",
+    "units": "30",
+    "atclbl": "Candesartán y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Blox D",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Candesartán",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "32 mg",
+        "12,5 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "farmaprecios": 26.4
+    },
+    "laboratorio": "Saval"
+  },
+  {
+    "ff": "Comprimidos",
+    "id": "1775213548252",
+    "pp": "23.76",
+    "pu": "0.79",
+    "rs": "24.354-1-01-12",
+    "amp": "Blopress Plus 16 mg + 12,5 mg Comprimidos (Abbott)",
+    "atc": "C09DA06",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Candesartán 16 mg + Hidroclorotiazida 12,5 mg Comprimidos",
+    "vol": "",
+    "vtm": "Candesartán + Hidroclorotiazida",
+    "ampp": "Blopress Plus 16 mg + 12,5 mg Comprimidos (Abbott), caja 30",
+    "cnmb": "No",
+    "conc": "16 mg + 12,5 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Candesartán 16 mg + Hidroclorotiazida 12,5 mg Comprimidos, caja 30",
+    "rango": "$21.12 — $26.40",
+    "subId": "s1775203249108",
+    "units": "30",
+    "atclbl": "Candesartán y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Blopress Plus",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Candesartán",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "16 mg",
+        "12,5 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 26.4,
+      "cruzazul": 21.12,
+      "pharmacys": 23.76,
+      "farmaprecios": 26.4
+    },
+    "laboratorio": "Abbott"
+  },
+  {
+    "ff": "Comprimidos",
+    "id": "1775213975524",
+    "pp": "12.04",
+    "pu": "0.86",
+    "rs": "H6490913",
+    "amp": "Atacand Plus 16 mg + 12,5 mg Comprimidos (AstraZeneca)",
+    "atc": "C09DA06",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Candesartán 16 mg + Hidroclorotiazida 12,5 mg Comprimidos",
+    "vol": "",
+    "vtm": "Candesartán + Hidroclorotiazida",
+    "ampp": "Atacand Plus 16 mg + 12,5 mg Comprimidos (AstraZeneca), caja 14",
+    "cnmb": "No",
+    "conc": "16 mg + 12,5 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Candesartán 16 mg + Hidroclorotiazida 12,5 mg Comprimidos, caja 14",
+    "rango": "Solo 1 fuente",
+    "subId": "s1775203249108",
+    "units": "14",
+    "atclbl": "Candesartán y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Atacand Plus",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Candesartán",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "16 mg",
+        "12,5 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 12.04,
+      "farmaprecios": 14.45
+    },
+    "laboratorio": "AstraZeneca"
+  },
+  {
+    "ff": "Comprimidos",
+    "id": "1775214115669",
+    "pp": "10.36",
+    "pu": "0.74",
+    "rs": "H6600913",
+    "amp": "Atacand Plus 32 mg + 12,5 mg Comprimidos (AstraZeneca)",
+    "atc": "C09DA06",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Candesartán 32 mg + Hidroclorotiazida 12,5 mg Comprimidos",
+    "vol": "",
+    "vtm": "Candesartán + Hidroclorotiazida",
+    "ampp": "Atacand Plus 32 mg + 12,5 mg Comprimidos (AstraZeneca), caja 14",
+    "cnmb": "No",
+    "conc": "32 mg + 12,5 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Candesartán 32 mg + Hidroclorotiazida 12,5 mg Comprimidos, caja 14",
+    "rango": "Solo 1 fuente",
+    "subId": "s1775203249108",
+    "units": "14",
+    "atclbl": "Candesartán y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Atacand Plus",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Candesartán",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "32 mg",
+        "12,5 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 10.36,
+      "farmaprecios": 12.43
+    },
+    "laboratorio": "AstraZeneca"
+  },
+  {
+    "ff": "Comprimidos recubiertos",
+    "id": "1775215001116",
+    "pp": "26.34",
+    "pu": "0.94",
+    "rs": "28870-05-09",
+    "amp": "Iltux HCT 20 mg + 12,5 mg Comprimidos recubiertos (Medicamenta)",
+    "atc": "C09DA08",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Olmesartán 20 mg + Hidroclorotiazida 12,5 mg Comprimidos recubiertos",
+    "vol": "",
+    "vtm": "Olmesartán + Hidroclorotiazida",
+    "ampp": "Iltux HCT 20 mg + 12,5 mg Comprimidos recubiertos (Medicamenta), caja 28",
+    "cnmb": "No",
+    "conc": "20 mg + 12,5 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Olmesartán 20 mg + Hidroclorotiazida 12,5 mg Comprimidos recubiertos, caja 28",
+    "rango": "$23.42 — $29.12",
+    "subId": "s1775203249108",
+    "units": "28",
+    "atclbl": "Olmesartán y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Iltux HCT",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Olmesartán",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "20 mg",
+        "12,5 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 29.12,
+      "cruzazul": 23.42,
+      "pharmacys": 26.34,
+      "farmaprecios": 29.27
+    },
+    "laboratorio": "Medicamenta"
+  },
+  {
+    "ff": "Comprimidos recubiertos",
+    "id": "1775215350312",
+    "pp": "31.00",
+    "pu": "1.11",
+    "rs": "28886-05-09",
+    "amp": "Iltux HCT 40 mg + 12,5 mg Comprimidos recubiertos (Medicamenta)",
+    "atc": "C09DA08",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Olmesartán 40 mg + Hidroclorotiazida 12,5 mg Comprimidos recubiertos",
+    "vol": "",
+    "vtm": "Olmesartán + Hidroclorotiazida",
+    "ampp": "Iltux HCT 40 mg + 12,5 mg Comprimidos recubiertos (Medicamenta), caja 28",
+    "cnmb": "No",
+    "conc": "40 mg + 12,5 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Olmesartán 40 mg + Hidroclorotiazida 12,5 mg Comprimidos recubiertos, caja 28",
+    "rango": "$28.74 — $35.84",
+    "subId": "s1775203249108",
+    "units": "28",
+    "atclbl": "Olmesartán y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Iltux HCT",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Olmesartán",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "40 mg",
+        "12,5 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 35.84,
+      "cruzazul": 28.74,
+      "medicity": 29.68,
+      "pharmacys": 32.33,
+      "farmaprecios": 35.92
+    },
+    "laboratorio": "Medicamenta"
+  },
+  {
+    "ff": "Comprimidos recubiertos",
+    "id": "1775215584937",
+    "pp": "30.88",
+    "pu": "1.10",
+    "rs": "28846-04-09",
+    "amp": "Iltux HCT 40 mg + 25 mg Comprimidos recubiertos (Medicamenta)",
+    "atc": "C09DA08",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Olmesartán 40 mg + Hidroclorotiazida 25 mg Comprimidos recubiertos",
+    "vol": "",
+    "vtm": "Olmesartán + Hidroclorotiazida",
+    "ampp": "Iltux HCT 40 mg + 25 mg Comprimidos recubiertos (Medicamenta), caja 28",
+    "cnmb": "No",
+    "conc": "40 mg + 25 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Olmesartán 40 mg + Hidroclorotiazida 25 mg Comprimidos recubiertos, caja 28",
+    "rango": "$27.45 — $34.44",
+    "subId": "s1775203249108",
+    "units": "28",
+    "atclbl": "Olmesartán y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Iltux HCT",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Olmesartán",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "40 mg",
+        "25 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 34.44,
+      "cruzazul": 27.45,
+      "pharmacys": 30.88,
+      "farmaprecios": 34.31
+    },
+    "laboratorio": "Medicamenta"
+  },
+  {
+    "ff": "Comprimidos recubiertos",
+    "id": "1775216018850",
+    "pp": "41.70",
+    "pu": "1.39",
+    "rs": "361260812",
+    "amp": "Olmetec HCT 40 mg + 12,5 mg Comprimidos recubiertos (Pfizer)",
+    "atc": "C09DA08",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Olmesartán 40 mg + Hidroclorotiazida 12,5 mg Comprimidos recubiertos",
+    "vol": "",
+    "vtm": "Olmesartán + Hidroclorotiazida",
+    "ampp": "Olmetec HCT 40 mg + 12,5 mg Comprimidos recubiertos (Pfizer), caja 30",
+    "cnmb": "No",
+    "conc": "40 mg + 12,5 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Olmesartán 40 mg + Hidroclorotiazida 12,5 mg Comprimidos recubiertos, caja 30",
+    "rango": "Solo 1 fuente",
+    "subId": "s1775203249108",
+    "units": "30",
+    "atclbl": "Olmesartán y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Olmetec HCT",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Olmesartán",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "40 mg",
+        "12,5 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 41.7,
+      "farmaprecios": 41.7
+    },
+    "laboratorio": "Pfizer"
+  },
+  {
+    "ff": "Comprimidos recubiertos",
+    "id": "1775216233452",
+    "pp": "33.60",
+    "pu": "1.12",
+    "rs": "NO-ARCSA",
+    "amp": "Olmetec HCT 20 mg + 12,5 mg Comprimidos recubiertos (Pfizer)",
+    "atc": "C09DA08",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Olmesartán 20 mg + Hidroclorotiazida 12,5 mg Comprimidos recubiertos",
+    "vol": "",
+    "vtm": "Olmesartán + Hidroclorotiazida",
+    "ampp": "Olmetec HCT 20 mg + 12,5 mg Comprimidos recubiertos (Pfizer), caja 30",
+    "cnmb": "No",
+    "conc": "20 mg + 12,5 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Olmesartán 20 mg + Hidroclorotiazida 12,5 mg Comprimidos recubiertos, caja 30",
+    "rango": "Solo 1 fuente",
+    "subId": "s1775203249108",
+    "units": "30",
+    "atclbl": "Olmesartán y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Olmetec HCT",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Olmesartán",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "20 mg",
+        "12,5 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 33.6,
+      "farmaprecios": 33.6
+    },
+    "laboratorio": "Pfizer"
+  },
+  {
+    "ff": "Comprimidos",
+    "id": "1775217086740",
+    "pp": "30.81",
+    "pu": "1.03",
+    "rs": "2869-MEE-0617",
+    "amp": "Indivan HCT 80 mg + 12,5 mg Comprimidos (Life)",
+    "atc": "C09DA07",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Telmisartán 80 mg + Hidroclorotiazida 12,5 mg Comprimidos",
+    "vol": "",
+    "vtm": "Telmisartán + Hidroclorotiazida",
+    "ampp": "Indivan HCT 80 mg + 12,5 mg Comprimidos (Life), caja 30",
+    "cnmb": "No",
+    "conc": "80 mg + 12,5 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Telmisartán 80 mg + Hidroclorotiazida 12,5 mg Comprimidos, caja 30",
+    "rango": "$27.84 — $34.80",
+    "subId": "s1775203249108",
+    "units": "30",
+    "atclbl": "Telmisartán y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Indivan HCT",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Telmisartán",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "80 mg",
+        "12,5 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 34.8,
+      "cruzazul": 27.84,
+      "medicity": 30.3,
+      "pharmacys": 31.32,
+      "farmaprecios": 34.8
+    },
+    "laboratorio": "Life"
+  },
+  {
+    "ff": "Comprimidos",
+    "id": "1775217710327",
+    "pp": "39.90",
+    "pu": "1.33",
+    "rs": "4358-MEE-0818",
+    "amp": "Indivan HCT Forte 80 mg + 25 mg Comprimidos (Life)",
+    "atc": "C09DA07",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Telmisartán 80 mg + Hidroclorotiazida 25 mg Comprimidos",
+    "vol": "",
+    "vtm": "Telmisartán + Hidroclorotiazida",
+    "ampp": "Indivan HCT Forte 80 mg + 25 mg Comprimidos (Life), caja 30",
+    "cnmb": "No",
+    "conc": "80 mg + 25 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Telmisartán 80 mg + Hidroclorotiazida 25 mg Comprimidos, caja 30",
+    "rango": "$36.72 — $41.31",
+    "subId": "s1775203249108",
+    "units": "30",
+    "atclbl": "Telmisartán y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Indivan HCT Forte",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Telmisartán",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "80 mg",
+        "25 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "cruzazul": 36.72,
+      "medicity": 39.9,
+      "pharmacys": 41.31,
+      "farmaprecios": 45.9
+    },
+    "laboratorio": "Life"
+  },
+  {
+    "ff": "Cápsulas duras",
+    "id": "1775218378522",
+    "pp": "26.73",
+    "pu": "0.89",
+    "rs": "1275-MEN-1217",
+    "amp": "Telmisar HCT 80 mg + 12,5 mg Cápsulas duras (PharmaBrand)",
+    "atc": "C09DA07",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Telmisartán 80 mg + Hidroclorotiazida 12,5 mg Cápsulas duras",
+    "vol": "",
+    "vtm": "Telmisartán + Hidroclorotiazida",
+    "ampp": "Telmisar HCT 80 mg + 12,5 mg Cápsulas duras (PharmaBrand), caja 30",
+    "cnmb": "No",
+    "conc": "80 mg + 12,5 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Telmisartán 80 mg + Hidroclorotiazida 12,5 mg Cápsulas duras, caja 30",
+    "rango": "$23.76 — $29.10",
+    "subId": "s1775203249108",
+    "units": "30",
+    "atclbl": "Telmisartán y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Telmisar HCT",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Telmisartán",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "80 mg",
+        "12,5 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 29.1,
+      "cruzazul": 23.76,
+      "pharmacys": 26.73,
+      "farmaprecios": 29.7
+    },
+    "laboratorio": "PharmaBrand"
+  },
+  {
+    "ff": "Cápsulas duras",
+    "id": "1775218562690",
+    "pp": "31.05",
+    "pu": "1.03",
+    "rs": "1297-MEN-0418",
+    "amp": "Telmisar HCT 80 mg + 25 mg Cápsulas duras (PharmaBrand)",
+    "atc": "C09DA07",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Telmisartán 80 mg + Hidroclorotiazida 25 mg Cápsulas duras",
+    "vol": "",
+    "vtm": "Telmisartán + Hidroclorotiazida",
+    "ampp": "Telmisar HCT 80 mg + 25 mg Cápsulas duras (PharmaBrand), caja 30",
+    "cnmb": "No",
+    "conc": "80 mg + 25 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Telmisartán 80 mg + Hidroclorotiazida 25 mg Cápsulas duras, caja 30",
+    "rango": "$27.60 — $34.20",
+    "subId": "s1775203249108",
+    "units": "30",
+    "atclbl": "Telmisartán y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Telmisar HCT",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Telmisartán",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "80 mg",
+        "25 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 34.2,
+      "cruzazul": 27.6,
+      "pharmacys": 31.05,
+      "farmaprecios": 34.5
+    },
+    "laboratorio": "PharmaBrand"
+  },
+  {
+    "ff": "Cápsulas duras",
+    "id": "1775218954195",
+    "pp": "27.08",
+    "pu": "0.97",
+    "rs": "892-MEN-0716",
+    "amp": "Telsar HC 80 mg + 12,5 mg Cápsulas duras (Prophar)",
+    "atc": "C09DA07",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Telmisartán 80 mg + Hidroclorotiazida 12,5 mg Cápsulas duras",
+    "vol": "",
+    "vtm": "Telmisartán + Hidroclorotiazida",
+    "ampp": "Telsar HC 80 mg + 12,5 mg Cápsulas duras (Prophar), caja 28",
+    "cnmb": "No",
+    "conc": "80 mg + 12,5 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Telmisartán 80 mg + Hidroclorotiazida 12,5 mg Cápsulas duras, caja 28",
+    "rango": "$23.74 — $29.68",
+    "subId": "s1775203249108",
+    "units": "28",
+    "atclbl": "Telmisartán y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Telsar HC",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Telmisartán",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "80 mg",
+        "12,5 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 29.68,
+      "cruzazul": 23.74,
+      "medicity": 27.44,
+      "pharmacys": 26.71,
+      "farmaprecios": 29.68
+    },
+    "laboratorio": "Prophar"
+  },
+  {
+    "ff": "Cápsulas duras",
+    "id": "1775219163043",
+    "pp": "31.05",
+    "pu": "1.11",
+    "rs": "947-MEN-0916",
+    "amp": "Telsar HCT 80 mg + 25 mg Cápsulas duras (Prophar)",
+    "atc": "C09DA07",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Telmisartán 80 mg + Hidroclorotiazida 25 mg Cápsulas duras",
+    "vol": "",
+    "vtm": "Telmisartán + Hidroclorotiazida",
+    "ampp": "Telsar HCT 80 mg + 25 mg Cápsulas duras (Prophar), caja 28",
+    "cnmb": "No",
+    "conc": "80 mg + 25 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Telmisartán 80 mg + Hidroclorotiazida 25 mg Cápsulas duras, caja 28",
+    "rango": "$27.33 — $34.16",
+    "subId": "s1775203249108",
+    "units": "28",
+    "atclbl": "Telmisartán y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Telsar HCT",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Telmisartán",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "80 mg",
+        "25 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 34.16,
+      "cruzazul": 27.33,
+      "medicity": 31.36,
+      "pharmacys": 30.74,
+      "farmaprecios": 34.16
+    },
+    "laboratorio": "Prophar"
+  },
+  {
+    "ff": "Comprimidos",
+    "id": "1775219519253",
+    "pp": "29.18",
+    "pu": "1.04",
+    "rs": "24.918-01-03",
+    "amp": "Micardis Plus 80 mg + 12,5 mg Comprimidos (Boehringer Ingelheim)",
+    "atc": "C09DA07",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Telmisartán 80 mg + Hidroclorotiazida 12,5 mg Comprimidos",
+    "vol": "",
+    "vtm": "Telmisartán + Hidroclorotiazida",
+    "ampp": "Micardis Plus 80 mg + 12,5 mg Comprimidos (Boehringer Ingelheim), caja 28",
+    "cnmb": "No",
+    "conc": "80 mg + 12,5 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Telmisartán 80 mg + Hidroclorotiazida 12,5 mg Comprimidos, caja 28",
+    "rango": "$25.98 — $32.20",
+    "subId": "s1775203249108",
+    "units": "28",
+    "atclbl": "Telmisartán y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Micardis Plus",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Telmisartán",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "80 mg",
+        "12,5 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 32.2,
+      "cruzazul": 25.98,
+      "medicity": 29.12,
+      "pharmacys": 29.23,
+      "farmaprecios": 32.48
+    },
+    "laboratorio": "Boehringer Ingelheim"
+  },
+  {
+    "ff": "Comprimidos",
+    "id": "1775219812855",
+    "pp": "38.60",
+    "pu": "1.38",
+    "rs": "28890-06-09",
+    "amp": "Micardis Plus 80 mg + 25 mg Comprimidos (Boehringer Ingelheim)",
+    "atc": "C09DA07",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Telmisartán 80 mg + Hidroclorotiazida 25 mg Comprimidos",
+    "vol": "",
+    "vtm": "Telmisartán + Hidroclorotiazida",
+    "ampp": "Micardis Plus 80 mg + 25 mg Comprimidos (Boehringer Ingelheim), caja 28",
+    "cnmb": "No",
+    "conc": "80 mg + 25 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Telmisartán 80 mg + Hidroclorotiazida 25 mg Comprimidos, caja 28",
+    "rango": "$34.27 — $42.84",
+    "subId": "s1775203249108",
+    "units": "28",
+    "atclbl": "Telmisartán y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Micardis Plus",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Telmisartán",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "80 mg",
+        "25 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 42.84,
+      "cruzazul": 34.27,
+      "medicity": 38.64,
+      "pharmacys": 38.56,
+      "farmaprecios": 42.84
+    },
+    "laboratorio": "Boehringer Ingelheim"
+  },
+  {
+    "ff": "Comprimidos recubiertos",
+    "id": "1775228947417",
+    "pp": "19.13",
+    "pu": "0.68",
+    "rs": "03549-MAE-04-05",
+    "amp": "Simultan D 80 mg + 12,5 mg Comprimidos recubiertos (Lazar)",
+    "atc": "C09DA03",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Valsartán 80 mg + Hidroclorotiazida 12,5 mg Comprimidos recubiertos",
+    "vol": "",
+    "vtm": "Valsartán + Hidroclorotiazida",
+    "ampp": "Simultan D 80 mg + 12,5 mg Comprimidos recubiertos (Lazar), caja 28",
+    "cnmb": "No",
+    "conc": "80 mg + 12,5 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Valsartán 80 mg + Hidroclorotiazida 12,5 mg Comprimidos recubiertos, caja 28",
+    "rango": "$18.00 — $20.25",
+    "subId": "s1775203249108",
+    "units": "28",
+    "atclbl": "Valsartán y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Simultan D",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Valsartán",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "80 mg",
+        "12,5 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "cruzazul": 18,
+      "pharmacys": 20.25,
+      "farmaprecios": 22.5
+    },
+    "laboratorio": "Lazar"
+  },
+  {
+    "ff": "Comprimidos recubiertos",
+    "id": "1775229084174",
+    "pp": "22.95",
+    "pu": "0.82",
+    "rs": "28425-03-08",
+    "amp": "Simultan D 160 mg + 12,5 mg Comprimidos recubiertos (Lazar)",
+    "atc": "C09DA03",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Valsartán 160 mg + Hidroclorotiazida 12,5 mg Comprimidos recubiertos",
+    "vol": "",
+    "vtm": "Valsartán + Hidroclorotiazida",
+    "ampp": "Simultan D 160 mg + 12,5 mg Comprimidos recubiertos (Lazar), caja 28",
+    "cnmb": "No",
+    "conc": "160 mg + 12,5 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Valsartán 160 mg + Hidroclorotiazida 12,5 mg Comprimidos recubiertos, caja 28",
+    "rango": "$21.60 — $24.30",
+    "subId": "s1775203249108",
+    "units": "28",
+    "atclbl": "Valsartán y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Simultan D",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Valsartán",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "160 mg",
+        "12,5 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "cruzazul": 21.6,
+      "pharmacys": 24.3,
+      "farmaprecios": 27
+    },
+    "laboratorio": "Lazar"
+  },
+  {
+    "ff": "Comprimidos",
+    "id": "1775239463073",
+    "pp": "44.71",
+    "pu": "1.49",
+    "rs": "29471-11-10",
+    "amp": "Coveram 10 mg + 10 mg Comprimidos (Servier)",
+    "atc": "C09BB04",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Amlodipino 10 mg + Perindopril 10 mg Comprimidos",
+    "vol": "",
+    "vtm": "Amlodipino + Perindopril",
+    "ampp": "Coveram 10 mg + 10 mg Comprimidos (Servier), caja 30",
+    "cnmb": "No",
+    "conc": "10 mg + 10 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Amlodipino 10 mg + Perindopril 10 mg Comprimidos, caja 30",
+    "rango": "$39.74 — $49.68",
+    "subId": "s1775236798588",
+    "units": "30",
+    "atclbl": "Perindopril y amlodipino",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Coveram",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Amlodipino",
+        "Perindopril"
+      ],
+      "concs": [
+        "10 mg",
+        "10 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 49.68,
+      "cruzazul": 39.74,
+      "pharmacys": 44.71,
+      "farmaprecios": 49.68
+    },
+    "laboratorio": "Servier"
+  },
+  {
+    "ff": "Comprimidos recubiertos",
+    "id": "1775229548664",
+    "pp": "21.17",
+    "pu": "0.76",
+    "rs": "980-MEN-0217",
+    "amp": "Pertena HC 80 mg + 12,5 mg Comprimidos recubiertos (Prophar)",
+    "atc": "C09DA03",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Valsartán 80 mg + Hidroclorotiazida 12,5 mg Comprimidos recubiertos",
+    "vol": "",
+    "vtm": "Valsartán + Hidroclorotiazida",
+    "ampp": "Pertena HC 80 mg + 12,5 mg Comprimidos recubiertos (Prophar), caja 28",
+    "cnmb": "No",
+    "conc": "80 mg + 12,5 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Valsartán 80 mg + Hidroclorotiazida 12,5 mg Comprimidos recubiertos, caja 28",
+    "rango": "$18.82 — $21.56",
+    "subId": "s1775203249108",
+    "units": "28",
+    "atclbl": "Valsartán y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Pertena HC",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Valsartán",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "80 mg",
+        "12,5 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "cruzazul": 18.82,
+      "medicity": 21.56,
+      "pharmacys": 21.17,
+      "farmaprecios": 23.52
+    },
+    "laboratorio": "Prophar"
+  },
+  {
+    "ff": "Comprimidos recubiertos",
+    "id": "1775229820326",
+    "pp": "26.81",
+    "pu": "0.96",
+    "rs": "896-MEN-0716",
+    "amp": "Pertena HC 160 mg + 12,5 mg Comprimidos recubiertos (Prophar)",
+    "atc": "C09DA03",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Valsartán 160 mg + Hidroclorotiazida 12,5 mg Comprimidos recubiertos",
+    "vol": "",
+    "vtm": "Valsartán + Hidroclorotiazida",
+    "ampp": "Pertena HC 160 mg + 12,5 mg Comprimidos recubiertos (Prophar), caja 28",
+    "cnmb": "No",
+    "conc": "160 mg + 12,5 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Valsartán 160 mg + Hidroclorotiazida 12,5 mg Comprimidos recubiertos, caja 28",
+    "rango": "$23.52 — $28.84",
+    "subId": "s1775203249108",
+    "units": "28",
+    "atclbl": "Valsartán y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Pertena HC",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Valsartán",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "160 mg",
+        "12,5 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 28.84,
+      "cruzazul": 23.52,
+      "medicity": 27.16,
+      "pharmacys": 26.46,
+      "farmaprecios": 29.4
+    },
+    "laboratorio": "Prophar"
+  },
+  {
+    "ff": "Comprimidos recubiertos",
+    "id": "1775230407081",
+    "pp": "22.77",
+    "pu": "0.81",
+    "rs": "29368-09-10",
+    "amp": "Diovan HCT 80 mg + 12,5 mg Comprimidos recubiertos (Novartis)",
+    "atc": "C09DA03",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Valsartán 80 mg + Hidroclorotiazida 12,5 mg Comprimidos recubiertos",
+    "vol": "",
+    "vtm": "Valsartán + Hidroclorotiazida",
+    "ampp": "Diovan HCT 80 mg + 12,5 mg Comprimidos recubiertos (Novartis), caja 28",
+    "cnmb": "No",
+    "conc": "80 mg + 12,5 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Valsartán 80 mg + Hidroclorotiazida 12,5 mg Comprimidos recubiertos, caja 28",
+    "rango": "$20.24 — $25.20",
+    "subId": "s1775203249108",
+    "units": "28",
+    "atclbl": "Valsartán y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Diovan HCT",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Valsartán",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "80 mg",
+        "12,5 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 25.2,
+      "cruzazul": 20.24,
+      "pharmacys": 22.77,
+      "farmaprecios": 25.3
+    },
+    "laboratorio": "Novartis"
+  },
+  {
+    "ff": "Comprimidos recubiertos",
+    "id": "1775230705024",
+    "pp": "29.62",
+    "pu": "1.06",
+    "rs": "29370-09-10",
+    "amp": "Diovan HCT 160 mg + 12,5 mg Comprimidos recubiertos (Novartis)",
+    "atc": "C09DA03",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Valsartán 160 mg + Hidroclorotiazida 12,5 mg Comprimidos recubiertos",
+    "vol": "",
+    "vtm": "Valsartán + Hidroclorotiazida",
+    "ampp": "Diovan HCT 160 mg + 12,5 mg Comprimidos recubiertos (Novartis), caja 28",
+    "cnmb": "No",
+    "conc": "160 mg + 12,5 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Valsartán 160 mg + Hidroclorotiazida 12,5 mg Comprimidos recubiertos, caja 28",
+    "rango": "$26.33 — $32.48",
+    "subId": "s1775203249108",
+    "units": "28",
+    "atclbl": "Valsartán y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Diovan HCT",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Valsartán",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "160 mg",
+        "12,5 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 32.48,
+      "cruzazul": 26.33,
+      "pharmacys": 29.62,
+      "farmaprecios": 32.9
+    },
+    "laboratorio": "Novartis"
+  },
+  {
+    "ff": "Comprimidos recubiertos",
+    "id": "1775230947246",
+    "pp": "34.83",
+    "pu": "1.24",
+    "rs": "29371-09-10",
+    "amp": "Diovan HCT 160 mg + 25 mg Comprimidos recubiertos (Novartis)",
+    "atc": "C09DA03",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Valsartán 160 mg + Hidroclorotiazida 25 mg Comprimidos recubiertos",
+    "vol": "",
+    "vtm": "Valsartán + Hidroclorotiazida",
+    "ampp": "Diovan HCT 160 mg + 25 mg Comprimidos recubiertos (Novartis), caja 28",
+    "cnmb": "No",
+    "conc": "160 mg + 25 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Valsartán 160 mg + Hidroclorotiazida 25 mg Comprimidos recubiertos, caja 28",
+    "rango": "$30.56 — $38.08",
+    "subId": "s1775203249108",
+    "units": "28",
+    "atclbl": "Valsartán y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Diovan HCT",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Valsartán",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "160 mg",
+        "25 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 38.08,
+      "cruzazul": 30.56,
+      "medicity": 35.28,
+      "pharmacys": 34.38,
+      "farmaprecios": 38.22
+    },
+    "laboratorio": "Novartis"
+  },
+  {
+    "ff": "Comprimidos recubiertos",
+    "id": "1775231279378",
+    "pp": "33.62",
+    "pu": "1.20",
+    "rs": "1649-MEE-0116",
+    "amp": "Diovan HCT 320 mg + 12,5 mg Comprimidos recubiertos (Novartis)",
+    "atc": "C09DA03",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Valsartán 320 mg + Hidroclorotiazida 12,5 mg Comprimidos recubiertos",
+    "vol": "",
+    "vtm": "Valsartán + Hidroclorotiazida",
+    "ampp": "Diovan HCT 320 mg + 12,5 mg Comprimidos recubiertos (Novartis), caja 28",
+    "cnmb": "No",
+    "conc": "320 mg + 12,5 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Valsartán 320 mg + Hidroclorotiazida 12,5 mg Comprimidos recubiertos, caja 28",
+    "rango": "$30.40 — $37.80",
+    "subId": "s1775203249108",
+    "units": "28",
+    "atclbl": "Valsartán y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Diovan HCT",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Valsartán",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "320 mg",
+        "12,5 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 37.8,
+      "cruzazul": 30.4,
+      "medicity": 33.04,
+      "pharmacys": 34.2,
+      "farmaprecios": 38
+    },
+    "laboratorio": "Novartis"
+  },
+  {
+    "ff": "Comprimidos recubiertos",
+    "id": "1775231913197",
+    "pp": "31.47",
+    "pu": "1.05",
+    "rs": "564-MEE-1214",
+    "amp": "Diapresan D 160 mg + 12,5 mg Comprimidos recubiertos (Bagó)",
+    "atc": "C09DA03",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Valsartán 160 mg + Hidroclorotiazida 12,5 mg Comprimidos recubiertos",
+    "vol": "",
+    "vtm": "Valsartán + Hidroclorotiazida",
+    "ampp": "Diapresan D 160 mg + 12,5 mg Comprimidos recubiertos (Bagó), caja 30",
+    "cnmb": "No",
+    "conc": "160 mg + 12,5 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Valsartán 160 mg + Hidroclorotiazida 12,5 mg Comprimidos recubiertos, caja 30",
+    "rango": "$31.39 — $35.37",
+    "subId": "s1775203249108",
+    "units": "30",
+    "atclbl": "Valsartán y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Diapresan D",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Valsartán",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "160 mg",
+        "12,5 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 31.39,
+      "cruzazul": 31.44,
+      "medicity": 31.5,
+      "pharmacys": 35.37,
+      "farmaprecios": 39.3
+    },
+    "laboratorio": "Bagó"
+  },
+  {
+    "ff": "Comprimidos recubiertos",
+    "id": "3e4999ee-5e67-4e10-b05e-657983e9fcda",
+    "pp": "27.52",
+    "pu": "0.92",
+    "rs": "566-MEE-1214",
+    "amp": "Diapresan D 80 mg + 12,5 mg Comprimidos recubiertos (Bagó)",
+    "atc": "C09DA03",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Valsartán 80 mg + Hidroclorotiazida 12,5 mg Comprimidos recubiertos",
+    "vol": "",
+    "vtm": "Valsartán + Hidroclorotiazida",
+    "ampp": "Diapresan D 80 mg + 12,5 mg Comprimidos recubiertos (Bagó), caja 30",
+    "cnmb": "No",
+    "conc": "80 mg + 12,5 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Valsartán 80 mg + Hidroclorotiazida 12,5 mg Comprimidos recubiertos, caja 30",
+    "rango": "$25.20 — $29.10",
+    "subId": "s1775203249108",
+    "units": "30",
+    "atclbl": "Valsartán y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Diapresan D",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Valsartán",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "80 mg",
+        "12,5 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 26.7,
+      "cruzazul": 25.2,
+      "medicity": 29.1,
+      "pharmacys": 28.35,
+      "farmaprecios": 31.5
+    },
+    "laboratorio": "Bagó"
+  },
+  {
+    "ff": "Comprimidos recubiertos",
+    "id": "1775232144599",
+    "pp": "37.33",
+    "pu": "1.24",
+    "rs": "567-MEE-1214",
+    "amp": "Diapresan D 160 mg + 25 mg Comprimidos recubiertos (Bagó)",
+    "atc": "C09DA03",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Valsartán 160 mg + Hidroclorotiazida 25 mg Comprimidos recubiertos",
+    "vol": "",
+    "vtm": "Valsartán + Hidroclorotiazida",
+    "ampp": "Diapresan D 160 mg + 25 mg Comprimidos recubiertos (Bagó), caja 30",
+    "cnmb": "No",
+    "conc": "160 mg + 25 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Valsartán 160 mg + Hidroclorotiazida 25 mg Comprimidos recubiertos, caja 30",
+    "rango": "$32.77 — $37.80",
+    "subId": "s1775203249108",
+    "units": "30",
+    "atclbl": "Valsartán y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Diapresan D",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Valsartán",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "160 mg",
+        "25 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 37.8,
+      "cruzazul": 32.77,
+      "medicity": 37.8,
+      "pharmacys": 36.86,
+      "farmaprecios": 40.95
+    },
+    "laboratorio": "Bagó"
+  },
+  {
+    "ff": "Comprimidos",
+    "id": "1775233798241",
+    "pp": "5.32",
+    "pu": "0.38",
+    "rs": "HG2351112",
+    "amp": "Irbesartán + Hidroclorotiazida 150 mg + 12,5 mg Comprimidos (MK)",
+    "atc": "C09DA04",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Irbesartán 150 mg + Hidroclorotiazida 12,5 mg Comprimidos",
+    "vol": "",
+    "vtm": "Irbesartán + Hidroclorotiazida",
+    "ampp": "Irbesartán + Hidroclorotiazida 150 mg + 12,5 mg Comprimidos (MK), caja 14",
+    "cnmb": "No",
+    "conc": "150 mg + 12,5 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Irbesartán 150 mg + Hidroclorotiazida 12,5 mg Comprimidos, caja 14",
+    "rango": "Solo 1 fuente",
+    "subId": "s1775203249108",
+    "units": "14",
+    "atclbl": "Irbesartán y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Irbesartán + Hidroclorotiazida",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "Sí",
+    "comboData": {
+      "pas": [
+        "Irbesartán",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "150 mg",
+        "12,5 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 5.32,
+      "farmaprecios": 5.6
+    },
+    "laboratorio": "MK"
+  },
+  {
+    "ff": "Comprimidos",
+    "id": "1775234077629",
+    "pp": "25.95",
+    "pu": "0.93",
+    "rs": "2776-MEN-0720",
+    "amp": "Irbetiazid 150 mg + 12,5 mg Comprimidos (Siegfried)",
+    "atc": "C09DA04",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Irbesartán 150 mg + Hidroclorotiazida 12,5 mg Comprimidos",
+    "vol": "",
+    "vtm": "Irbesartán + Hidroclorotiazida",
+    "ampp": "Irbetiazid 150 mg + 12,5 mg Comprimidos (Siegfried), caja 28",
+    "cnmb": "No",
+    "conc": "150 mg + 12,5 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Irbesartán 150 mg + Hidroclorotiazida 12,5 mg Comprimidos, caja 28",
+    "rango": "$24.00 — $28.50",
+    "subId": "s1775203249108",
+    "units": "28",
+    "atclbl": "Irbesartán y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Irbetiazid",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Irbesartán",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "150 mg",
+        "12,5 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 28.5,
+      "cruzazul": 24,
+      "medicity": 24.9,
+      "pharmacys": 27,
+      "farmaprecios": 30
+    },
+    "laboratorio": "Siegfried"
+  },
+  {
+    "ff": "Comprimidos",
+    "id": "1775234262987",
+    "pp": "30.72",
+    "pu": "1.10",
+    "rs": "2775-MEN-0720",
+    "amp": "Irbetiazid 300 mg + 12,5 mg Comprimidos (Siegfried)",
+    "atc": "C09DA04",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Irbesartán 300 mg + Hidroclorotiazida 12,5 mg Comprimidos",
+    "vol": "",
+    "vtm": "Irbesartán + Hidroclorotiazida",
+    "ampp": "Irbetiazid 300 mg + 12,5 mg Comprimidos (Siegfried), caja 28",
+    "cnmb": "No",
+    "conc": "300 mg + 12,5 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Irbesartán 300 mg + Hidroclorotiazida 12,5 mg Comprimidos, caja 28",
+    "rango": "$29.96 — $34.56",
+    "subId": "s1775203249108",
+    "units": "28",
+    "atclbl": "Irbesartán y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Irbetiazid",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Irbesartán",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "300 mg",
+        "12,5 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 29.96,
+      "cruzazul": 30.72,
+      "pharmacys": 34.56,
+      "farmaprecios": 38.4
+    },
+    "laboratorio": "Siegfried"
+  },
+  {
+    "ff": "Comprimidos",
+    "id": "1775234592090",
+    "pp": "27.21",
+    "pu": "0.91",
+    "rs": "30134-03-12",
+    "amp": "Besarzid 150 mg + 12,5 mg Comprimidos (Berkanafarma)",
+    "atc": "C09DA04",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Irbesartán 150 mg + Hidroclorotiazida 12,5 mg Comprimidos",
+    "vol": "",
+    "vtm": "Irbesartán + Hidroclorotiazida",
+    "ampp": "Besarzid 150 mg + 12,5 mg Comprimidos (Berkanafarma), caja 30",
+    "cnmb": "No",
+    "conc": "150 mg + 12,5 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Irbesartán 150 mg + Hidroclorotiazida 12,5 mg Comprimidos, caja 30",
+    "rango": "$24.12 — $27.60",
+    "subId": "s1775203249108",
+    "units": "30",
+    "atclbl": "Irbesartán y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Besarzid",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Irbesartán",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "150 mg",
+        "12,5 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 27.3,
+      "cruzazul": 24.12,
+      "medicity": 27.6,
+      "pharmacys": 27.13,
+      "farmaprecios": 30.15
+    },
+    "laboratorio": "Berkanafarma"
+  },
+  {
+    "ff": "Comprimidos",
+    "id": "1775234748755",
+    "pp": "34.98",
+    "pu": "1.17",
+    "rs": "30136-03-12",
+    "amp": "Besarzid 300 mg + 12,5 mg Comprimidos (Berkanafarma)",
+    "atc": "C09DA04",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Irbesartán 300 mg + Hidroclorotiazida 12,5 mg Comprimidos",
+    "vol": "",
+    "vtm": "Irbesartán + Hidroclorotiazida",
+    "ampp": "Besarzid 300 mg + 12,5 mg Comprimidos (Berkanafarma), caja 30",
+    "cnmb": "No",
+    "conc": "300 mg + 12,5 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Irbesartán 300 mg + Hidroclorotiazida 12,5 mg Comprimidos, caja 30",
+    "rango": "$30.72 — $38.40",
+    "subId": "s1775203249108",
+    "units": "30",
+    "atclbl": "Irbesartán y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Besarzid",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Irbesartán",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "300 mg",
+        "12,5 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 38.4,
+      "cruzazul": 30.72,
+      "medicity": 35.4,
+      "pharmacys": 34.56,
+      "farmaprecios": 38.4
+    },
+    "laboratorio": "Berkanafarma"
+  },
+  {
+    "ff": "Comprimidos",
+    "id": "1775235428015",
+    "pp": "11.97",
+    "pu": "0.86",
+    "rs": "1661-MEE-0116",
+    "amp": "Co-Acepress 150 mg + 12,5 mg Comprimidos (Eurofarma)",
+    "atc": "C09DA04",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Irbesartán 150 mg + Hidroclorotiazida 12,5 mg Comprimidos",
+    "vol": "",
+    "vtm": "Irbesartán + Hidroclorotiazida",
+    "ampp": "Co-Acepress 150 mg + 12,5 mg Comprimidos (Eurofarma), caja 14",
+    "cnmb": "No",
+    "conc": "150 mg + 12,5 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Irbesartán 150 mg + Hidroclorotiazida 12,5 mg Comprimidos, caja 14",
+    "rango": "$10.64 — $13.30",
+    "subId": "s1775203249108",
+    "units": "14",
+    "atclbl": "Irbesartán y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Co-Acepress",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Irbesartán",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "150 mg",
+        "12,5 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 13.3,
+      "cruzazul": 10.64,
+      "pharmacys": 11.97,
+      "farmaprecios": 13.13
+    },
+    "laboratorio": "Eurofarma"
+  },
+  {
+    "ff": "Comprimidos",
+    "id": "1775235625859",
+    "pp": "15.26",
+    "pu": "1.09",
+    "rs": "1586-MEE-1215",
+    "amp": "Co-Acepress 300 mg + 12,5 mg Comprimidos (Eurofarma)",
+    "atc": "C09DA04",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Irbesartán 300 mg + Hidroclorotiazida 12,5 mg Comprimidos",
+    "vol": "",
+    "vtm": "Irbesartán + Hidroclorotiazida",
+    "ampp": "Co-Acepress 300 mg + 12,5 mg Comprimidos (Eurofarma), caja 14",
+    "cnmb": "No",
+    "conc": "300 mg + 12,5 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Irbesartán 300 mg + Hidroclorotiazida 12,5 mg Comprimidos, caja 14",
+    "rango": "$13.44 — $16.66",
+    "subId": "s1775203249108",
+    "units": "14",
+    "atclbl": "Irbesartán y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Co-Acepress",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Irbesartán",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "300 mg",
+        "12,5 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 16.66,
+      "cruzazul": 13.44,
+      "medicity": 15.4,
+      "pharmacys": 15.12,
+      "farmaprecios": 16.8
+    },
+    "laboratorio": "Eurofarma"
+  },
+  {
+    "ff": "Comprimidos recubiertos",
+    "id": "1775236137635",
+    "pp": "13.65",
+    "pu": "0.97",
+    "rs": "27.602-1-12-11",
+    "amp": "Coaprovel 150 mg + 12,5 mg Comprimidos recubiertos (Sanofi)",
+    "atc": "C09DA04",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Irbesartán 150 mg + Hidroclorotiazida 12,5 mg Comprimidos recubiertos",
+    "vol": "",
+    "vtm": "Irbesartán + Hidroclorotiazida",
+    "ampp": "Coaprovel 150 mg + 12,5 mg Comprimidos recubiertos (Sanofi), caja 14",
+    "cnmb": "No",
+    "conc": "150 mg + 12,5 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Irbesartán 150 mg + Hidroclorotiazida 12,5 mg Comprimidos recubiertos, caja 14",
+    "rango": "$13.65 — $14.00",
+    "subId": "s1775203249108",
+    "units": "14",
+    "atclbl": "Irbesartán y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Coaprovel",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Irbesartán",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "150 mg",
+        "12,5 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 14,
+      "cruzazul": 13.65,
+      "pharmacys": 13.65
+    },
+    "laboratorio": "Sanofi"
+  },
+  {
+    "ff": "Comprimidos recubiertos",
+    "id": "1775236303320",
+    "pp": "17.92",
+    "pu": "1.28",
+    "rs": "27.573-1-12-11",
+    "amp": "Coaprovel 300 mg + 12,5 mg Comprimidos recubiertos (Sanofi)",
+    "atc": "C09DA04",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Irbesartán 300 mg + Hidroclorotiazida 12,5 mg Comprimidos recubiertos",
+    "vol": "",
+    "vtm": "Irbesartán + Hidroclorotiazida",
+    "ampp": "Coaprovel 300 mg + 12,5 mg Comprimidos recubiertos (Sanofi), caja 14",
+    "cnmb": "No",
+    "conc": "300 mg + 12,5 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Irbesartán 300 mg + Hidroclorotiazida 12,5 mg Comprimidos recubiertos, caja 14",
+    "rango": "$17.92 — $17.92",
+    "subId": "s1775203249108",
+    "units": "14",
+    "atclbl": "Irbesartán y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Coaprovel",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Irbesartán",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "300 mg",
+        "12,5 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 17.92,
+      "cruzazul": 17.92,
+      "pharmacys": 17.92
+    },
+    "laboratorio": "Sanofi"
+  },
+  {
+    "ff": "Comprimidos recubiertos",
+    "id": "1775236509567",
+    "pp": "5.83",
+    "pu": "0.42",
+    "rs": "27.805-08-07",
+    "amp": "Coaprovel 300 mg + 25 mg Comprimidos recubiertos (Sanofi)",
+    "atc": "C09DA04",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Irbesartán 300 mg + Hidroclorotiazida 25 mg Comprimidos recubiertos",
+    "vol": "",
+    "vtm": "Irbesartán + Hidroclorotiazida",
+    "ampp": "Coaprovel 300 mg + 25 mg Comprimidos recubiertos (Sanofi), caja 14",
+    "cnmb": "No",
+    "conc": "300 mg + 25 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Irbesartán 300 mg + Hidroclorotiazida 25 mg Comprimidos recubiertos, caja 14",
+    "rango": "$5.83 — $5.88",
+    "subId": "s1775203249108",
+    "units": "14",
+    "atclbl": "Irbesartán y diuréticos",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Coaprovel",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Irbesartán",
+        "Hidroclorotiazida"
+      ],
+      "concs": [
+        "300 mg",
+        "25 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 5.88,
+      "cruzazul": 5.83,
+      "pharmacys": 5.83,
+      "farmaprecios": 6.02
+    },
+    "laboratorio": "Sanofi"
+  },
+  {
+    "ff": "Comprimidos",
+    "id": "1775237586966",
+    "pp": "43.20",
+    "pu": "1.44",
+    "rs": "29453-11-10",
+    "amp": "Coveram 5 mg + 5 mg Comprimidos (Servier)",
+    "atc": "C09BB04",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Amlodipino 5 mg + Perindopril 5 mg Comprimidos",
+    "vol": "",
+    "vtm": "Amlodipino + Perindopril",
+    "ampp": "Coveram 5 mg + 5 mg Comprimidos (Servier), caja 30",
+    "cnmb": "No",
+    "conc": "5 mg + 5 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Amlodipino 5 mg + Perindopril 5 mg Comprimidos, caja 30",
+    "rango": "$38.40 — $48.00",
+    "subId": "s1775236798588",
+    "units": "30",
+    "atclbl": "Perindopril y amlodipino",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Coveram",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Amlodipino",
+        "Perindopril"
+      ],
+      "concs": [
+        "5 mg",
+        "5 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 48,
+      "cruzazul": 38.4,
+      "pharmacys": 43.2,
+      "farmaprecios": 47.52
+    },
+    "laboratorio": "Servier"
+  },
+  {
+    "ff": "Comprimidos",
+    "id": "1775237743352",
+    "pp": "44.71",
+    "pu": "1.49",
+    "rs": "29455-11-10",
+    "amp": "Coveram 5 mg + 10 mg Comprimidos (Servier)",
+    "atc": "C09BB04",
+    "sns": "No",
+    "via": "oral",
+    "vmp": "Amlodipino 5 mg + Perindopril 10 mg Comprimidos",
+    "vol": "",
+    "vtm": "Amlodipino + Perindopril",
+    "ampp": "Coveram 5 mg + 10 mg Comprimidos (Servier), caja 30",
+    "cnmb": "No",
+    "conc": "5 mg + 10 mg",
+    "vias": [
+      "oral"
+    ],
+    "vmpp": "Amlodipino 5 mg + Perindopril 10 mg Comprimidos, caja 30",
+    "rango": "$39.74 — $49.68",
+    "subId": "s1775236798588",
+    "units": "30",
+    "atclbl": "Perindopril y amlodipino",
+    "chapId": "c01",
+    "envase": "caja",
+    "estado": "autorizado",
+    "nombre": "Coveram",
+    "volStr": "",
+    "esCombo": true,
+    "volUnit": "mL",
+    "clinData": {},
+    "generico": "No",
+    "comboData": {
+      "pas": [
+        "Amlodipino",
+        "Perindopril"
+      ],
+      "concs": [
+        "5 mg",
+        "10 mg"
+      ],
+      "count": 2
+    },
+    "farmPrices": {
+      "fybeca": 49.68,
+      "cruzazul": 39.74,
+      "pharmacys": 44.71,
+      "farmaprecios": 49.68
+    },
+    "laboratorio": "Servier"
+  }
+]
