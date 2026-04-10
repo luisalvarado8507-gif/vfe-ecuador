@@ -5352,3 +5352,71 @@ function updEditorButtons(){
 
   document.addEventListener("DOMContentLoaded", loadCatalog);
 </script>
+<!-- BLOQUE TÉCNICO SNOMED / FHIR -->
+<section id="tech-snomed"
+         style="
+           margin-top:24px;
+           padding:16px;
+           border-top:2px dashed #a3c98b;
+           font-size:13px;
+           background:#f6fbf3;
+         ">
+  <h4 style="margin:0 0 10px 0;color:#2f6f2f;">
+    🔧 Interoperabilidad técnica (SNOMED CT / HL7 FHIR)
+  </h4>
+
+  <div id="tech-content">
+    <em>Cargando información técnica…</em>
+  </div>
+</section>
+async function loadTechSNOMED(medicationId) {
+  const SUPABASE_URL = "https://TU_PROYECTO.supabase.co";
+  const SUPABASE_KEY = "TU_ANON_KEY_AQUI";
+
+  const res = await fetch(
+    `${SUPABASE_URL}/rest/v1/medication_tech_view?medication_id=eq.${medicationId}`,
+    {
+      headers: {
+        apikey: SUPABASE_KEY,
+        Authorization: `Bearer ${SUPABASE_KEY}`
+      }
+    }
+  );
+
+  const data = await res.json();
+
+  if (!data.length) {
+    document.getElementById("tech-content").innerHTML =
+      "<em>Información técnica no disponible</em>";
+    return;
+  }
+
+  const med = data[0];
+
+  document.getElementById("tech-content").innerHTML = `
+    <strong>Medicamento lógico (VTM)</strong><br/>
+    ${med.vtm_name}<br/><br/>
+
+    <strong>Forma farmacéutica</strong><br/>
+    ${med.dose_form || "—"}<br/>
+    SNOMED CT: ${med.dose_form_snomed || "—"}<br/><br/>
+
+    <strong>Principios activos</strong>
+    <ul>
+      ${med.ingredients.map(i => `
+        <li>
+          ${i.ingredient} — ${i.dose}<br/>
+          <small>
+            SNOMED CT: ${i.snomed}
+            (${i.semantic_type})
+            ${i.standard ? " — dosis estándar ✅" : ""}
+          </small>
+        </li>
+      `).join("")}
+    </ul>
+
+    <strong>FHIR</strong><br/>
+    Recurso: <code>MedicationKnowledge</code><br/>
+    Preparación: ✅ completa
+  `;
+}
