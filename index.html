@@ -5293,7 +5293,46 @@ function updEditorButtons(){
 })();
 </script>
 
+<!-- MODAL TÉCNICO SNOMED / FHIR -->
+<div id="tech-modal"
+     style="
+       position:fixed;
+       inset:0;
+       background:rgba(0,0,0,.45);
+       display:none;
+       align-items:center;
+       justify-content:center;
+       z-index:2000;
+     ">
 
+  <div style="
+       width:92%;
+       max-width:740px;
+       max-height:85vh;
+       background:#ffffff;
+       border-radius:10px;
+       padding:20px;
+       overflow:auto;
+       box-shadow:0 20px 60px rgba(0,0,0,.3);
+     ">
+
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+      <h3 style="margin:0;color:#2f6f2f">
+        🔧 Interoperabilidad técnica (SNOMED CT / HL7 FHIR)
+      </h3>
+
+      <button onclick="closeTechModal()"
+              style="border:none;background:none;font-size:20px;cursor:pointer">
+        ✕
+      </button>
+    </div>
+
+    <div id="tech-modal-content">
+      <em>Cargando información técnica…</em>
+    </div>
+
+  </div>
+</div>
 </body></html>
 <!-- ========================= -->
 <!-- CATÁLOGO DESDE SUPABASE -->
