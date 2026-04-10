@@ -236,7 +236,15 @@ tr:hover td{background:var(--bg3)}
 ::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:var(--bdr2);border-radius:2px}
 #pgn{display:flex;justify-content:center;gap:5px;margin-top:11px;align-items:center;font-size:12px;color:var(--tx3)}
 </style>
-<style type="text/css" id="operaUserStyle"></style></head>
+<style type="text/css" id="operaUserStyle"></style>  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>
+    window._supa = supabase.createClient(
+      'https://hvwmvcpkjqqymvvqnlyu.supabase.co',
+      'sb_publishable_E40VaQk3uZCV01udprSpJQ_5VDZpbHZ'
+    );
+    console.log('Supabase conectado');
+  </script>
+</head>
 <body>
 
 
@@ -2493,6 +2501,38 @@ async function save(){
     await _db.collection('vfe_config').doc('chaps').set({ value: JSON.stringify(chaps) });
     await _db.collection('vfe_config').doc('stexts').set({ value: JSON.stringify(stexts) });
   } catch(e){ console.error('save error',e); }
+  // Sincronizar medicamentos con Supabase
+  try { await syncMedicamentosToSupabase(); } catch(e){ console.warn('Supabase sync error',e); }
+}
+
+async function syncMedicamentosToSupabase(){
+  if(!window._supa) return;
+  const snap = await _db.collection('medicamentos').get();
+  const meds = snap.docs.map(d=>({firebaseId:d.id,...d.data()}));
+  for(const med of meds){
+    const vtm = med.vtm||med.data?.vtm||'';
+    const amp = med.amp||med.data?.amp||'';
+    if(!vtm && !amp) continue;
+    // Buscar si ya existe en Supabase
+    const {data:existing} = await window._supa
+      .from('medications')
+      .select('id')
+      .eq('vtm_name', vtm)
+      .limit(1);
+    if(existing?.length > 0) continue; // Ya existe
+    // Insertar nuevo medicamento
+    await window._supa.from('medications').insert({
+      vtm_name: vtm,
+      vmp_name: amp,
+      atc_code: med.atc||med.data?.atc||'',
+      is_generic: (med.generico||med.data?.generico)==='Sí',
+      sns_included: (med.cnmb||med.data?.cnmb)==='Sí',
+      is_combination: (med.esCombo||med.data?.esCombo)||false,
+      sub_id: med.subId||med.data?.subId||'',
+      chapter_id: med.chapId||med.data?.chapId||'',
+    });
+  }
+  console.log('Supabase sync completado');
 }
 
 // ── Carga inicial desde Firestore ─────────────────────────────────────────
