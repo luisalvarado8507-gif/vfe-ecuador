@@ -5420,3 +5420,28 @@ async function loadTechSNOMED(medicationId) {
     Preparación: ✅ completa
   `;
 }
+// Detectar cuándo se muestra una ficha y cargar info SNOMED
+const fichaObserver = new MutationObserver(() => {
+  const ficha = document.querySelector('[data-medication-id]');
+
+  if (!ficha) return;
+
+  const medId = ficha.getAttribute('data-medication-id');
+  if (!medId) return;
+
+  // Mostrar bloque técnico
+  const techBlock = document.getElementById('tech-snomed');
+  if (techBlock) techBlock.style.display = 'block';
+
+  // Cargar técnica
+  loadTechSNOMED(medId);
+
+  // Se ejecuta una sola vez por ficha
+  fichaObserver.disconnect();
+});
+
+// Observa cambios en todo el body
+fichaObserver.observe(document.body, {
+  childList: true,
+  subtree: true
+});
