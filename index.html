@@ -6144,15 +6144,18 @@ function closeLogin(){
 // Para cambiarla: modifica el valor de EDITOR_PIN en el código
 const EDITOR_PIN = 'VFE2026';
 
-function doLogin(){
+async function doLogin(){
   const pin   = (document.getElementById('login-pin')?.value || '').trim();
   const errEl = document.getElementById('login-err');
   errEl.style.display = 'none';
   if(!pin){ errEl.textContent = 'Introduce la clave de acceso'; errEl.style.display='block'; return; }
   if(pin === EDITOR_PIN){
-    currentUser = { email: 'editor@vfe' };
+    try {
+      // Iniciar sesión anónima en Firebase para que Firestore acepte escrituras
+      await _auth.signInAnonymously();
+    } catch(e){ console.warn('Firebase anon auth error:', e); }
+    currentUser = _auth.currentUser || { email: 'editor@vfe' };
     isEditor    = true;
-    // Guardar sesión en localStorage para no tener que entrar cada vez
     localStorage.setItem('vfe_editor_session', EDITOR_PIN);
     closeLogin();
     updAuthUI();
@@ -6166,7 +6169,8 @@ function doLogin(){
   }
 }
 
-function doLogout(){
+async function doLogout(){
+  try { await _auth.signOut(); } catch(e){}
   currentUser = null;
   isEditor    = false;
   localStorage.removeItem('vfe_editor_session');
@@ -6214,11 +6218,17 @@ function updEditorButtons(){
 (async function boot(){
   document.getElementById('load-overlay').style.display='flex';
 
-  // Restaurar sesión desde localStorage (sin Firebase Auth)
+  // Restaurar sesión desde localStorage
   const savedSession = localStorage.getItem('vfe_editor_session');
   if(savedSession && savedSession === EDITOR_PIN){
-    currentUser = { email: 'editor@vfe' };
-    isEditor    = true;
+    try {
+      // Re-autenticar anónimamente en Firebase para que Firestore acepte escrituras
+      await _auth.signInAnonymously();
+      currentUser = _auth.currentUser || { email: 'editor@vfe' };
+    } catch(e){
+      currentUser = { email: 'editor@vfe' };
+    }
+    isEditor = true;
   } else {
     currentUser = null;
     isEditor    = false;
