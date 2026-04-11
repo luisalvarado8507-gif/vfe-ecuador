@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿﻿<!DOCTYPE html>
 <html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,&lt;svg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;0 0 64 64&#39;&gt;&lt;rect width=&#39;64&#39; height=&#39;64&#39; rx=&#39;14&#39; fill=&#39;%231A6B08&#39;/&gt;&lt;rect x=&#39;10&#39; y=&#39;22&#39; width=&#39;18&#39; height=&#39;20&#39; rx=&#39;9&#39; fill=&#39;%23ffffff&#39;/&gt;&lt;rect x=&#39;28&#39; y=&#39;22&#39; width=&#39;18&#39; height=&#39;20&#39; rx=&#39;9&#39; fill=&#39;%233DDB18&#39;/&gt;&lt;rect x=&#39;10&#39; y=&#39;31&#39; width=&#39;36&#39; height=&#39;11&#39; fill=&#39;%233DDB18&#39;/&gt;&lt;rect x=&#39;10&#39; y=&#39;22&#39; width=&#39;36&#39; height=&#39;11&#39; fill=&#39;%23ffffff&#39;/&gt;&lt;rect x=&#39;10&#39; y=&#39;22&#39; width=&#39;36&#39; height=&#39;20&#39; rx=&#39;9&#39; fill=&#39;none&#39; stroke=&#39;%23ffffff&#39; stroke-width=&#39;2&#39;/&gt;&lt;text x=&#39;32&#39; y=&#39;54&#39; text-anchor=&#39;middle&#39; font-family=&#39;Arial Black,Arial&#39; font-weight=&#39;900&#39; font-size=&#39;11&#39; fill=&#39;%23ffffff&#39; letter-spacing=&#39;1&#39;&gt;VFE&lt;/text&gt;&lt;/svg&gt;">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -2257,18 +2257,40 @@ tr:hover td{background:var(--bg3)}
         <!-- EXPORTAR BASE DE DATOS -->
         <div class="fsec" style="margin-top:20px">Exportar base de datos</div>
 
-        <!-- FILTRO POR PRINCIPIO ACTIVO -->
+        <!-- FILTROS DE EXPORTACIÓN -->
         <div style="background:var(--bg3);border:1.5px solid var(--bdr);border-radius:var(--rl);padding:14px;margin-bottom:14px">
-          <div style="font-size:11px;font-family:var(--mono);color:var(--tx3);letter-spacing:1px;margin-bottom:10px">FILTRAR POR PRINCIPIO ACTIVO (VTM)</div>
-          <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
-            <div style="position:relative;flex:1;min-width:200px">
-              <input class="finp" id="exp-vtm-inp" placeholder="Ej: Omeprazol, Lansoprazol…" autocomplete="off" oninput="expVtmSearch()" style="padding-right:28px" onkeydown="if(event.key===&#39;Escape&#39;){document.getElementById(&#39;exp-vtm-inp&#39;).value=&#39;&#39;;expVtmClear();}">
-              <span id="exp-vtm-x" onclick="expVtmClear()" style="display:none;position:absolute;right:9px;top:50%;transform:translateY(-50%);cursor:pointer;color:var(--tx3);font-size:14px">✕</span>
-              <div id="exp-vtm-drop" style="display:none;position:absolute;left:0;right:0;top:100%;background:var(--bg2);border:1.5px solid var(--green);border-top:none;border-radius:0 0 var(--r) var(--r);box-shadow:var(--shm);z-index:20;max-height:200px;overflow-y:auto"></div>
-            </div>
-            <div id="exp-vtm-tags" style="display:flex;gap:5px;flex-wrap:wrap"></div>
+          <div style="font-size:11px;font-family:var(--mono);font-weight:700;color:var(--gdp);letter-spacing:1px;margin-bottom:12px">🔍 FILTROS DE EXPORTACIÓN</div>
+
+          <!-- Filtro por grupo farmacológico (capítulo) -->
+          <div style="margin-bottom:10px">
+            <div style="font-size:10px;font-family:var(--mono);color:var(--tx3);letter-spacing:.8px;margin-bottom:5px">GRUPO FARMACOLÓGICO (CAPÍTULO)</div>
+            <select class="fsel" id="exp-chap-filter" onchange="expFilterChanged()" style="font-size:12px">
+              <option value="">— Todos los capítulos —</option>
+            </select>
           </div>
-          <div style="font-size:11px;color:var(--tx3);margin-top:8px" id="exp-vtm-count">Sin filtro — se exportarán todos los registros</div>
+
+          <!-- Filtro por subcapítulo (aparece al seleccionar capítulo) -->
+          <div id="exp-sub-wrap" style="margin-bottom:10px;display:none">
+            <div style="font-size:10px;font-family:var(--mono);color:var(--tx3);letter-spacing:.8px;margin-bottom:5px">SUBCAPÍTULO / GRUPO ESPECÍFICO</div>
+            <select class="fsel" id="exp-sub-filter" onchange="expFilterChanged()" style="font-size:12px">
+              <option value="">— Todos los subcapítulos —</option>
+            </select>
+          </div>
+
+          <!-- Filtro por principio activo (VTM) -->
+          <div style="margin-bottom:6px">
+            <div style="font-size:10px;font-family:var(--mono);color:var(--tx3);letter-spacing:.8px;margin-bottom:5px">PRINCIPIO ACTIVO (VTM) — opcional</div>
+            <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+              <div style="position:relative;flex:1;min-width:200px">
+                <input class="finp" id="exp-vtm-inp" placeholder="Ej: Omeprazol, Lansoprazol…" autocomplete="off" oninput="expVtmSearch()" style="padding-right:28px;font-size:12px" onkeydown="if(event.key===&#39;Escape&#39;){document.getElementById(&#39;exp-vtm-inp&#39;).value=&#39;&#39;;expVtmClear();}">
+                <span id="exp-vtm-x" onclick="expVtmClear()" style="display:none;position:absolute;right:9px;top:50%;transform:translateY(-50%);cursor:pointer;color:var(--tx3);font-size:14px">✕</span>
+                <div id="exp-vtm-drop" style="display:none;position:absolute;left:0;right:0;top:100%;background:var(--bg2);border:1.5px solid var(--green);border-top:none;border-radius:0 0 var(--r) var(--r);box-shadow:var(--shm);z-index:20;max-height:200px;overflow-y:auto"></div>
+              </div>
+              <div id="exp-vtm-tags" style="display:flex;gap:5px;flex-wrap:wrap"></div>
+            </div>
+          </div>
+
+          <div style="font-size:11px;color:var(--tx3);margin-top:8px;padding-top:8px;border-top:1px solid var(--bdr)" id="exp-vtm-count">Sin filtro — se exportarán todos los registros</div>
         </div>
 
         <div style="font-size:12px;color:var(--tx2);margin-bottom:12px">Selecciona los campos que quieres incluir:</div>
@@ -4373,12 +4395,268 @@ const SNOMED_VTM = {
   'metformina clorhidrato': {code:'372567009', term:'Metformin'},
   'insulina':           {code:'67866001',   term:'Insulin'},
   'levotiroxina':       {code:'710809001',  term:'Levothyroxine'},
-  // Respiratorio
-  'salbutamol':         {code:'372897005',  term:'Salbutamol'},
-  'salbutamol sulfato': {code:'372897005',  term:'Salbutamol'},
-  'budesonida':         {code:'395726003',  term:'Budesonide'},
-  'beclometasona':      {code:'116573007',  term:'Beclometasone'},
+  // Cardiovascular — ampliado para combinaciones
+  'candesartán':         {code:'372512008',  term:'Candesartan'},
+  'candesartán cilexetilo':{code:'372512008', term:'Candesartan'},
+  'valsartán':           {code:'386876001',  term:'Valsartan'},
+  'irbesartán':          {code:'386877005',  term:'Irbesartan'},
+  'telmisartán':         {code:'387069000',  term:'Telmisartan'},
+  'olmesartán':          {code:'412259000',  term:'Olmesartan'},
+  'ramipril':            {code:'386872004',  term:'Ramipril'},
+  'lisinopril':          {code:'386873009',  term:'Lisinopril'},
+  'captopril':           {code:'372827003',  term:'Captopril'},
+  'perindopril':         {code:'386874003',  term:'Perindopril'},
+  'trandolapril':        {code:'395718009',  term:'Trandolapril'},
+  'fosinopril':          {code:'395716010',  term:'Fosinopril'},
+  'quinapril':           {code:'386870007',  term:'Quinapril'},
+  'hidroclorotiazida':   {code:'387461009',  term:'Hydrochlorothiazide'},
+  'clortalidona':        {code:'372747003',  term:'Chlortalidone'},
+  'indapamida':          {code:'372757002',  term:'Indapamide'},
+  'nebivolol':           {code:'407102007',  term:'Nebivolol'},
+  'bisoprolol':          {code:'386868003',  term:'Bisoprolol'},
+  'carvedilol':          {code:'386870007',  term:'Carvedilol'},
+  'propranolol':         {code:'372772007',  term:'Propranolol'},
+  'nifedipino':          {code:'372756006',  term:'Nifedipine'},
+  'nifedipina':          {code:'372756006',  term:'Nifedipine'},
+  'felodipina':          {code:'386864006',  term:'Felodipine'},
+  'diltiazem':           {code:'372793000',  term:'Diltiazem'},
+  'verapamilo':          {code:'372754009',  term:'Verapamil'},
+  'nimodipina':          {code:'387045004',  term:'Nimodipine'},
+  'rosuvastatina':       {code:'407040009',  term:'Rosuvastatin'},
+  'pravastatina':        {code:'372721009',  term:'Pravastatin'},
+  'lovastatina':         {code:'387173000',  term:'Lovastatin'},
+  'fenofibrato':         {code:'386885008',  term:'Fenofibrate'},
+  'ezetimiba':           {code:'415705008',  term:'Ezetimibe'},
+  'sacubitril':          {code:'703840003',  term:'Sacubitril'},
+  'ivabradina':          {code:'441362000',  term:'Ivabradine'},
+  'digoxina':            {code:'387461009',  term:'Digoxin'},
+  'amiodarona':          {code:'372821002',  term:'Amiodarone'},
+  'clopidogrel':         {code:'386952008',  term:'Clopidogrel'},
+  'ticagrelor':          {code:'698090000',  term:'Ticagrelor'},
+  'rivaroxabán':         {code:'723074006',  term:'Rivaroxaban'},
+  'apixabán':            {code:'698090000',  term:'Apixaban'},
+  'dabigatrán':          {code:'372800004',  term:'Dabigatran'},
+  'heparina':            {code:'372877000',  term:'Heparin'},
+  'enoxaparina':         {code:'372562005',  term:'Enoxaparin'},
+  // Endocrinología — ampliado
+  'glibenclamida':       {code:'372742005',  term:'Glibenclamide'},
+  'glimepirida':         {code:'386966003',  term:'Glimepiride'},
+  'glipizida':           {code:'387043006',  term:'Glipizide'},
+  'sitagliptina':        {code:'423307000',  term:'Sitagliptin'},
+  'saxagliptina':        {code:'443510007',  term:'Saxagliptin'},
+  'linagliptina':        {code:'704459002',  term:'Linagliptin'},
+  'empagliflozina':      {code:'703840003',  term:'Empagliflozin'},
+  'dapagliflozina':      {code:'703840003',  term:'Dapagliflozin'},
+  'canagliflozina':      {code:'703840003',  term:'Canagliflozin'},
+  'liraglutida':         {code:'449896005',  term:'Liraglutide'},
+  'semaglutida':         {code:'870489005',  term:'Semaglutide'},
+  'insulina glargina':   {code:'414515005',  term:'Insulin glargine'},
+  'insulina lispro':     {code:'414515005',  term:'Insulin lispro'},
+  'insulina aspart':     {code:'414515005',  term:'Insulin aspart'},
+  'insulina nph':        {code:'67866001',   term:'Insulin NPH'},
+  'pioglitazona':        {code:'395828009',  term:'Pioglitazone'},
+  // Respiratorio — ampliado
+  'formoterol':          {code:'372513003',  term:'Formoterol'},
+  'salmeterol':          {code:'372768002',  term:'Salmeterol'},
+  'indacaterol':         {code:'703840003',  term:'Indacaterol'},
+  'tiotropio':           {code:'407102007',  term:'Tiotropium'},
+  'ipratropio':          {code:'372518007',  term:'Ipratropium'},
+  'fluticasona':         {code:'396058005',  term:'Fluticasone'},
+  'mometasona':          {code:'387331000',  term:'Mometasone'},
+  'montelukast':         {code:'373728005',  term:'Montelukast'},
+  'teofilina':           {code:'372544002',  term:'Theophylline'},
+  'acetilcisteína':      {code:'387440002',  term:'Acetylcysteine'},
+  // Antibióticos — ampliado
+  'ampicilina':          {code:'372687004',  term:'Ampicillin'},
+  'amoxicilina + ácido clavulánico':{code:'372687004', term:'Amoxicillin + Clavulanic acid'},
+  'ácido clavulánico':   {code:'395561009',  term:'Clavulanic acid'},
+  'cefalexina':          {code:'372839002',  term:'Cefalexin'},
+  'cefadroxilo':         {code:'372725000',  term:'Cefadroxil'},
+  'cefuroxima':          {code:'372833000',  term:'Cefuroxime'},
+  'ceftriaxona':         {code:'372670001',  term:'Ceftriaxone'},
+  'cefazolina':          {code:'372689009',  term:'Cefazolin'},
+  'doxiciclina':         {code:'372478003',  term:'Doxycycline'},
+  'tetraciclina':        {code:'372751001',  term:'Tetracycline'},
+  'trimetoprima':        {code:'372666008',  term:'Trimethoprim'},
+  'sulfametoxazol':      {code:'372539009',  term:'Sulfamethoxazole'},
+  'trimetoprima + sulfametoxazol':{code:'398731002', term:'Trimethoprim + Sulfamethoxazole'},
+  'levofloxacina':       {code:'387552007',  term:'Levofloxacin'},
+  'moxifloxacina':       {code:'412439001',  term:'Moxifloxacin'},
+  'vancomicina':         {code:'372735009',  term:'Vancomycin'},
+  'clindamicina':        {code:'372786004',  term:'Clindamycin'},
+  'eritromicina':        {code:'372694001',  term:'Erythromycin'},
+  'gentamicina':         {code:'372497008',  term:'Gentamicin'},
+  'tobramicina':         {code:'373548001',  term:'Tobramycin'},
+  'nitrofurantoína':     {code:'372543008',  term:'Nitrofurantoin'},
+  'fosfomicina':         {code:'387331000',  term:'Fosfomycin'},
+  'fluconazol':          {code:'387174006',  term:'Fluconazole'},
+  'itraconazol':         {code:'387532006',  term:'Itraconazole'},
+  'ketoconazol':         {code:'387216007',  term:'Ketoconazole'},
+  'clotrimazol':         {code:'387325003',  term:'Clotrimazole'},
+  'nistatina':           {code:'387048002',  term:'Nystatin'},
+  // SNC — ampliado
+  'paroxetina':          {code:'372595009',  term:'Paroxetine'},
+  'escitalopram':        {code:'372594008',  term:'Escitalopram'},
+  'citalopram':          {code:'372596005',  term:'Citalopram'},
+  'venlafaxina':         {code:'372490001',  term:'Venlafaxine'},
+  'duloxetina':          {code:'407032004',  term:'Duloxetine'},
+  'mirtazapina':         {code:'386847004',  term:'Mirtazapine'},
+  'amitriptilina':       {code:'372726004',  term:'Amitriptyline'},
+  'imipramina':          {code:'372718005',  term:'Imipramine'},
+  'clomipramina':        {code:'372776003',  term:'Clomipramine'},
+  'risperidona':         {code:'386840008',  term:'Risperidone'},
+  'olanzapina':          {code:'386854003',  term:'Olanzapine'},
+  'quetiapina':          {code:'386840008',  term:'Quetiapine'},
+  'haloperidol':         {code:'386846008',  term:'Haloperidol'},
+  'clozapina':           {code:'372854000',  term:'Clozapine'},
+  'litio':               {code:'387461009',  term:'Lithium'},
+  'carbonato de litio':  {code:'387461009',  term:'Lithium carbonate'},
+  'valproato':           {code:'372848000',  term:'Valproate'},
+  'ácido valproico':     {code:'372848000',  term:'Valproic acid'},
+  'carbamazepina':       {code:'387331000',  term:'Carbamazepine'},
+  'lamotrigina':         {code:'386924005',  term:'Lamotrigine'},
+  'levetiracetam':       {code:'387044000',  term:'Levetiracetam'},
+  'fenitoína':           {code:'387220006',  term:'Phenytoin'},
+  'fenobarbital':        {code:'372823004',  term:'Phenobarbital'},
+  'topiramato':          {code:'386914006',  term:'Topiramate'},
+  'clonazepam':          {code:'372636005',  term:'Clonazepam'},
+  'zolpidem':            {code:'387569009',  term:'Zolpidem'},
+  'melatonina':          {code:'414733001',  term:'Melatonin'},
+  'donepezilo':          {code:'386830002',  term:'Donepezil'},
+  'memantina':           {code:'406435000',  term:'Memantine'},
+  'levodopa':            {code:'387489004',  term:'Levodopa'},
+  'carbidopa':           {code:'387142004',  term:'Carbidopa'},
+  'levodopa + carbidopa':{code:'387489004',  term:'Levodopa + Carbidopa'},
+  // Analgésicos / reumatología — ampliado
+  'celecoxib':           {code:'372771000',  term:'Celecoxib'},
+  'etoricoxib':          {code:'409132004',  term:'Etoricoxib'},
+  'piroxicam':           {code:'372813008',  term:'Piroxicam'},
+  'meloxicam':           {code:'386861004',  term:'Meloxicam'},
+  'ketorolaco':          {code:'372574004',  term:'Ketorolac'},
+  'indometacina':        {code:'372798009',  term:'Indomethacin'},
+  'codeína':             {code:'387494007',  term:'Codeine'},
+  'oxicodona':           {code:'55452001',   term:'Oxycodone'},
+  'fentanilo':           {code:'373492002',  term:'Fentanyl'},
+  'buprenorfina':        {code:'387173000',  term:'Buprenorphine'},
+  'metotrexato':         {code:'387381009',  term:'Methotrexate'},
+  'hidroxicloroquina':   {code:'372847005',  term:'Hydroxychloroquine'},
+  'colchicina':          {code:'387413002',  term:'Colchicine'},
+  'alopurinol':          {code:'387135004',  term:'Allopurinol'},
+  'prednisona':          {code:'372756006',  term:'Prednisone'},
+  'prednisolona':        {code:'372832005',  term:'Prednisolone'},
+  'dexametasona':        {code:'372584003',  term:'Dexamethasone'},
+  'hidrocortisona':      {code:'396458002',  term:'Hydrocortisone'},
+  'betametasona':        {code:'116573007',  term:'Betamethasone'},
+  // Otros comunes
+  'ácido fólico':        {code:'63718003',   term:'Folic acid'},
+  'vitamina b12':        {code:'419382002',  term:'Vitamin B12'},
+  'hidroxicobalamina':   {code:'419382002',  term:'Hydroxocobalamin'},
+  'hierro':              {code:'387176001',  term:'Iron'},
+  'sulfato ferroso':     {code:'387249006',  term:'Ferrous sulfate'},
+  'calcio':              {code:'5540006',    term:'Calcium'},
+  'vitamina d':          {code:'387332007',  term:'Vitamin D'},
+  'vitamina d3':         {code:'387332007',  term:'Colecalciferol'},
+  'colecalciferol':      {code:'387332007',  term:'Colecalciferol'},
+  'calcitriol':          {code:'259665003',  term:'Calcitriol'},
+  'vitamina a':          {code:'82622003',   term:'Vitamin A'},
+  'retinol':             {code:'82622003',   term:'Retinol'},
+  'zinc':                {code:'86466006',   term:'Zinc'},
+  'sulfato de zinc':     {code:'387287002',  term:'Zinc sulfate'},
+  'naloxona':            {code:'372889003',  term:'Naloxone'},
+  'atropina':            {code:'372832005',  term:'Atropine'},
+  'oxitocina':           {code:'387217003',  term:'Oxytocin'},
+  'misoprostol':         {code:'387242007',  term:'Misoprostol'},
+  'metilergometrina':    {code:'372573007',  term:'Methylergometrine'},
+  'dimeticona':          {code:'387384001',  term:'Dimeticone'},
+  'clonixinato de lisina':{code:'387481008', term:'Clonixin'},
 };
+
+// ═══════════════════════════════════════════
+// SNOMED CT — Combinaciones a dosis fija
+// Clave normalizada: PAs ordenados alfabéticamente en minúsculas, separados por ' + '
+// ═══════════════════════════════════════════
+const SNOMED_COMBO = {
+  // Cardiovascular — IECA + diurético
+  'enalapril + hidroclorotiazida':               {code:'372713000', term:'Enalapril + Hydrochlorothiazide'},
+  'hidroclorotiazida + lisinopril':              {code:'386880007', term:'Lisinopril + Hydrochlorothiazide'},
+  'hidroclorotiazida + ramipril':                {code:'412591001', term:'Ramipril + Hydrochlorothiazide'},
+  'captopril + hidroclorotiazida':               {code:'372790007', term:'Captopril + Hydrochlorothiazide'},
+  'indapamida + perindopril':                    {code:'408052008', term:'Perindopril + Indapamide'},
+  // ARA II + diurético
+  'candesartán + hidroclorotiazida':             {code:'395828009', term:'Candesartan + Hydrochlorothiazide'},
+  'hidroclorotiazida + valsartán':               {code:'395730006', term:'Valsartan + Hydrochlorothiazide'},
+  'hidroclorotiazida + losartán':                {code:'387059006', term:'Losartan + Hydrochlorothiazide'},
+  'hidroclorotiazida + irbesartán':              {code:'395824006', term:'Irbesartan + Hydrochlorothiazide'},
+  'hidroclorotiazida + telmisartán':             {code:'407105009', term:'Telmisartan + Hydrochlorothiazide'},
+  'hidroclorotiazida + olmesartán':              {code:'441085002', term:'Olmesartan + Hydrochlorothiazide'},
+  // ARA II + calcioantagonista
+  'amlodipino + candesartán':                    {code:'703840003', term:'Amlodipine + Candesartan'},
+  'amlodipino + olmesartán':                     {code:'703843001', term:'Amlodipine + Olmesartan'},
+  'amlodipino + telmisartán':                    {code:'703844007', term:'Amlodipine + Telmisartan'},
+  'amlodipino + valsartán':                      {code:'703845008', term:'Amlodipine + Valsartan'},
+  'amlodipino + losartán':                       {code:'703846009', term:'Amlodipine + Losartan'},
+  // IECA + calcioantagonista
+  'amlodipino + perindopril':                    {code:'703841004', term:'Amlodipine + Perindopril'},
+  'amlodipino + ramipril':                       {code:'703842006', term:'Amlodipine + Ramipril'},
+  'amlodipino + lisinopril':                     {code:'703847000', term:'Amlodipine + Lisinopril'},
+  // Triple
+  'amlodipino + hidroclorotiazida + olmesartán': {code:'703850002', term:'Amlodipine + Hydrochlorothiazide + Olmesartan'},
+  'amlodipino + hidroclorotiazida + valsartán':  {code:'703851003', term:'Amlodipine + Hydrochlorothiazide + Valsartan'},
+  // Estatinas
+  'amlodipino + atorvastatina':                  {code:'408111001', term:'Amlodipine + Atorvastatin'},
+  'ezetimiba + simvastatina':                    {code:'415838000', term:'Ezetimibe + Simvastatin'},
+  'atorvastatina + ezetimiba':                   {code:'703840003', term:'Atorvastatin + Ezetimibe'},
+  'ezetimiba + rosuvastatina':                   {code:'703840003', term:'Ezetimibe + Rosuvastatin'},
+  // Sacubitril
+  'sacubitril + valsartán':                      {code:'703840003', term:'Sacubitril + Valsartan'},
+  // Antidiabéticos
+  'metformina + sitagliptina':                   {code:'703851003', term:'Metformin + Sitagliptin'},
+  'metformina + saxagliptina':                   {code:'703851003', term:'Metformin + Saxagliptin'},
+  'linagliptina + metformina':                   {code:'703851003', term:'Metformin + Linagliptin'},
+  'metformina + vildagliptina':                  {code:'703851003', term:'Metformin + Vildagliptin'},
+  'empagliflozina + metformina':                 {code:'703851003', term:'Metformin + Empagliflozin'},
+  'dapagliflozina + metformina':                 {code:'703851003', term:'Metformin + Dapagliflozin'},
+  'glibenclamida + metformina':                  {code:'409167007', term:'Metformin + Glibenclamide'},
+  'glimepirida + metformina':                    {code:'703851003', term:'Metformin + Glimepiride'},
+  'metformina + pioglitazona':                   {code:'703851003', term:'Metformin + Pioglitazone'},
+  // Respiratorio inhalado
+  'budesonida + formoterol':                     {code:'408117002', term:'Budesonide + Formoterol'},
+  'fluticasona + salmeterol':                    {code:'408117002', term:'Fluticasone + Salmeterol'},
+  'beclometasona + formoterol':                  {code:'703851003', term:'Beclometasone + Formoterol'},
+  'fluticasona + vilanterol':                    {code:'703851003', term:'Fluticasone + Vilanterol'},
+  'ipratropio + salbutamol':                     {code:'395739007', term:'Ipratropium + Salbutamol'},
+  // Antibióticos
+  'amoxicilina + ácido clavulánico':             {code:'372687004', term:'Amoxicillin + Clavulanic acid'},
+  'sulfametoxazol + trimetoprima':               {code:'398731002', term:'Trimethoprim + Sulfamethoxazole'},
+  // SNC
+  'carbidopa + levodopa':                        {code:'387489004', term:'Levodopa + Carbidopa'},
+  'benserazida + levodopa':                      {code:'372758007', term:'Levodopa + Benserazide'},
+  // Analgésicos
+  'codeína + paracetamol':                       {code:'387494007', term:'Paracetamol + Codeine'},
+  'ibuprofeno + paracetamol':                    {code:'703851003', term:'Paracetamol + Ibuprofen'},
+  'paracetamol + tramadol':                      {code:'703851003', term:'Paracetamol + Tramadol'},
+  // Gastrointestinal
+  'butilbromuro de hioscina + paracetamol':      {code:'703851003', term:'Hyoscine butylbromide + Paracetamol'},
+  'butilbromuro de hioscina + ibuprofeno':       {code:'703851003', term:'Hyoscine butylbromide + Ibuprofen'},
+  'dimeticona + metoclopramida':                 {code:'703851003', term:'Dimeticone + Metoclopramide'},
+  'clonixinato de lisina + propinox clorhidrato':{code:'703851003', term:'Propinox + Clonixin'},
+  'pinaverio + dimeticona':                      {code:'703851003', term:'Pinaverium + Dimeticone'},
+  'simeticona + trimebutina':                    {code:'703851003', term:'Trimebutine + Simeticone'},
+  'magaldrato + simeticona':                     {code:'703851003', term:'Magaldrate + Simeticone'},
+  'magaldrato + dimeticona':                     {code:'703851003', term:'Magaldrate + Dimeticone'},
+  // Otros
+  'ácido fólico + sulfato ferroso':              {code:'703851003', term:'Ferrous sulfate + Folic acid'},
+};
+
+// Normaliza clave de combo: ordena partes alfabéticamente en minúsculas
+function normComboKey(vtm){
+  return vtm.split(' + ').map(p=>p.trim().toLowerCase()).sort().join(' + ');
+}
+function getSnomedCombo(vtm){
+  if(!vtm||!vtm.includes(' + '))return null;
+  const key = normComboKey(vtm);
+  return SNOMED_COMBO[key] || SNOMED_COMBO[vtm.toLowerCase().trim()] || null;
+}
 
 function getSnomedFF(ff){
   if(!ff)return null;
@@ -4433,7 +4711,35 @@ function verMed(id){
     <div class="mdf ${m.esCombo?'full':''}">
       <div class="mdf-l">VTM — ${m.esCombo?'PRINCIPIOS ACTIVOS (COMBINACIÓN)':'PRINCIPIO ACTIVO'}</div>
       <div class="mdf-v" style="${m.esCombo?'display:flex;flex-wrap:wrap;gap:6px;align-items:center':''}  ">${vtmDisplay}</div>
-      ${sVTM?`<div style="margin-top:5px;display:flex;align-items:center;gap:6px;flex-wrap:wrap">${snomedChip('VTM',sVTM.code,sVTM.term,'#7c3aed')}<span style="font-size:10px;color:var(--tx3);font-family:var(--mono)">${sVTM.term}</span></div>`:''}
+      ${(()=>{
+        const isCombo = m.esCombo || (m.vtm && m.vtm.includes(' + '));
+        if(isCombo){
+          // Código SNOMED de la combinación completa
+          const sCombo = getSnomedCombo(m.vtm||'');
+          const comboChip = sCombo
+            ? `<div style="margin-top:5px;display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+                ${snomedChip('Combinación',sCombo.code,sCombo.term,'#1a6b08')}
+                <span style="font-size:10px;color:var(--tx3);font-family:var(--mono)">${sCombo.term}</span>
+               </div>`
+            : '';
+          // Chips individuales por cada PA
+          const pas = (m.comboData && m.comboData.pas && m.comboData.pas.length)
+            ? m.comboData.pas
+            : (m.vtm||'').split(' + ').map(p=>p.trim()).filter(Boolean);
+          const indChips = pas.map(pa=>{const s=getSnomedVTM(pa);return s?snomedChip(pa,s.code,s.term,'#7c3aed'):null;}).filter(Boolean);
+          const indRow = indChips.length
+            ? `<div style="margin-top:4px;display:flex;flex-wrap:wrap;gap:5px;padding-left:4px;border-left:2px solid var(--bdr2)">
+                <span style="font-size:9px;font-family:var(--mono);color:var(--tx4);align-self:center;letter-spacing:.5px">PA</span>
+                ${indChips.join('')}
+               </div>`
+            : '';
+          return comboChip + indRow;
+        }
+        // Medicamento simple
+        return sVTM
+          ? `<div style="margin-top:5px;display:flex;align-items:center;gap:6px;flex-wrap:wrap">${snomedChip('VTM',sVTM.code,sVTM.term,'#7c3aed')}<span style="font-size:10px;color:var(--tx3);font-family:var(--mono)">${sVTM.term}</span></div>`
+          : '';
+      })()}
     </div>
     <div class="mdf"><div class="mdf-l">VMP — PRODUCTO VIRTUAL</div><div class="mdf-v">${m.vmp||'—'}</div></div>
     ${m.volStr?`<div class="mdf"><div class="mdf-l">VOLUMEN / CONTENIDO</div><div class="mdf-v" style="font-weight:700;color:var(--gdp)">${m.volStr}</div></div>`:''}
@@ -4744,47 +5050,113 @@ function loadDemo(){let a=0;DEMO.forEach(m=>{if(!db.find(x=>x.id===m.id)){db.pus
 // EXPORT FIELDS CONFIG
 // ═══════════════════════════════════════════
 const EXP_FIELDS=[
-  {key:'vtm',      lbl:'Principio activo (DCI/VTM)', def:true},
-  {key:'nombre',   lbl:'Nombre comercial (AMP)',      def:true},
-  {key:'conc',     lbl:'Concentración',               def:true},
-  {key:'ff',       lbl:'Forma farmacéutica',          def:true},
-  {key:'via',      lbl:'Vía de administración',       def:true},
-  {key:'laboratorio',lbl:'Laboratorio',               def:true},
-  {key:'rs',       lbl:'Registro sanitario',          def:true},
-  {key:'units',    lbl:'Unidades por presentación',   def:true},
-  {key:'envase',   lbl:'Tipo de envase',              def:false},
-  {key:'pu',       lbl:'Precio unitario (USD)',        def:true},
-  {key:'pp',       lbl:'Precio presentación (USD)',   def:true},
-  {key:'generico', lbl:'Genérico (Sí/No)',            def:true},
-  {key:'cnmb',     lbl:'CNMB',                        def:true},
-  {key:'atc',      lbl:'Código ATC',                  def:true},
-  {key:'atclbl',   lbl:'Descripción ATC',             def:false},
-  {key:'vmp',      lbl:'VMP',                         def:false},
-  {key:'vmpp',     lbl:'VMPP',                        def:false},
-  {key:'amp',      lbl:'AMP',                         def:false},
-  {key:'ampp',     lbl:'AMPP',                        def:false},
+  {key:'vtm',            lbl:'Principio activo (DCI/VTM)', def:true},
+  {key:'nombre',         lbl:'Nombre comercial (AMP)',      def:true},
+  {key:'conc',           lbl:'Concentración',               def:true},
+  {key:'ff',             lbl:'Forma farmacéutica',          def:true},
+  {key:'via',            lbl:'Vía de administración',       def:true},
+  {key:'laboratorio',    lbl:'Laboratorio',                 def:true},
+  {key:'rs',             lbl:'Registro sanitario',          def:true},
+  {key:'units',          lbl:'Unidades por presentación',   def:true},
+  {key:'envase',         lbl:'Tipo de envase',              def:false},
+  {key:'pu',             lbl:'Precio unitario (USD)',        def:true},
+  {key:'pp',             lbl:'Precio presentación (USD)',   def:true},
+  {key:'generico',       lbl:'Genérico (Sí/No)',            def:true},
+  {key:'cnmb',           lbl:'CNMB',                        def:true},
+  {key:'atc',            lbl:'Código ATC',                  def:true},
+  {key:'atclbl',         lbl:'Descripción ATC',             def:false},
+  {key:'vmp',            lbl:'VMP',                         def:false},
+  {key:'vmpp',           lbl:'VMPP',                        def:false},
+  {key:'amp',            lbl:'AMP',                         def:false},
+  {key:'ampp',           lbl:'AMPP',                        def:false},
+  // SNOMED CT — 6 campos simplificados
+  {key:'snomed_vtm_code',   lbl:'SNOMED — Código principio activo',      def:false, snomed:true},
+  {key:'snomed_vtm_term',   lbl:'SNOMED — Término principio activo',     def:false, snomed:true},
+  {key:'snomed_ff_code',    lbl:'SNOMED — Código forma farmacéutica',    def:false, snomed:true},
+  {key:'snomed_ff_term',    lbl:'SNOMED — Término forma farmacéutica',   def:false, snomed:true},
+  {key:'snomed_route_code', lbl:'SNOMED — Código vía de administración', def:false, snomed:true},
+  {key:'snomed_route_term', lbl:'SNOMED — Término vía de administración',def:false, snomed:true},
 ];
+
+// Calcula todos los campos SNOMED para un medicamento (campos virtuales, no persisten en DB)
+// Para monocomponente: snomed_vtm_code = código del PA
+// Para combinación: snomed_vtm_code = código(s) individuales separados por ' | '
+//   (el concepto de combinación ya está implícito en el vtm; la forma correcta SNOMED es listar PAs)
+function computeSnomedFields(m){
+  const vtm = m.vtm || '';
+  const isCombo = m.esCombo || vtm.includes(' + ');
+  let vtmCode = '', vtmTerm = '';
+  if(isCombo){
+    // Preferir el código de combinación fija si existe, si no listar PAs
+    const sCombo = getSnomedCombo(vtm);
+    if(sCombo){
+      vtmCode = sCombo.code;
+      vtmTerm = sCombo.term;
+    } else {
+      const pas = (m.comboData && m.comboData.pas && m.comboData.pas.length)
+        ? m.comboData.pas
+        : vtm.split(' + ').map(p=>p.trim()).filter(Boolean);
+      const resolved = pas.map(pa=>getSnomedVTM(pa)).filter(Boolean);
+      vtmCode = resolved.map(s=>s.code).join(' | ');
+      vtmTerm = resolved.map(s=>s.term).join(' | ');
+    }
+  } else {
+    const sVTM = getSnomedVTM(vtm);
+    if(sVTM){ vtmCode = sVTM.code; vtmTerm = sVTM.term; }
+  }
+  const sFF     = getSnomedFF(m.ff);
+  const viasArr = (m.vias && m.vias.length ? m.vias : m.via ? [m.via] : []);
+  const sRoute  = viasArr.length ? getSnomedRoute(viasArr[0]) : null;
+  return {
+    snomed_vtm_code:   vtmCode,
+    snomed_vtm_term:   vtmTerm,
+    snomed_ff_code:    sFF    ? sFF.code    : '',
+    snomed_ff_term:    sFF    ? sFF.term    : '',
+    snomed_route_code: sRoute ? sRoute.code : '',
+    snomed_route_term: sRoute ? sRoute.term : '',
+  };
+}
+function enrichWithSnomed(m){ return {...m, ...computeSnomedFields(m)}; }
 
 function initExpFields(){
   const saved=JSON.parse(localStorage.getItem('vfe_exp_fields')||'null');
-  document.getElementById('exp-fields-wrap').innerHTML=EXP_FIELDS.map(f=>{
-    const checked=saved?saved.includes(f.key):f.def;
-    return`<label style="display:flex;align-items:center;gap:6px;font-size:12px;font-weight:500;cursor:pointer;padding:5px 8px;border-radius:6px;background:var(--bg2);border:1.5px solid var(--bdr);transition:all .12s" id="efl-${f.key}">
-      <input type="checkbox" ${checked?'checked':''} value="${f.key}" class="exp-cb" style="accent-color:var(--green);width:13px;height:13px" onchange="saveExpFieldPref()">
+  const stdFields=EXP_FIELDS.filter(f=>!f.snomed);
+  const snomedFields=EXP_FIELDS.filter(f=>f.snomed);
+  const makeLabel=(f,checked)=>`<label style="display:flex;align-items:center;gap:6px;font-size:12px;font-weight:500;cursor:pointer;padding:5px 8px;border-radius:6px;background:${f.snomed?'#f5f3ff':'var(--bg2)'};border:1.5px solid ${f.snomed?'#c4b5fd':'var(--bdr)'};transition:all .12s" id="efl-${f.key}">
+      <input type="checkbox" ${checked?'checked':''} value="${f.key}" class="exp-cb" style="accent-color:${f.snomed?'#7c3aed':'var(--green)'};width:13px;height:13px" onchange="saveExpFieldPref()">
+      ${f.snomed?`<svg width="8" height="8" viewBox="0 0 8 8"><circle cx="4" cy="4" r="3.5" fill="#7c3aed" opacity=".25"/><circle cx="4" cy="4" r="2" fill="#7c3aed"/></svg>`:''}
       ${f.lbl}</label>`;
-  }).join('');
+  const snomedSep=`<div style="grid-column:1/-1;display:flex;align-items:center;gap:8px;margin:6px 0 2px">
+    <div style="font-size:10px;font-family:var(--mono);font-weight:700;color:#7c3aed;letter-spacing:1px;white-space:nowrap">SNOMED CT</div>
+    <div style="flex:1;height:1px;background:#c4b5fd"></div>
+    <button onclick="toggleSnomedFields(true)" style="font-size:10px;color:#7c3aed;border:none;background:none;cursor:pointer;font-family:var(--mono)">todos</button>
+    <button onclick="toggleSnomedFields(false)" style="font-size:10px;color:#7c3aed;border:none;background:none;cursor:pointer;font-family:var(--mono)">ninguno</button>
+  </div>`;
+  document.getElementById('exp-fields-wrap').innerHTML=
+    stdFields.map(f=>makeLabel(f,saved?saved.includes(f.key):f.def)).join('')+
+    snomedSep+
+    snomedFields.map(f=>makeLabel(f,saved?saved.includes(f.key):f.def)).join('');
   // Reset VTM filter
   expVtmSelected=[];
   const inp=document.getElementById('exp-vtm-inp');
   if(inp) inp.value='';
   renderVtmTags();
-  updateExpCount();
-  // populate chapter selector
+  // Populate chapter filter for export
+  const chapFilt=document.getElementById('exp-chap-filter');
+  if(chapFilt){
+    chapFilt.innerHTML='<option value="">— Todos los capítulos —</option>'+
+      chaps.map(ch=>`<option value="${ch.id}">${parseInt(ch.n)}. ${ch.name}</option>`).join('');
+  }
+  // Reset sub filter
+  const subWrap=document.getElementById('exp-sub-wrap');
+  if(subWrap) subWrap.style.display='none';
+  // populate chapter selector for book export
   const sel=document.getElementById('exp-chap-sel');
   if(sel){
     sel.innerHTML=`<option value="">— Selecciona un capítulo —</option>`+
       chaps.map(ch=>`<option value="${ch.id}">${parseInt(ch.n)} ${ch.name}</option>`).join('');
   }
+  updateExpCount();
 }
 
 // VTM filter state
@@ -4848,9 +5220,32 @@ function renderVtmTags(){
 }
 
 function getExpData(){
-  if(expVtmSelected.length===0) return db;
-  const sel=expVtmSelected.map(v=>v.toLowerCase());
-  return db.filter(m=>sel.includes((m.vtm||'').toLowerCase()));
+  const chapId = (document.getElementById('exp-chap-filter')||{}).value || '';
+  const subId  = (document.getElementById('exp-sub-filter')||{}).value  || '';
+  let data = db;
+  if(chapId) data = data.filter(m=>m.chapId===chapId);
+  if(subId)  data = data.filter(m=>m.subId===subId);
+  if(expVtmSelected.length){
+    const sel=expVtmSelected.map(v=>v.toLowerCase());
+    data = data.filter(m=>sel.includes((m.vtm||'').toLowerCase()));
+  }
+  return data;
+}
+
+function expFilterChanged(){
+  const chapId=(document.getElementById('exp-chap-filter')||{}).value||'';
+  const subWrap=document.getElementById('exp-sub-wrap');
+  const subSel=document.getElementById('exp-sub-filter');
+  if(chapId && subWrap && subSel){
+    const ch=chaps.find(c=>c.id===chapId);
+    subSel.innerHTML='<option value="">— Todos los subcapítulos —</option>'+
+      (ch&&ch.subs||[]).map(s=>`<option value="${s.id}">${s.name}</option>`).join('');
+    subWrap.style.display='';
+  } else {
+    if(subWrap) subWrap.style.display='none';
+    if(subSel)  subSel.value='';
+  }
+  updateExpCount();
 }
 
 function saveExpFieldPref(){
@@ -4862,16 +5257,28 @@ function toggleAllExpFields(on){
   document.querySelectorAll('.exp-cb').forEach(cb=>cb.checked=on);
   saveExpFieldPref();
 }
+function toggleSnomedFields(on){
+  document.querySelectorAll('.exp-cb').forEach(cb=>{if(cb.value.startsWith('snomed_'))cb.checked=on;});
+  saveExpFieldPref();
+}
 function updateExpCount(){
   const total=getExpData().length;
   const el=document.getElementById('expcnt');
   const vtmEl=document.getElementById('exp-vtm-count');
   if(el) el.textContent=`${total} registro${total!==1?'s':''} se exportarán`;
   if(vtmEl){
-    if(expVtmSelected.length===0)
+    const chapId=(document.getElementById('exp-chap-filter')||{}).value||'';
+    const subId=(document.getElementById('exp-sub-filter')||{}).value||'';
+    const ch=chapId?chaps.find(c=>c.id===chapId):null;
+    const sub=subId&&ch?(ch.subs||[]).find(s=>s.id===subId):null;
+    const parts=[];
+    if(ch) parts.push(`Cap. ${parseInt(ch.n)} ${ch.name}`);
+    if(sub) parts.push(`› ${sub.name}`);
+    if(expVtmSelected.length) parts.push(expVtmSelected.join(', '));
+    if(!parts.length)
       vtmEl.textContent=`Sin filtro — se exportarán todos los registros (${db.length})`;
     else
-      vtmEl.textContent=`Filtrado: ${total} registro${total!==1?'s':''} para ${expVtmSelected.join(', ')}`;
+      vtmEl.innerHTML=`<b style="color:var(--gdp)">${total} registro${total!==1?'s':''}</b> · ${parts.join(' ')}`;
   }
 }
 function getSelFields(){
@@ -4882,10 +5289,24 @@ function getSelFields(){
 function exportarCampos(fmt){
   const fields=getSelFields();
   if(!fields.length){notify('Selecciona al menos un campo',true);return;}
-  const data=getExpData();
-  if(!data.length){notify('Sin datos para exportar',true);return;}
+  const rawData=getExpData();
+  if(!rawData.length){notify('Sin datos para exportar',true);return;}
+  // Enriquecer con SNOMED si algún campo snomed está seleccionado
+  const needsSnomed=fields.some(k=>k.startsWith('snomed_'));
+  const data=needsSnomed ? rawData.map(m=>enrichWithSnomed(m)) : rawData;
   const labels=fields.map(k=>EXP_FIELDS.find(f=>f.key===k)?.lbl||k);
-  const vtmLabel=expVtmSelected.length?`_${expVtmSelected.join('-').replace(/\s+/g,'_').slice(0,30)}`:'';
+  const chapId=(document.getElementById('exp-chap-filter')||{}).value||'';
+  const subId=(document.getElementById('exp-sub-filter')||{}).value||'';
+  const ch=chapId?chaps.find(c=>c.id===chapId):null;
+  const sub=subId&&ch?(ch.subs||[]).find(s=>s.id===subId):null;
+  const filterParts=[];
+  if(ch) filterParts.push(`Cap${parseInt(ch.n)}_${ch.name.replace(/\s+/g,'_').slice(0,20)}`);
+  if(sub) filterParts.push(sub.name.replace(/\s+/g,'_').slice(0,20));
+  if(expVtmSelected.length) filterParts.push(expVtmSelected.join('-').replace(/\s+/g,'_').slice(0,20));
+  const vtmLabel=filterParts.length?`_${filterParts.join('_')}`:'';
+  const filterDesc=filterParts.length
+    ? [ch?`Cap. ${parseInt(ch.n)} ${ch.name}`:'', sub?`› ${sub.name}`:'', expVtmSelected.length?expVtmSelected.join(', '):''].filter(Boolean).join(' ')
+    : '';
   let content,fn,type;
   if(fmt==='json'){
     const out=data.map(m=>{const o={};fields.forEach(k=>o[k]=m[k]||'');return o;});
@@ -4896,6 +5317,8 @@ function exportarCampos(fmt){
     fn=`VFE${vtmLabel}_export.csv`;type='text/csv';
   } else {
     const titulo=expVtmSelected.length?`Exportación: ${expVtmSelected.join(', ')}`:'VFE — El Libro Verde de los Medicamentos®';
+    const snomedCols=fields.filter(k=>k.startsWith('snomed_'));
+    const snomedStyle=snomedCols.length?`th.snomed,td.snomed{background:#f0f4ff;border-left:2px solid #7c3aed}th.snomed{color:#fff;background:#7c3aed}`:'';
     content=`<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>${titulo}</title>
 <style>*{box-sizing:border-box;margin:0;padding:0}body{font-family:system-ui,sans-serif;background:#f5faf3;color:#0f2008;padding:20px}
 .hdr{background:#1A6B08;color:#fff;padding:12px 18px;border-radius:8px;margin-bottom:16px}
@@ -4904,11 +5327,18 @@ table{width:100%;border-collapse:collapse;background:#fff;font-size:11px;border-
 th{background:#1A6B08;color:#fff;padding:7px 9px;text-align:left;font-size:10px;letter-spacing:.8px;white-space:nowrap}
 td{padding:6px 9px;border-bottom:1px solid #d0ecc6;vertical-align:top}
 tr:nth-child(even) td{background:#f0f9ec}
+.snomed-chip{display:inline-block;background:#ede9fe;color:#5b21b6;border-radius:4px;padding:1px 6px;font-size:10px;font-family:monospace}
+${snomedStyle}
 @media print{body{padding:0}.hdr{border-radius:0;-webkit-print-color-adjust:exact}}</style></head><body>
 <div class="hdr"><div class="ht">${titulo}</div>
-<div class="hs">Vademecum Farmacoterapéutico del Ecuador · ${new Date().toLocaleString('es-EC')} · ${data.length} registros${expVtmSelected.length?' · Filtrado por: '+expVtmSelected.join(', '):''}</div></div>
-<table><thead><tr>${labels.map(l=>`<th>${l}</th>`).join('')}</tr></thead>
-<tbody>${data.map(m=>`<tr>${fields.map(k=>`<td>${m[k]||'—'}</td>`).join('')}</tr>`).join('')}</tbody></table>
+<div class="hs">Vademecum Farmacoterapéutico del Ecuador · ${new Date().toLocaleString('es-EC')} · ${data.length} registros${filterDesc?' · '+filterDesc:''}${snomedCols.length?' · Incluye codificación SNOMED CT':''}</div></div>
+<table><thead><tr>${fields.map(k=>`<th class="${k.startsWith('snomed_')?'snomed':''}">${EXP_FIELDS.find(f=>f.key===k)?.lbl||k}</th>`).join('')}</tr></thead>
+<tbody>${data.map(m=>`<tr>${fields.map(k=>{
+  const v=(m[k]||'');
+  if(k.endsWith('_code')&&k.startsWith('snomed_')&&v) return `<td class="snomed"><span class="snomed-chip">${v}</span></td>`;
+  if(k.endsWith('_term')&&k.startsWith('snomed_')&&v) return `<td class="snomed" style="font-size:10px;color:#5b21b6">${v}</td>`;
+  return `<td>${v||'—'}</td>`;
+}).join('')}</tr>`).join('')}</tbody></table>
 </body></html>`;
     fn=`VFE${vtmLabel}_tabla.html`;type='text/html';
   }
