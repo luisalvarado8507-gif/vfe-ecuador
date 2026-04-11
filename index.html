@@ -2460,15 +2460,22 @@ tr:hover td{background:var(--bg3)}
       <div style="font-size:32px;font-weight:800;color:var(--green);letter-spacing:-1px;line-height:1">VFE</div>
       <div style="font-size:13px;font-weight:600;color:var(--tx2);margin-top:4px">Acceso del equipo editorial</div>
     </div>
-    <div class="fg" style="margin-bottom:20px">
-      <label class="flbl">CLAVE DE ACCESO</label>
-      <input class="finp" id="login-pin" type="password" placeholder="Introduce la clave" autocomplete="current-password"
-        onkeydown="if(event.key==='Enter')doLogin()" style="letter-spacing:4px;font-size:18px;text-align:center">
+    <div class="fg" style="margin-bottom:12px">
+      <label class="flbl">CORREO ELECTRÓNICO</label>
+      <input class="finp" id="login-email" type="email" placeholder="editor@ejemplo.com" autocomplete="username">
+    </div>
+    <div class="fg" style="margin-bottom:8px">
+      <label class="flbl">CONTRASEÑA</label>
+      <input class="finp" id="login-pass" type="password" placeholder="••••••••" autocomplete="current-password" onkeydown="if(event.key==='Enter')doLogin()">
+    </div>
+    <div style="text-align:right;margin-bottom:16px">
+      <span onclick="doResetPassword()" style="font-size:11px;color:var(--gdp);cursor:pointer;text-decoration:underline">¿Olvidaste tu contraseña?</span>
     </div>
     <div id="login-err" style="font-size:12px;color:var(--red);margin-bottom:12px;display:none"></div>
-    <button onclick="doLogin()" class="btn btn-p" style="width:100%;justify-content:center">Entrar</button>
+    <div id="login-ok" style="font-size:12px;color:var(--green);margin-bottom:12px;display:none"></div>
+    <button onclick="doLogin()" class="btn btn-p" style="width:100%;justify-content:center">Iniciar sesión</button>
     <div style="text-align:center;margin-top:14px;font-size:11px;color:var(--tx4)">
-      Solo para el equipo editorial (3 usuarios).<br>Los visitantes pueden consultar sin clave.
+      Solo para el equipo editorial.<br>Los visitantes pueden consultar sin iniciar sesión.
     </div>
   </div>
 </div>
@@ -6141,31 +6148,44 @@ function closeLogin(){
 }
 
 // Clave de acceso para el equipo editorial (3 usuarios comparten la misma clave)
-// Para cambiarla: modifica el valor de EDITOR_PIN en el código
-const EDITOR_PIN = 'VFE2026';
-
 async function doLogin(){
-  const pin   = (document.getElementById('login-pin')?.value || '').trim();
+  const email = (document.getElementById('login-email')?.value || '').trim();
+  const pass  = (document.getElementById('login-pass')?.value || '');
   const errEl = document.getElementById('login-err');
+  const okEl  = document.getElementById('login-ok');
   errEl.style.display = 'none';
-  if(!pin){ errEl.textContent = 'Introduce la clave de acceso'; errEl.style.display='block'; return; }
-  if(pin === EDITOR_PIN){
-    try {
-      // Iniciar sesión anónima en Firebase para que Firestore acepte escrituras
-      await _auth.signInAnonymously();
-    } catch(e){ console.warn('Firebase anon auth error:', e); }
-    currentUser = _auth.currentUser || { email: 'editor@vfe' };
+  if(okEl) okEl.style.display = 'none';
+  if(!email||!pass){ errEl.textContent='Completa email y contraseña'; errEl.style.display='block'; return; }
+  try {
+    const cred = await _auth.signInWithEmailAndPassword(email, pass);
+    currentUser = cred.user;
     isEditor    = true;
-    localStorage.setItem('vfe_editor_session', EDITOR_PIN);
     closeLogin();
     updAuthUI();
     updEditorButtons();
-    notify('Bienvenido al equipo editorial ✅');
-  } else {
-    errEl.textContent = 'Clave incorrecta';
+    notify('Bienvenido, ' + (cred.user.email||'editor'));
+  } catch(e){
+    const msg = e.code === 'auth/wrong-password' || e.code === 'auth/user-not-found' || e.code === 'auth/invalid-credential'
+      ? 'Correo o contraseña incorrectos'
+      : (e.message||'Error de autenticación');
+    errEl.textContent = msg;
     errEl.style.display = 'block';
-    document.getElementById('login-pin').value = '';
-    document.getElementById('login-pin').focus();
+  }
+}
+
+async function doResetPassword(){
+  const email = (document.getElementById('login-email')?.value || '').trim();
+  const errEl = document.getElementById('login-err');
+  const okEl  = document.getElementById('login-ok');
+  errEl.style.display = 'none';
+  if(okEl) okEl.style.display = 'none';
+  if(!email){ errEl.textContent='Escribe tu correo electrónico primero'; errEl.style.display='block'; return; }
+  try {
+    await _auth.sendPasswordResetEmail(email);
+    if(okEl){ okEl.textContent='✅ Email enviado a '+email+' — revisa tu bandeja de entrada'; okEl.style.display='block'; }
+  } catch(e){
+    errEl.textContent = 'No se pudo enviar el email: ' + (e.message||'error');
+    errEl.style.display = 'block';
   }
 }
 
@@ -6173,7 +6193,6 @@ async function doLogout(){
   try { await _auth.signOut(); } catch(e){}
   currentUser = null;
   isEditor    = false;
-  localStorage.removeItem('vfe_editor_session');
   updAuthUI();
   updEditorButtons();
   notify('Sesión cerrada');
@@ -6218,22 +6237,15 @@ function updEditorButtons(){
 (async function boot(){
   document.getElementById('load-overlay').style.display='flex';
 
-  // Restaurar sesión desde localStorage
-  const savedSession = localStorage.getItem('vfe_editor_session');
-  if(savedSession && savedSession === EDITOR_PIN){
-    try {
-      // Re-autenticar anónimamente en Firebase para que Firestore acepte escrituras
-      await _auth.signInAnonymously();
-      currentUser = _auth.currentUser || { email: 'editor@vfe' };
-    } catch(e){
-      currentUser = { email: 'editor@vfe' };
-    }
-    isEditor = true;
-  } else {
-    currentUser = null;
-    isEditor    = false;
-  }
-  updAuthUI();
+  // Restaurar sesión Firebase
+  await new Promise(resolve => {
+    _auth.onAuthStateChanged(user => {
+      currentUser = user || null;
+      isEditor    = !!user;
+      updAuthUI();
+      resolve();
+    });
+  });
 
   // Cargar datos desde Firestore
   await loadFromSupabase();
