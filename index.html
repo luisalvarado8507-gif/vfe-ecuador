@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<!-- saved from url=(0095)file:///Users/luisalvaradoaguirre/Downloads/VFE___El_Libro_Verde_de_los_Medicamentos%20(2).html -->
+<!-- saved from url=(0095)file:///Users/luisalvaradoaguirre/Downloads/VFE___El_Libro_Verde_de_los_Medicamentos%20(1).html -->
 <html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,&lt;svg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;0 0 64 64&#39;&gt;&lt;rect width=&#39;64&#39; height=&#39;64&#39; rx=&#39;14&#39; fill=&#39;%231A6B08&#39;/&gt;&lt;rect x=&#39;10&#39; y=&#39;22&#39; width=&#39;18&#39; height=&#39;20&#39; rx=&#39;9&#39; fill=&#39;%23ffffff&#39;/&gt;&lt;rect x=&#39;28&#39; y=&#39;22&#39; width=&#39;18&#39; height=&#39;20&#39; rx=&#39;9&#39; fill=&#39;%233DDB18&#39;/&gt;&lt;rect x=&#39;10&#39; y=&#39;31&#39; width=&#39;36&#39; height=&#39;11&#39; fill=&#39;%233DDB18&#39;/&gt;&lt;rect x=&#39;10&#39; y=&#39;22&#39; width=&#39;36&#39; height=&#39;11&#39; fill=&#39;%23ffffff&#39;/&gt;&lt;rect x=&#39;10&#39; y=&#39;22&#39; width=&#39;36&#39; height=&#39;20&#39; rx=&#39;9&#39; fill=&#39;none&#39; stroke=&#39;%23ffffff&#39; stroke-width=&#39;2&#39;/&gt;&lt;text x=&#39;32&#39; y=&#39;54&#39; text-anchor=&#39;middle&#39; font-family=&#39;Arial Black,Arial&#39; font-weight=&#39;900&#39; font-size=&#39;11&#39; fill=&#39;%23ffffff&#39; letter-spacing=&#39;1&#39;&gt;VFE&lt;/text&gt;&lt;/svg&gt;">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>VFE — El Libro Verde de los Medicamentos</title>
 <link href="file:///Users/luisalvaradoaguirre/Downloads/VFE%20%E2%80%94%20El%20Libro%20Verde%20de%20los%20Medicamentos_files/css2" rel="stylesheet">
 <!-- Firebase SDK -->
-<script src="./VFE — El Libro Verde de los Medicamentos_files/firebase-app-compat.js"></script><style type="text/css" id="operaUserStyle"></style><style type="text/css" id="operaUserStyle"></style>
+<script src="./VFE — El Libro Verde de los Medicamentos_files/firebase-app-compat.js"></script><style type="text/css" id="operaUserStyle"></style>
 <script src="./VFE — El Libro Verde de los Medicamentos_files/firebase-firestore-compat.js"></script>
 <script src="./VFE — El Libro Verde de los Medicamentos_files/firebase-auth-compat.js"></script>
 <style>
@@ -4482,7 +4482,7 @@ tr:hover td{background:var(--bg3)}
       <div class="mdtags"><span class="badge" style="background:var(--purple);color:#fff;font-weight:700">⊕ COMBINACIÓN</span><span class="badge bk">comprimido recubierto con película</span><span class="badge bb">oral</span><span class="badge bk">Marca</span></div>
     </div>
     <div style="display:flex;gap:6px">
-      <button class="btn btn-g bsm" onclick="exportMedPDF(&#39;3e4999ee-5e67-4e10-b05e-657983e9fcda&#39;)">⬇ Ficha PDF</button><button style="margin-left: 6px;">Ficha técnica</button><button style="margin-left: 6px;">Ficha técnica</button>
+      <button class="btn btn-g bsm" onclick="exportMedPDF(&#39;3e4999ee-5e67-4e10-b05e-657983e9fcda&#39;)">⬇ Ficha PDF</button><button style="margin-left: 6px;">Ficha técnica</button>
       <button class="btn btn-g bsm" onclick="editMed(&#39;3e4999ee-5e67-4e10-b05e-657983e9fcda&#39;)">✏ Editar</button>
     </div>
   </div>
@@ -4576,28 +4576,26 @@ tr:hover td{background:var(--bg3)}
         <button class="btn btn-g bsm" onclick="loadDemo()">⊡ Cargar medicamentos de demostración</button>
         <div id="impres" style="margin-top:9px"></div>
 
-        <!-- CORRECCIONES MASIVAS DE CALIDAD -->
+        <!-- CORRECCIONES MASIVAS -->
         <div class="fsec" style="margin-top:20px">Correcciones de calidad masivas <span class="fsec-badge">EDITOR</span></div>
         <div style="background:#fff3cd;border:1.5px solid #d97706;border-radius:var(--rl);padding:14px;margin-bottom:20px">
           <div style="font-size:12px;font-weight:600;color:#92400e;margin-bottom:8px">⚙️ Correcciones automáticas sobre todos los registros Firebase</div>
-          <div style="font-size:11px;color:#78350f;margin-bottom:12px;line-height:1.7">
-            Aplica las correcciones de calidad identificadas en el informe internacional. Opera sobre <b>todos los registros</b> de la base. Recomendado exportar JSON antes como respaldo.
-          </div>
+          <div style="font-size:11px;color:#78350f;margin-bottom:12px;line-height:1.7">Aplica las correcciones de calidad identificadas en el informe. Opera sobre <b>todos los registros</b>. Recomendado exportar JSON antes como respaldo.</div>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px">
             <label style="display:flex;align-items:flex-start;gap:7px;font-size:12px;cursor:pointer;padding:8px;background:#fff;border-radius:6px;border:1px solid #fcd34d">
-              <input type="checkbox" id="fix-inn" checked="" style="margin-top:2px;accent-color:#d97706">
+              <input type="checkbox" id="fix-inn" checked style="margin-top:2px;accent-color:#d97706">
               <div><b>INN minúscula (WHO)</b><br><span style="color:#78350f;font-size:11px">Amlodipino → amlodipino</span></div>
             </label>
             <label style="display:flex;align-items:flex-start;gap:7px;font-size:12px;cursor:pointer;padding:8px;background:#fff;border-radius:6px;border:1px solid #fcd34d">
-              <input type="checkbox" id="fix-ff" checked="" style="margin-top:2px;accent-color:#d97706">
+              <input type="checkbox" id="fix-ff" checked style="margin-top:2px;accent-color:#d97706">
               <div><b>FF términos EDQM</b><br><span style="color:#78350f;font-size:11px">Comprimidos → comprimido</span></div>
             </label>
             <label style="display:flex;align-items:flex-start;gap:7px;font-size:12px;cursor:pointer;padding:8px;background:#fff;border-radius:6px;border:1px solid #fcd34d">
-              <input type="checkbox" id="fix-conc" checked="" style="margin-top:2px;accent-color:#d97706">
+              <input type="checkbox" id="fix-conc" checked style="margin-top:2px;accent-color:#d97706">
               <div><b>Concentración UCUM</b><br><span style="color:#78350f;font-size:11px">2,5 mg → 2.5 mg</span></div>
             </label>
             <label style="display:flex;align-items:flex-start;gap:7px;font-size:12px;cursor:pointer;padding:8px;background:#fff;border-radius:6px;border:1px solid #fcd34d">
-              <input type="checkbox" id="fix-atc" checked="" style="margin-top:2px;accent-color:#d97706">
+              <input type="checkbox" id="fix-atc" checked style="margin-top:2px;accent-color:#d97706">
               <div><b>ATC incorrectos</b><br><span style="color:#78350f;font-size:11px">RS en campo ATC → correcto</span></div>
             </label>
           </div>
@@ -5408,7 +5406,7 @@ tr:hover td{background:var(--bg3)}
 </div>
 
 <!-- LOGIN MODAL -->
-<div id="login-modal" style="display: none; position: fixed; inset: 0px; background: rgba(15, 32, 8, 0.6); z-index: 900; align-items: center; justify-content: center;">
+<div id="login-modal" style="display:none;position:fixed;inset:0;background:rgba(15,32,8,.6);z-index:900;align-items:center;justify-content:center">
   <div style="background:var(--bg2);border:1.5px solid var(--bdr);border-radius:var(--rxl);padding:36px 40px;width:360px;box-shadow:0 20px 60px rgba(15,32,8,.25);position:relative">
     <button onclick="closeLogin()" style="position:absolute;top:14px;right:16px;background:none;border:none;font-size:20px;cursor:pointer;color:var(--tx4)">×</button>
     <div style="text-align:center;margin-bottom:24px">
@@ -5426,7 +5424,7 @@ tr:hover td{background:var(--bg3)}
     <div style="text-align:right;margin-bottom:16px">
       <span onclick="doResetPassword()" style="font-size:11px;color:var(--gdp);cursor:pointer;text-decoration:underline">¿Olvidaste tu contraseña?</span>
     </div>
-    <div id="login-err" style="font-size: 12px; color: var(--red); margin-bottom: 12px; display: none;">Firebase: Error (auth/requests-from-referer-null-are-blocked.).</div>
+    <div id="login-err" style="font-size:12px;color:var(--red);margin-bottom:12px;display:none"></div>
     <div id="login-ok" style="font-size:12px;color:var(--green);margin-bottom:12px;display:none"></div>
     <button onclick="doLogin()" class="btn btn-p" style="width:100%;justify-content:center">Iniciar sesión</button>
     <div style="text-align:center;margin-top:14px;font-size:11px;color:var(--tx4)">
@@ -8261,18 +8259,15 @@ document.addEventListener('mousedown', function(e){
 // ═══════════════════════════════════════════
 // CORRECCIONES MASIVAS DE CALIDAD — Firebase
 // ═══════════════════════════════════════════
-
 const FF_NORMALIZE = {
   'Comprimidos':'comprimido','comprimidos':'comprimido',
   'Comprimidos recubiertos':'comprimido recubierto con película',
   'comprimidos recubiertos':'comprimido recubierto con película',
-  'Comprimido recubierto':'comprimido recubierto con película',
   'Comprimidos de liberación prolongada':'comprimido de liberación prolongada',
   'comprimidos de liberación prolongada':'comprimido de liberación prolongada',
   'Comprimidos masticables':'comprimido masticable',
   'comprimidos masticables':'comprimido masticable',
-  'Grageas':'comprimido recubierto con película',
-  'grageas':'comprimido recubierto con película',
+  'Grageas':'comprimido recubierto con película','grageas':'comprimido recubierto con película',
   'Cápsulas':'cápsula dura','cápsulas':'cápsula dura',
   'Cápsulas duras':'cápsula dura','cápsulas duras':'cápsula dura',
   'Cápsulas blandas':'cápsula blanda',
@@ -8280,8 +8275,7 @@ const FF_NORMALIZE = {
   'cápsulas gastrorresistentes':'cápsula gastrorresistente',
   'Cápsulas de liberación prolongada':'cápsula de liberación prolongada',
   'cápsulas de liberación prolongada':'cápsula de liberación prolongada',
-  'Suspensión oral':'suspensión oral',
-  'Solución oral':'solución oral',
+  'Suspensión oral':'suspensión oral','Solución oral':'solución oral',
   'Jarabe':'solución oral',
   'Gotero':'gotas orales, solución','gotero':'gotas orales, solución',
   'Granulado solución oral':'granulado para solución oral',
@@ -8291,24 +8285,10 @@ const FF_NORMALIZE = {
   'Parche transdérmico':'parche transdérmico',
   'Inhalador presurizado':'solución para inhalación en envase a presión',
   'Polvo para inhalación':'polvo para inhalación',
-  'Solución para nebulización':'solución para nebulización',
   'Crema':'crema','Pomada':'pomada','Gel':'gel','Loción':'loción',
   'Colirio':'colirio en solución',
   'Supositorio':'supositorio','Óvulo':'óvulo vaginal',
 };
-
-const ATC_FIXES_MAP = {
-  'Amlodipino + Valsartán':'C09DB01',
-  'amlodipino + valsartán':'C09DB01',
-  'Carvedilol + Hidroclorotiazida':'C07BG01',
-  'carvedilol + hidroclorotiazida':'C07BG01',
-  'Nitroglicerina':'C01DA02',
-  'nitroglicerina':'C01DA02',
-};
-
-function normINN(v){ return v?v.split(' + ').map(p=>p.trim().toLowerCase()).join(' + '):v; }
-function normFF(v){ return FF_NORMALIZE[v]||v; }
-function normConc(v){ return v?v.replace(/(\d),(\d)/g,'$1.$2'):v; }
 
 async function runMassCorrections(){
   if(!isEditor){ notify('Solo los editores pueden aplicar correcciones',true); return; }
@@ -8319,89 +8299,65 @@ async function runMassCorrections(){
   const statusEl = document.getElementById('fix-status');
   const logEl    = document.getElementById('fix-log');
   logEl.style.display='block'; logEl.innerHTML='';
-  function log(msg,color){ logEl.innerHTML+=`<div style="color:${color||'#374151'}">${msg}</div>`; logEl.scrollTop=logEl.scrollHeight; }
-  function setStatus(msg){ if(statusEl) statusEl.textContent=msg; }
-  log('🚀 Iniciando correcciones...','#1d4ed8');
+  const log = (msg,color) => { logEl.innerHTML+=`<div style="color:${color||'#374151'}">${msg}</div>`; logEl.scrollTop=logEl.scrollHeight; };
+  const setStatus = msg => { if(statusEl) statusEl.textContent=msg; };
+  log('Iniciando correcciones...','#1d4ed8');
   setStatus('Cargando registros...');
   try {
     const snap = await _db.collection('medicamentos').get();
-    log(`📦 ${snap.docs.length} registros cargados`);
-    let innN=0,ffN=0,concN=0,atcN=0,total=0;
+    log(`${snap.docs.length} registros cargados`);
+    let innN=0,ffN=0,concN=0,atcN=0,total=0,bc=0;
     const batch = _db.batch();
-    let bc=0;
     for(const doc of snap.docs){
       const raw=doc.data(); const m={...(raw.data||raw)}; let changed=false;
       if(doINN&&m.vtm){
-        const n=normINN(m.vtm);
+        const n=m.vtm.split(' + ').map(p=>p.trim().toLowerCase()).join(' + ');
         if(n!==m.vtm){
-          if(m.vmp) m.vmp=m.vmp.replace(m.vtm,n);
-          if(m.vmpp) m.vmpp=m.vmpp.replace(m.vtm,n);
-          if(m.amp) m.amp=m.amp.replace(m.vtm,n);
-          if(m.ampp) m.ampp=m.ampp.replace(m.vtm,n);
+          ['vmp','vmpp','amp','ampp'].forEach(k=>{ if(m[k]) m[k]=m[k].replace(m.vtm,n); });
           m.vtm=n; innN++; changed=true;
         }
       }
       if(doFF&&m.ff){
-        const n=normFF(m.ff);
+        const n=FF_NORMALIZE[m.ff]||m.ff;
         if(n!==m.ff){
-          if(m.vmp) m.vmp=m.vmp.replace(m.ff,n);
-          if(m.vmpp) m.vmpp=m.vmpp.replace(m.ff,n);
-          if(m.amp) m.amp=m.amp.replace(m.ff,n);
-          if(m.ampp) m.ampp=m.ampp.replace(m.ff,n);
+          ['vmp','vmpp','amp','ampp'].forEach(k=>{ if(m[k]) m[k]=m[k].replace(m.ff,n); });
           m.ff=n; ffN++; changed=true;
         }
       }
       if(doConc&&m.conc){
-        const n=normConc(m.conc);
+        const n=m.conc.replace(/(\d),(\d)/g,'$1.$2');
         if(n!==m.conc){
-          if(m.vmp) m.vmp=m.vmp.replace(m.conc,n);
-          if(m.vmpp) m.vmpp=m.vmpp.replace(m.conc,n);
-          if(m.amp) m.amp=m.amp.replace(m.conc,n);
-          if(m.ampp) m.ampp=m.ampp.replace(m.conc,n);
+          ['vmp','vmpp','amp','ampp'].forEach(k=>{ if(m[k]) m[k]=m[k].replace(m.conc,n); });
           m.conc=n; concN++; changed=true;
         }
       }
       if(doATC){
-        const vtmKey = m.vtm||'';
-        const atcVal = m.atc||'';
-        // Fix RS in ATC field
-        const isRS = /^[0-9]{3,}/.test(atcVal)||/[0-9]{4}-[A-Z]{2,3}-[0-9]{2,4}/.test(atcVal);
+        const atc=m.atc||'';
+        const isRS=/^[0-9]{3,}/.test(atc)||/[0-9]{4}-[A-Z]{2,3}-[0-9]{2,4}/.test(atc);
         if(isRS){
-          const fix=ATC_FIXES_MAP[vtmKey];
-          if(fix){
-            if(!m.rs||!m.rs.trim()) m.rs=atcVal; // move RS to correct field
-            m.atc=fix; atcN++; changed=true;
-            log(`  🔧 ${vtmKey}: ATC=${fix}, RS=${m.rs}`,'#d97706');
-          }
+          const fixes={'Amlodipino + Valsartán':'C09DB01','amlodipino + valsartán':'C09DB01','Nitroglicerina':'C01DA02','nitroglicerina':'C01DA02'};
+          const fix=fixes[m.vtm];
+          if(fix){ if(!m.rs) m.rs=atc; m.atc=fix; atcN++; changed=true; log(`ATC corregido: ${m.vtm} → ${fix}`,'#d97706'); }
         }
-        // Fix incomplete ATC (5 chars)
-        if(atcVal==='C07BG'){ m.atc='C07BG01'; atcN++; changed=true; log(`  🔧 C07BG → C07BG01`,'#d97706'); }
+        if(atc==='C07BG'){ m.atc='C07BG01'; atcN++; changed=true; }
       }
       if(changed){
         const ref=_db.collection('medicamentos').doc(doc.id);
         if(raw.data) batch.update(ref,{data:m,updatedAt:firebase.firestore.FieldValue.serverTimestamp()});
         else batch.update(ref,{...m,updatedAt:firebase.firestore.FieldValue.serverTimestamp()});
         bc++; total++;
-        if(bc>=450){ setStatus(`Guardando lote... (${total})`); await batch.commit(); bc=0; log('  ✅ Lote guardado','#16a34a'); }
+        if(bc>=450){ await batch.commit(); bc=0; log('Lote guardado','#16a34a'); }
       }
     }
-    if(bc>0){ setStatus('Guardando...'); await batch.commit(); }
+    if(bc>0){ await batch.commit(); }
     await loadFromSupabase(); rDash();
-    log('','');
-    log('═══════════════════════════════','#374151');
-    log('✅ CORRECCIONES COMPLETADAS','#16a34a');
-    log(`   INN normalizados: ${innN}`);
-    log(`   FF normalizadas (EDQM): ${ffN}`);
-    log(`   Concentraciones (UCUM): ${concN}`);
-    log(`   ATC corregidos: ${atcN}`);
-    log(`   Total registros modificados: ${total}/${snap.docs.length}`);
-    log('═══════════════════════════════','#374151');
+    log('COMPLETADO','#16a34a');
+    log(`INN: ${innN} | FF: ${ffN} | Conc: ${concN} | ATC: ${atcN} | Total: ${total}`);
     setStatus(`✅ ${total} registros corregidos`);
-    notify(`✅ ${total} registros corregidos en Firebase`);
+    notify(`✅ ${total} registros corregidos`);
   } catch(e){
-    log(`❌ Error: ${e.message}`,'#dc2626');
+    log(`Error: ${e.message}`,'#dc2626');
     setStatus('❌ Error');
-    console.error(e);
     notify('Error: '+e.message,true);
   }
 }
