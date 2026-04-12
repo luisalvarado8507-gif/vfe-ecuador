@@ -6456,6 +6456,8 @@ function rDash(){
   set('ds-med', n(db.length));
   set('ds-pa',  n(pas));
   set('ds-pres',n(gen));
+  const cnmb=db.filter(m=>m.cnmb==='Sí').length;
+  set('ds-cnmb',n(cnmb));
 
   // Recent table
   document.getElementById('dtbody').innerHTML=[...db].reverse().slice(0,8).map(m=>`<tr>
