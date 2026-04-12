@@ -7066,7 +7066,7 @@ function guardar(){
     rs:g('f-rs'),
     atc: atcChips.length ? atcChips[0].code : '',
     atclbl: atcChips.length ? atcChips[0].lbl : '',
-    atcs: atcChips.length > 1 ? atcChips.map(c=>c.code) : undefined,
+    atcs: atcChips.length > 1 ? atcChips.map(c=>c.code) : null,
     estado:'autorizado',sns:'No',
     vmp,vmpp,amp,ampp,chapId,subId,clinData:cd
   };
