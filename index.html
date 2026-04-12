@@ -8299,9 +8299,9 @@ async function runMassCorrections(){
   const statusEl = document.getElementById('fix-status');
   const logEl    = document.getElementById('fix-log');
   logEl.style.display='block'; logEl.innerHTML='';
-  const log = (msg,color) => { logEl.innerHTML+=`<div style="color:${color||'#374151'}">${msg}</div>`; logEl.scrollTop=logEl.scrollHeight; };
+  function addLog(msg,color){ logEl.innerHTML+='<div style="color:'+(color||'#374151')+'">'+msg+'</div>'; logEl.scrollTop=logEl.scrollHeight; }
   const setStatus = msg => { if(statusEl) statusEl.textContent=msg; };
-  log('Iniciando correcciones...','#1d4ed8');
+  addLog('Iniciando correcciones...','#1d4ed8');
   setStatus('Cargando registros...');
   try {
     const snap = await _db.collection('medicamentos').get();
