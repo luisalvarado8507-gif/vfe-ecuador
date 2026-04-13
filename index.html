@@ -6212,7 +6212,8 @@ function showV(name){
     setC2Visible(false);
     rChaps();
   }
-  if(name==='dash')rDash();if(name==='db')rDb();if(name==='nuevo')buildForm();if(name==='arbol')rArbol();
+  if(name==='dash')rDash();
+  showV('dash');if(name==='db')rDb();if(name==='nuevo')buildForm();if(name==='arbol')rArbol();
   if(name==='io'){document.getElementById('expcnt').textContent=`${db.length} registros en base de datos`;initExpFields();}
   if(name==='progress')rProgress();
 }
