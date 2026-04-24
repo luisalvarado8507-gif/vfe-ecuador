@@ -4337,11 +4337,45 @@ tr:hover td{background:var(--bg3)}
             <input class="finp" id="f-nombre" placeholder="Ej. Tenormin" oninput="autoGen()">
           </div>
           <div class="fg">
+            <label class="flbl">UNIDAD DE PRESENTACIÓN <span class="opt">ISO 11239 · EDQM</span></label>
+            <select class="fsel" id="f-upres" onchange="autoGen()">
+              <option value="">— Selecciona —</option>
+              <optgroup label="Sólidos orales">
+                <option>comprimido</option>
+                <option>cápsula</option>
+                <option>gragea</option>
+                <option>granulo</option>
+                <option>polvo oral</option>
+              </optgroup>
+              <optgroup label="Parenterales">
+                <option>vial</option>
+                <option>ampolla</option>
+                <option>jeringa precargada</option>
+                <option>bolsa IV</option>
+                <option>cartucho</option>
+              </optgroup>
+              <optgroup label="Inhalados">
+                <option>inhalador dosis medida</option>
+                <option>cápsula para inhalación</option>
+                <option>ampolla para nebulización</option>
+              </optgroup>
+              <optgroup label="Tópicos / otros">
+                <option>tubo</option>
+                <option>parche</option>
+                <option>supositorio</option>
+                <option>óvulo vaginal</option>
+                <option>sobre</option>
+                <option>pluma inyectora</option>
+                <option>dispositivo intrauterino</option>
+              </optgroup>
+            </select>
+          </div>
+          <div class="fg">
             <label class="flbl">UNIDADES POR PRESENTACIÓN</label>
             <input class="finp" id="f-units" type="number" min="1" placeholder="Ej. 28" oninput="autoGen();calcPrecio()">
           </div>
           <div class="fg">
-            <label class="flbl">TIPO DE ENVASE</label>
+            <label class="flbl">TIPO DE ENVASE <span class="opt">ISO 11239 · Packaging</span></label>
             <select class="fsel" id="f-envase" onchange="autoGen()">
               <option value="">— Selecciona —</option>
               <option>blíster</option><option>frasco</option><option>tubo</option><option>vial</option>
@@ -7070,6 +7104,7 @@ function guardar(){
     comboData,
     generico:gen,cnmb:g('f-cnmb'),nombre,
     units,envase,vol,volUnit,volStr,pu,pp,rango,farmPrices,
+    upres:g('f-upres')||'',
     rs:g('f-rs'),
     atc: atcChips.length ? atcChips[0].code : '',
     atclbl: atcChips.length ? atcChips[0].lbl : '',
@@ -7139,7 +7174,7 @@ function limpiar(){
   // Campos de texto
   atcChips = []; renderAtcChips();
   const atcInp = document.getElementById('f-atc-inp'); if(atcInp) atcInp.value='';
-  ['f-vtm','f-conc','f-lab','f-nombre','f-units','f-vol','f-rs','f-atc','f-atclbl'].forEach(id=>{
+  ['f-vtm','f-conc','f-lab','f-nombre','f-units','f-vol','f-rs','f-atc','f-atclbl','f-upres'].forEach(id=>{
     const el=document.getElementById(id); if(el)el.value='';
   });
   const vus=document.getElementById('f-vol-unit'); if(vus)vus.value='mL';
@@ -7219,7 +7254,7 @@ function editMed(id){
     // Restore common fields
     [['f-lab',m.laboratorio],['f-ff',m.ff],
      ['f-gen',m.generico],['f-cnmb',m.cnmb],['f-nombre',m.nombre],
-     ['f-units',m.units],['f-envase',m.envase],['f-vol',m.vol],['f-pu',m.pu],['f-pp',m.pp],
+     ['f-units',m.units],['f-envase',m.envase],['f-upres',m.upres],['f-vol',m.vol],['f-pu',m.pu],['f-pp',m.pp],
      ['f-rs',m.rs],['f-atc',''],['f-atclbl','']
     ].forEach(([k,v])=>{const el=document.getElementById(k);if(el)el.value=v||'';});
     const vus=document.getElementById('f-vol-unit');if(vus&&m.volUnit)vus.value=m.volUnit;
@@ -8847,7 +8882,7 @@ function verMed(id){
     <div class="mdf"><div class="mdf-l">CÓDIGO ATC</div><div class="mdf-v mo">${m.atc||'—'}</div></div>
     <div class="mdf span2"><div class="mdf-l">DESCRIPCIÓN ATC</div><div class="mdf-v">${m.atclbl||'—'}</div></div>
     <div class="mdf"><div class="mdf-l">REGISTRO SANITARIO</div><div class="mdf-v mo">${m.rs||'—'}</div></div>
-    <div class="mdf"><div class="mdf-l">UNIDADES / ENVASE</div><div class="mdf-v">${m.units?m.units+' '+m.envase:'—'}</div></div>
+    <div class="mdf"><div class="mdf-l">UNIDADES / ENVASE</div><div class="mdf-v">${m.units?m.units+' '+m.envase:'—'}${m.upres?' · '+m.upres:''}</div></div>
     <div class="mdf"><div class="mdf-l" title="Mediana de precios de farmacias (excluye Farmaprecios)">PRECIO REFERENCIAL <span style="font-size:9px;color:var(--tx3);font-family:var(--mono)">(MEDIANA)</span></div><div class="mdf-v" style="font-weight:800;color:var(--gdp);font-size:16px">${m.pp?'$ '+parseFloat(m.pp).toFixed(2):'—'}</div></div>
     <div class="mdf"><div class="mdf-l">PRECIO UNITARIO</div><div class="mdf-v">${m.pu?'$ '+parseFloat(m.pu).toFixed(2):'—'}</div></div>
     ${m.rango?`<div class="mdf"><div class="mdf-l">RANGO DE PRECIOS</div><div class="mdf-v" style="color:var(--tx3)">${m.rango}</div></div>`:''}
