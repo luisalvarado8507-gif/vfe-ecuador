@@ -4108,7 +4108,16 @@ tr:hover td{background:var(--bg3)}
     <div class="view" id="view-nuevo">
       <div class="fwrap">
 
-        <div class="fsec">Datos obligatorios <span class="fsec-badge">REQUERIDOS</span></div>
+                <!-- FORM TABS -->
+        <div class="ftabs">
+          <button class="ftab act" onclick="switchTab(0,this)">📋 Datos básicos</button>
+          <button class="ftab" onclick="switchTab(1,this)">🔬 Estándares ISO</button>
+          <button class="ftab" onclick="switchTab(2,this)">🩺 Datos clínicos</button>
+        </div>
+
+        <!-- TAB 1: DATOS BÁSICOS -->
+        <div class="ftpanel act" id="ftpanel-0">
+<div class="fsec">Datos obligatorios <span class="fsec-badge">REQUERIDOS</span></div>
         <div class="fgrid">
           <!-- SELECTOR COMBINACIÓN -->
           <div class="fg full" style="margin-bottom:4px">
@@ -4491,7 +4500,11 @@ tr:hover td{background:var(--bg3)}
           </div>
         </div>
 
-        <div class="fsec">Datos regulatorios <span class="fsec-badge">OPCIONALES</span></div>
+                </div>
+
+        <!-- TAB 2: ESTÁNDARES ISO -->
+        <div class="ftpanel" id="ftpanel-1">
+<div class="fsec">Datos regulatorios <span class="fsec-badge">OPCIONALES</span></div>
         <div class="fgrid">
           <div class="fg">
             <label class="flbl">REGISTRO SANITARIO <span class="opt">OPCIONAL</span></label>
@@ -4577,9 +4590,86 @@ tr:hover td{background:var(--bg3)}
         <div class="fsec">Clasificación — Capítulo y subcapítulos</div>
         <div id="class-chain" style="display:flex;flex-direction:column;gap:10px"><div class="fgrid" style="grid-template-columns: 1fr;"><div class="fg"><label class="flbl">CAPÍTULO <span class="req">*</span></label><select class="fsel" id="cc-chap"><option value="">— Selecciona un capítulo —</option><option value="c01">1 Sistema Cardiovascular</option><option value="c02">2 Sangre y Coagulación</option><option value="c03">3 Sistema Gastrointestinal</option><option value="c04">4 Sistema Respiratorio</option><option value="c05">5 Dolor y Fiebre</option><option value="c06">6 Patología Osteoarticular</option><option value="c07">7 Sistema Hormonal</option><option value="c08">8 Ginecología y Obstetricia</option><option value="c09">9 Sistema Urogenital</option><option value="c10">10 Sistema Nervioso</option><option value="c11">11 Infecciones</option><option value="c12">12 Inmunidad</option><option value="c13">13 Dermatología</option><option value="c14">14 Oftalmología</option><option value="c15">15 Otorrinolaringología</option><option value="c16">16 Anestésicos</option><option value="c17">17 Antídotos y Quelantes</option><option value="c18">18 Medicamentos Diversos</option></select></div></div></div>
 
-        <div class="fsec">Secciones clínicas <span class="fsec-badge">SELECCIONA LAS QUE APLICAN</span></div>
+        
+          <!-- ISO 11615 — Ciclo de vida del producto -->
+          <div class="fsec" style="margin-top:20px">Ciclo de vida del producto <span class="fsec-badge">ISO 11615</span></div>
+          <div class="fgrid">
+            <div class="fg">
+              <label class="flbl">TITULAR DE LA AUTORIZACIÓN <span class="opt">ISO 11615</span></label>
+              <input class="finp" id="f-iso11615-titular" placeholder="Ej. Pfizer S.A.">
+            </div>
+            <div class="fg">
+              <label class="flbl">FECHA DE AUTORIZACIÓN <span class="opt">ISO 11615</span></label>
+              <input class="finp" id="f-iso11615-fecha" type="date">
+            </div>
+            <div class="fg">
+              <label class="flbl">ESTADO REGULATORIO <span class="opt">ISO 11615</span></label>
+              <select class="fsel" id="f-iso11615-estado">
+                <option value="">— Selecciona —</option>
+                <option value="autorizado">Autorizado</option>
+                <option value="suspendido">Suspendido</option>
+                <option value="retirado">Retirado del mercado</option>
+                <option value="en revisión">En revisión regulatoria</option>
+                <option value="caducado">Registro caducado</option>
+              </select>
+            </div>
+            <div class="fg">
+              <label class="flbl">NÚMERO DE PROCEDIMIENTO <span class="opt">ISO 11615</span></label>
+              <input class="finp" id="f-iso11615-proc" placeholder="Ej. ARCSA-2024-0123">
+            </div>
+            <div class="fg">
+              <label class="flbl">PAÍS DE AUTORIZACIÓN <span class="opt">ISO 11615</span></label>
+              <select class="fsel" id="f-iso11615-pais">
+                <option value="Ecuador">Ecuador</option>
+                <option value="Colombia">Colombia</option>
+                <option value="Perú">Perú</option>
+                <option value="Estados Unidos">Estados Unidos (FDA)</option>
+                <option value="Unión Europea">Unión Europea (EMA)</option>
+                <option value="Reino Unido">Reino Unido (MHRA)</option>
+                <option value="Otro">Otro</option>
+              </select>
+            </div>
+            <div class="fg">
+              <label class="flbl">FECHA DE VENCIMIENTO RS <span class="opt">ISO 11615</span></label>
+              <input class="finp" id="f-iso11615-vencimiento" type="date">
+            </div>
+          </div>
+
+          <!-- ISO 11616 — PhPID -->
+          <div class="fsec" style="margin-top:20px">Identificador farmacéutico global <span class="fsec-badge">ISO 11616</span></div>
+          <div class="fgrid">
+            <div class="fg">
+              <label class="flbl">PhPID — PHARMACEUTICAL PRODUCT IDENTIFIER <span class="opt">ISO 11616</span></label>
+              <input class="finp" id="f-phpid" placeholder="Ej. PhPID-C08CA01-5mg-comprimido" oninput="this.value=this.value.toUpperCase()">
+              <div style="font-size:10px;color:var(--tx3);margin-top:3px">Identificador único que combina: sustancia + concentración + forma farmacéutica. Independiente del fabricante.</div>
+            </div>
+            <div class="fg">
+              <label class="flbl">PHPID NIVEL 1 — Sustancia + FF <span class="opt">ISO 11616</span></label>
+              <input class="finp" id="f-phpid-l1" placeholder="Ej. amlodipino comprimido recubierto">
+            </div>
+            <div class="fg">
+              <label class="flbl">PHPID NIVEL 2 — Sustancia + FF + Concentración <span class="opt">ISO 11616</span></label>
+              <input class="finp" id="f-phpid-l2" placeholder="Ej. amlodipino comprimido recubierto 5 mg">
+            </div>
+            <div class="fg">
+              <label class="flbl">PHPID NIVEL 3 — Sustancia + FF + Conc + Unidad <span class="opt">ISO 11616</span></label>
+              <input class="finp" id="f-phpid-l3" placeholder="Ej. amlodipino comprimido recubierto 5 mg caja 30">
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 3: DATOS CLÍNICOS -->
+        <div class="ftpanel" id="ftpanel-2">
+<div class="fsec">Secciones clínicas <span class="fsec-badge">SELECCIONA LAS QUE APLICAN</span></div>
         <div class="ctw" id="ctogs"><button class="ct " onclick="togCS(&#39;Generalidades&#39;,this)">Generalidades</button><button class="ct " onclick="togCS(&#39;Rol del medicamento&#39;,this)">Rol del medicamento</button><button class="ct " onclick="togCS(&#39;Embarazo y lactancia&#39;,this)">Embarazo y lactancia</button><button class="ct " onclick="togCS(&#39;Interacciones&#39;,this)">Interacciones</button><button class="ct " onclick="togCS(&#39;Precauciones&#39;,this)">Precauciones</button><button class="ct " onclick="togCS(&#39;Indicaciones&#39;,this)">Indicaciones</button><button class="ct " onclick="togCS(&#39;Contraindicaciones&#39;,this)">Contraindicaciones</button><button class="ct " onclick="togCS(&#39;Efectos adversos&#39;,this)">Efectos adversos</button><button class="ct " onclick="togCS(&#39;Dosificación&#39;,this)">Dosificación</button><button class="ct " onclick="togCS(&#39;Farmacocinética&#39;,this)">Farmacocinética</button></div>
         <div id="cfields"></div>
+
+        <div style="display:flex;gap:9px;margin-top:18px">
+          <button class="btn btn-p" onclick="guardar()">Guardar medicamento</button>
+          <button class="btn btn-g" onclick="limpiar()">Limpiar formulario</button>
+        </div>
+      </div>
+        </div>
 
         <div style="display:flex;gap:9px;margin-top:18px">
           <button class="btn btn-p" onclick="guardar()">Guardar medicamento</button>
@@ -7185,6 +7275,16 @@ function guardar(){
     iso11238Forma:(document.getElementById('f-iso11238-forma')?.value)||'',
     iso11238Estado:(document.getElementById('f-iso11238-estado')?.value)||'',
     concUcum:(document.getElementById('f-conc-ucum')?.value)||'mg',
+    iso11615Titular:(document.getElementById('f-iso11615-titular')?.value)||'',
+    iso11615Fecha:(document.getElementById('f-iso11615-fecha')?.value)||'',
+    iso11615Estado:(document.getElementById('f-iso11615-estado')?.value)||'',
+    iso11615Proc:(document.getElementById('f-iso11615-proc')?.value)||'',
+    iso11615Pais:(document.getElementById('f-iso11615-pais')?.value)||'Ecuador',
+    iso11615Vencimiento:(document.getElementById('f-iso11615-vencimiento')?.value)||'',
+    phpid:(document.getElementById('f-phpid')?.value)||'',
+    phpidL1:(document.getElementById('f-phpid-l1')?.value)||'',
+    phpidL2:(document.getElementById('f-phpid-l2')?.value)||'',
+    phpidL3:(document.getElementById('f-phpid-l3')?.value)||'',
     rs:g('f-rs'),
     atc: atcChips.length ? atcChips[0].code : '',
     atclbl: atcChips.length ? atcChips[0].lbl : '',
@@ -7254,7 +7354,7 @@ function limpiar(){
   // Campos de texto
   atcChips = []; renderAtcChips();
   const atcInp = document.getElementById('f-atc-inp'); if(atcInp) atcInp.value='';
-  ['f-vtm','f-conc','f-lab','f-nombre','f-units','f-vol','f-rs','f-atc','f-atclbl','f-upres','f-iso11238-forma','f-iso11238-estado'].forEach(id=>{
+  ['f-vtm','f-conc','f-lab','f-nombre','f-units','f-vol','f-rs','f-atc','f-atclbl','f-upres','f-iso11238-forma','f-iso11238-estado','f-iso11615-titular','f-iso11615-fecha','f-iso11615-estado','f-iso11615-proc','f-iso11615-vencimiento','f-phpid','f-phpid-l1','f-phpid-l2','f-phpid-l3'].forEach(id=>{
     const el=document.getElementById(id); if(el)el.value='';
   });
   const vus=document.getElementById('f-vol-unit'); if(vus)vus.value='mL';
@@ -7334,7 +7434,11 @@ function editMed(id){
     // Restore common fields
     [['f-lab',m.laboratorio],['f-ff',m.ff],
      ['f-gen',m.generico],['f-cnmb',m.cnmb],['f-nombre',m.nombre],
-     ['f-units',m.units],['f-envase',m.envase],['f-upres',m.upres],['f-iso11238-forma',m.iso11238Forma],['f-iso11238-estado',m.iso11238Estado],['f-conc-ucum',m.concUcum],['f-vol',m.vol],['f-pu',m.pu],['f-pp',m.pp],
+     ['f-units',m.units],['f-envase',m.envase],['f-upres',m.upres],['f-iso11238-forma',m.iso11238Forma],['f-iso11238-estado',m.iso11238Estado],['f-conc-ucum',m.concUcum],
+     ['f-iso11615-titular',m.iso11615Titular],['f-iso11615-fecha',m.iso11615Fecha],
+     ['f-iso11615-estado',m.iso11615Estado],['f-iso11615-proc',m.iso11615Proc],
+     ['f-iso11615-pais',m.iso11615Pais],['f-iso11615-vencimiento',m.iso11615Vencimiento],
+     ['f-phpid',m.phpid],['f-phpid-l1',m.phpidL1],['f-phpid-l2',m.phpidL2],['f-phpid-l3',m.phpidL3],['f-vol',m.vol],['f-pu',m.pu],['f-pp',m.pp],
      ['f-rs',m.rs],['f-atc',''],['f-atclbl','']
     ].forEach(([k,v])=>{const el=document.getElementById(k);if(el)el.value=v||'';});
     const vus=document.getElementById('f-vol-unit');if(vus&&m.volUnit)vus.value=m.volUnit;
@@ -8880,6 +8984,14 @@ document.addEventListener('mousedown', function(e){
   if(drop&&inp&&!drop.contains(e.target)&&e.target!==inp) drop.style.display='none';
 });
 
+
+function switchTab(idx, btn){
+  document.querySelectorAll('.ftab').forEach(b=>b.classList.remove('act'));
+  document.querySelectorAll('.ftpanel').forEach(p=>p.classList.remove('act'));
+  btn.classList.add('act');
+  const panel=document.getElementById('ftpanel-'+idx);
+  if(panel) panel.classList.add('act');
+}
 
 function verMed(id){
   const m=db.find(x=>x.id===id);if(!m)return;
