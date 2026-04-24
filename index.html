@@ -4148,7 +4148,27 @@ tr:hover td{background:var(--bg3)}
           </div>
           <div class="fg" id="wrap-mono-conc" style="">
             <label class="flbl">CONCENTRACIÓN / DOSIS <span class="req">*</span></label>
-            <input class="finp" id="f-conc" placeholder="Ej. 500 mg  ó  250 mg/5 mL" oninput="autoGen()">
+            <div style="display:flex;gap:6px;align-items:center">
+              <input class="finp" id="f-conc" placeholder="Ej. 10" oninput="vtmAutocomplete();autoGen()" style="flex:1">
+              <select class="fsel" id="f-conc-ucum" onchange="autoGen()" style="width:130px;flex-shrink:0" title="Unidad UCUM — ISO 11240">
+                <option value="mg">mg</option>
+                <option value="g">g</option>
+                <option value="mcg">mcg (µg)</option>
+                <option value="mg/mL">mg/mL</option>
+                <option value="mcg/mL">mcg/mL</option>
+                <option value="g/100mL">g/100 mL</option>
+                <option value="mg/5mL">mg/5 mL</option>
+                <option value="UI">UI</option>
+                <option value="UI/mL">UI/mL</option>
+                <option value="mg/dosis">mg/dosis</option>
+                <option value="mcg/dosis">mcg/dosis</option>
+                <option value="%">%</option>
+                <option value="mg/g">mg/g</option>
+                <option value="mmol/L">mmol/L</option>
+                <option value="mEq">mEq</option>
+              </select>
+            </div>
+            <div style="font-size:10px;color:var(--tx3);margin-top:3px">ISO 11240 · UCUM — usa punto decimal (Ej: 2.5 no 2,5)</div>
           </div>
 
           <!-- COMBINACIÓN (oculto por defecto) -->
@@ -4476,6 +4496,62 @@ tr:hover td{background:var(--bg3)}
           <div class="fg">
             <label class="flbl">REGISTRO SANITARIO <span class="opt">OPCIONAL</span></label>
             <input class="finp" id="f-rs" placeholder="Ej. ARCSA-01-2024-123456">
+          </div>
+          <div class="fg">
+            <label class="flbl">FORMA QUÍMICA DE LA SUSTANCIA <span class="opt">ISO 11238 — sal o base</span></label>
+            <select class="fsel" id="f-iso11238-forma">
+              <option value="">— Selecciona —</option>
+              <optgroup label="Base / ácido libre">
+                <option value="base libre">base libre</option>
+                <option value="ácido libre">ácido libre</option>
+              </optgroup>
+              <optgroup label="Sales">
+                <option value="clorhidrato">clorhidrato</option>
+                <option value="sulfato">sulfato</option>
+                <option value="bromhidrato">bromhidrato</option>
+                <option value="maleato">maleato</option>
+                <option value="fumarato">fumarato</option>
+                <option value="fosfato">fosfato</option>
+                <option value="sodio">sodio (sal sódica)</option>
+                <option value="potasio">potasio (sal potásica)</option>
+                <option value="calcio">calcio (sal cálcica)</option>
+                <option value="mesilato">mesilato</option>
+                <option value="besilato">besilato</option>
+                <option value="tartrato">tartrato</option>
+                <option value="acetato">acetato</option>
+                <option value="succinato">succinato</option>
+                <option value="lactato">lactato</option>
+              </optgroup>
+              <optgroup label="Ésteres / profármacos">
+                <option value="éster etílico">éster etílico</option>
+                <option value="éster metílico">éster metílico</option>
+                <option value="éster propílico">éster propílico</option>
+                <option value="pivoxilo">pivoxilo</option>
+                <option value="mofetilo">mofetilo</option>
+              </optgroup>
+              <optgroup label="Hidratos / solvatos">
+                <option value="monohidrato">monohidrato</option>
+                <option value="dihidrato">dihidrato</option>
+                <option value="anhidro">anhidro</option>
+              </optgroup>
+              <optgroup label="Otros">
+                <option value="mezcla racémica">mezcla racémica</option>
+                <option value="enantiómero R">enantiómero R</option>
+                <option value="enantiómero S">enantiómero S</option>
+                <option value="no aplica">no aplica</option>
+              </optgroup>
+            </select>
+          </div>
+          <div class="fg">
+            <label class="flbl">ESTADO FÍSICO <span class="opt">ISO 11238</span></label>
+            <select class="fsel" id="f-iso11238-estado">
+              <option value="">— Selecciona —</option>
+              <option value="sólido cristalino">sólido cristalino</option>
+              <option value="sólido amorfo">sólido amorfo</option>
+              <option value="líquido">líquido</option>
+              <option value="gas">gas</option>
+              <option value="semisólido">semisólido</option>
+            </select>
           </div>
           <div class="fg full">
             <label class="flbl">CÓDIGO(S) ATC <span class="opt">OPCIONAL — puede tener varios</span>
@@ -7044,8 +7120,9 @@ function guardar(){
 
   if(tipoPA === 'mono'){
     vtm = g('f-vtm');
-    conc = g('f-conc');
-    if(!vtm||!conc){notify('Principio activo y concentración son obligatorios',true);return;}
+    const concVal=g('f-conc'); const concUnit=(document.getElementById('f-conc-ucum')?.value)||'mg';
+    conc = concVal ? concVal+' '+concUnit : '';
+    if(!vtm||!concVal){notify('Principio activo y concentración son obligatorios',true);return;}
   } else {
     const cd = getComboData();
     if(cd.pas.length < 2 || cd.pas.some(p=>!p)){notify('Ingresa todos los principios activos de la combinación',true);return;}
@@ -7105,6 +7182,9 @@ function guardar(){
     generico:gen,cnmb:g('f-cnmb'),nombre,
     units,envase,vol,volUnit,volStr,pu,pp,rango,farmPrices,
     upres:g('f-upres')||'',
+    iso11238Forma:(document.getElementById('f-iso11238-forma')?.value)||'',
+    iso11238Estado:(document.getElementById('f-iso11238-estado')?.value)||'',
+    concUcum:(document.getElementById('f-conc-ucum')?.value)||'mg',
     rs:g('f-rs'),
     atc: atcChips.length ? atcChips[0].code : '',
     atclbl: atcChips.length ? atcChips[0].lbl : '',
@@ -7174,7 +7254,7 @@ function limpiar(){
   // Campos de texto
   atcChips = []; renderAtcChips();
   const atcInp = document.getElementById('f-atc-inp'); if(atcInp) atcInp.value='';
-  ['f-vtm','f-conc','f-lab','f-nombre','f-units','f-vol','f-rs','f-atc','f-atclbl','f-upres'].forEach(id=>{
+  ['f-vtm','f-conc','f-lab','f-nombre','f-units','f-vol','f-rs','f-atc','f-atclbl','f-upres','f-iso11238-forma','f-iso11238-estado'].forEach(id=>{
     const el=document.getElementById(id); if(el)el.value='';
   });
   const vus=document.getElementById('f-vol-unit'); if(vus)vus.value='mL';
@@ -7254,7 +7334,7 @@ function editMed(id){
     // Restore common fields
     [['f-lab',m.laboratorio],['f-ff',m.ff],
      ['f-gen',m.generico],['f-cnmb',m.cnmb],['f-nombre',m.nombre],
-     ['f-units',m.units],['f-envase',m.envase],['f-upres',m.upres],['f-vol',m.vol],['f-pu',m.pu],['f-pp',m.pp],
+     ['f-units',m.units],['f-envase',m.envase],['f-upres',m.upres],['f-iso11238-forma',m.iso11238Forma],['f-iso11238-estado',m.iso11238Estado],['f-conc-ucum',m.concUcum],['f-vol',m.vol],['f-pu',m.pu],['f-pp',m.pp],
      ['f-rs',m.rs],['f-atc',''],['f-atclbl','']
     ].forEach(([k,v])=>{const el=document.getElementById(k);if(el)el.value=v||'';});
     const vus=document.getElementById('f-vol-unit');if(vus&&m.volUnit)vus.value=m.volUnit;
