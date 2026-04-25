@@ -263,7 +263,7 @@ tr:hover td{background:var(--bg3)}
       'https://hvwmvcpkjqqymvvqnlyu.supabase.co',
       'sb_publishable_E40VaQk3uZCV01udprSpJQ_5VDZpbHZ'
     );
-    console.log('Supabase conectado');
+    // Supabase conectado
   </script>
 <style type="text/css"></style></head>
 <body>
@@ -5679,16 +5679,16 @@ const CHAPS=[
 ];
 
 const DEMO=[
-  {id:'dm1',vtm:'atenolol',conc:'50 mg',laboratorio:'AstraZeneca',ff:'Comprimidos',via:'oral',generico:'No',nombre:'Tenormin',units:'28',envase:'blíster',pu:'0.25',rs:'ARC001',atc:'C07AB03',atclbl:'Atenolol — Beta-bloqueantes selectivos',estado:'autorizado',sns:'Sí',pais:'Ecuador',chapId:'c01',subId:'s0101',clinData:{Generalidades:'Betabloqueante cardioselectivo de acción prolongada.',Indicaciones:'HTA, angina estable, post-infarto.',Contraindicaciones:'Bradicardia, bloqueo AV, asma bronquial.'}},
-  {id:'dm2',vtm:'enalapril',conc:'10 mg',laboratorio:'Genfar S.A.',ff:'Comprimidos',via:'oral',generico:'Sí',nombre:'Enalapril Genfar',units:'30',envase:'blíster',pu:'0.12',rs:'ARC002',atc:'C09AA02',atclbl:'Enalapril — IECA',estado:'autorizado',sns:'Sí',pais:'Ecuador',chapId:'c01',subId:'s0101',clinData:{Generalidades:'IECA de primera línea para HTA e IC.',Dosificación:'5–40 mg/día en 1–2 tomas.'}},
-  {id:'dm3',vtm:'warfarina',conc:'5 mg',laboratorio:'Lafrancol',ff:'Comprimidos',via:'oral',generico:'Sí',nombre:'Warfarina',units:'30',envase:'frasco',pu:'0.14',rs:'ARC003',atc:'B01AA03',atclbl:'Warfarina — Anticoagulantes',estado:'autorizado',sns:'Sí',pais:'Ecuador',chapId:'c02',subId:'s0201',clinData:{Generalidades:'Anticoagulante oral antagonista vitamina K.',Interacciones:'AINEs, antibióticos, alcohol — múltiples interacciones.','Embarazo y lactancia':'Contraindicado en 1er y 3er trimestre.'}},
-  {id:'dm4',vtm:'omeprazol',conc:'20 mg',laboratorio:'MK S.A.',ff:'Cápsulas gastrorresistentes',via:'oral',generico:'Sí',nombre:'Omeprazol MK',units:'14',envase:'blíster',pu:'0.21',rs:'ARC004',atc:'A02BC01',atclbl:'Omeprazol — IBP',estado:'autorizado',sns:'Sí',pais:'Ecuador',chapId:'c03',subId:'s0301',clinData:{Generalidades:'Inhibidor de la bomba de protones (IBP).',Indicaciones:'ERGE, úlcera péptica, H. pylori.',Precauciones:'Uso prolongado: hipomagnesemia, fracturas.'}},
-  {id:'dm5',vtm:'salbutamol',conc:'100 mcg/dosis',laboratorio:'GlaxoSmithKline',ff:'Inhalador presurizado',via:'inhalatoria',generico:'No',nombre:'Ventolin',units:'200',envase:'inhalador',pu:'0.045',rs:'ARC005',atc:'R03AC02',atclbl:'Salbutamol — SABA',estado:'autorizado',sns:'Sí',pais:'Ecuador',chapId:'c04',subId:'s0401',clinData:{Generalidades:'Agonista beta-2 de acción corta (SABA).',Dosificación:'2 pulsaciones cada 4–6 h en crisis.','Embarazo y lactancia':'Puede usarse con precaución.'}},
-  {id:'dm6',vtm:'ibuprofeno',conc:'400 mg',laboratorio:'Genfar S.A.',ff:'Comprimidos recubiertos',via:'oral',generico:'Sí',nombre:'Ibuprofeno Genfar',units:'20',envase:'blíster',pu:'0.15',rs:'ARC006',atc:'M01AE01',atclbl:'Ibuprofeno — AINEs',estado:'autorizado',sns:'No',pais:'Ecuador',chapId:'c05',subId:'s0504',clinData:{Indicaciones:'Dolor leve-moderado, fiebre, inflamación.',Contraindicaciones:'Úlcera activa, IRC grave, embarazo 3T.','Embarazo y lactancia':'Contraindicado en tercer trimestre.',Interacciones:'Anticoagulantes, litio, diuréticos.'}},
-  {id:'dm7',vtm:'paracetamol',conc:'500 mg',laboratorio:'Genfar S.A.',ff:'Comprimidos',via:'oral',generico:'Sí',nombre:'Paracetamol Genfar',units:'20',envase:'blíster',pu:'0.09',rs:'ARC007',atc:'N02BE01',atclbl:'Paracetamol — Analgésicos no opioides',estado:'autorizado',sns:'No',pais:'Ecuador',chapId:'c05',subId:'s0501',clinData:{Generalidades:'Analgésico y antipirético sin actividad antiinflamatoria significativa.','Embarazo y lactancia':'Seguro en dosis terapéuticas.'}},
-  {id:'dm8',vtm:'metformina',conc:'850 mg',laboratorio:'Genfar S.A.',ff:'Comprimidos',via:'oral',generico:'Sí',nombre:'Metformina Genfar',units:'30',envase:'frasco',pu:'0.11',rs:'ARC008',atc:'A10BA02',atclbl:'Metformina — Biguanidas',estado:'autorizado',sns:'Sí',pais:'Ecuador',chapId:'c07',subId:'s0702',clinData:{'Rol del medicamento':'Primera elección en DM2. Reduce mortalidad CV.',Precauciones:'Suspender 48 h antes de contraste yodado.','Embarazo y lactancia':'Puede usarse en diabetes gestacional.'}},
-  {id:'dm9',vtm:'amoxicilina',conc:'500 mg',laboratorio:'Genfar S.A.',ff:'Cápsulas duras',via:'oral',generico:'Sí',nombre:'Amoxicilina Genfar',units:'21',envase:'blíster',pu:'0.27',rs:'ARC009',atc:'J01CA04',atclbl:'Amoxicilina — Penicilinas',estado:'autorizado',sns:'Sí',pais:'Ecuador',chapId:'c11',subId:'s1101',clinData:{Indicaciones:'Infecciones ORL, respiratorias, urinarias.','Embarazo y lactancia':'Categoría B. Segura.',Interacciones:'Anticonceptivos orales (reduce eficacia).'}},
-  {id:'dm10',vtm:'sertralina',conc:'50 mg',laboratorio:'MK S.A.',ff:'Comprimidos recubiertos',via:'oral',generico:'Sí',nombre:'Sertralina MK',units:'30',envase:'blíster',pu:'0.31',rs:'ARC010',atc:'N06AB06',atclbl:'Sertralina — ISRS',estado:'autorizado',sns:'Sí',pais:'Ecuador',chapId:'c10',subId:'s1001',clinData:{Generalidades:'ISRS de primera línea.',Precauciones:'Riesgo suicida en <25 años. No suspender bruscamente.','Embarazo y lactancia':'Usar si beneficio > riesgo.'}},
+  {id:'dm1',vtm:'atenolol',conc:'50 mg',laboratorio:'AstraZeneca',ff:'Comprimidos',via:'oral',generico:'No',nombre:'Tenormin',units:'28',envase:'blíster',pu:'0.25',rs:'ARC001',atc:'C07AB03',atclbl:'Atenolol — Beta-bloqueantes selectivos',estado:'pendiente',sns:'Sí',pais:'Ecuador',chapId:'c01',subId:'s0101',clinData:{Generalidades:'Betabloqueante cardioselectivo de acción prolongada.',Indicaciones:'HTA, angina estable, post-infarto.',Contraindicaciones:'Bradicardia, bloqueo AV, asma bronquial.'}},
+  {id:'dm2',vtm:'enalapril',conc:'10 mg',laboratorio:'Genfar S.A.',ff:'Comprimidos',via:'oral',generico:'Sí',nombre:'Enalapril Genfar',units:'30',envase:'blíster',pu:'0.12',rs:'ARC002',atc:'C09AA02',atclbl:'Enalapril — IECA',estado:'pendiente',sns:'Sí',pais:'Ecuador',chapId:'c01',subId:'s0101',clinData:{Generalidades:'IECA de primera línea para HTA e IC.',Dosificación:'5–40 mg/día en 1–2 tomas.'}},
+  {id:'dm3',vtm:'warfarina',conc:'5 mg',laboratorio:'Lafrancol',ff:'Comprimidos',via:'oral',generico:'Sí',nombre:'Warfarina',units:'30',envase:'frasco',pu:'0.14',rs:'ARC003',atc:'B01AA03',atclbl:'Warfarina — Anticoagulantes',estado:'pendiente',sns:'Sí',pais:'Ecuador',chapId:'c02',subId:'s0201',clinData:{Generalidades:'Anticoagulante oral antagonista vitamina K.',Interacciones:'AINEs, antibióticos, alcohol — múltiples interacciones.','Embarazo y lactancia':'Contraindicado en 1er y 3er trimestre.'}},
+  {id:'dm4',vtm:'omeprazol',conc:'20 mg',laboratorio:'MK S.A.',ff:'Cápsulas gastrorresistentes',via:'oral',generico:'Sí',nombre:'Omeprazol MK',units:'14',envase:'blíster',pu:'0.21',rs:'ARC004',atc:'A02BC01',atclbl:'Omeprazol — IBP',estado:'pendiente',sns:'Sí',pais:'Ecuador',chapId:'c03',subId:'s0301',clinData:{Generalidades:'Inhibidor de la bomba de protones (IBP).',Indicaciones:'ERGE, úlcera péptica, H. pylori.',Precauciones:'Uso prolongado: hipomagnesemia, fracturas.'}},
+  {id:'dm5',vtm:'salbutamol',conc:'100 mcg/dosis',laboratorio:'GlaxoSmithKline',ff:'Inhalador presurizado',via:'inhalatoria',generico:'No',nombre:'Ventolin',units:'200',envase:'inhalador',pu:'0.045',rs:'ARC005',atc:'R03AC02',atclbl:'Salbutamol — SABA',estado:'pendiente',sns:'Sí',pais:'Ecuador',chapId:'c04',subId:'s0401',clinData:{Generalidades:'Agonista beta-2 de acción corta (SABA).',Dosificación:'2 pulsaciones cada 4–6 h en crisis.','Embarazo y lactancia':'Puede usarse con precaución.'}},
+  {id:'dm6',vtm:'ibuprofeno',conc:'400 mg',laboratorio:'Genfar S.A.',ff:'Comprimidos recubiertos',via:'oral',generico:'Sí',nombre:'Ibuprofeno Genfar',units:'20',envase:'blíster',pu:'0.15',rs:'ARC006',atc:'M01AE01',atclbl:'Ibuprofeno — AINEs',estado:'pendiente',sns:'No',pais:'Ecuador',chapId:'c05',subId:'s0504',clinData:{Indicaciones:'Dolor leve-moderado, fiebre, inflamación.',Contraindicaciones:'Úlcera activa, IRC grave, embarazo 3T.','Embarazo y lactancia':'Contraindicado en tercer trimestre.',Interacciones:'Anticoagulantes, litio, diuréticos.'}},
+  {id:'dm7',vtm:'paracetamol',conc:'500 mg',laboratorio:'Genfar S.A.',ff:'Comprimidos',via:'oral',generico:'Sí',nombre:'Paracetamol Genfar',units:'20',envase:'blíster',pu:'0.09',rs:'ARC007',atc:'N02BE01',atclbl:'Paracetamol — Analgésicos no opioides',estado:'pendiente',sns:'No',pais:'Ecuador',chapId:'c05',subId:'s0501',clinData:{Generalidades:'Analgésico y antipirético sin actividad antiinflamatoria significativa.','Embarazo y lactancia':'Seguro en dosis terapéuticas.'}},
+  {id:'dm8',vtm:'metformina',conc:'850 mg',laboratorio:'Genfar S.A.',ff:'Comprimidos',via:'oral',generico:'Sí',nombre:'Metformina Genfar',units:'30',envase:'frasco',pu:'0.11',rs:'ARC008',atc:'A10BA02',atclbl:'Metformina — Biguanidas',estado:'pendiente',sns:'Sí',pais:'Ecuador',chapId:'c07',subId:'s0702',clinData:{'Rol del medicamento':'Primera elección en DM2. Reduce mortalidad CV.',Precauciones:'Suspender 48 h antes de contraste yodado.','Embarazo y lactancia':'Puede usarse en diabetes gestacional.'}},
+  {id:'dm9',vtm:'amoxicilina',conc:'500 mg',laboratorio:'Genfar S.A.',ff:'Cápsulas duras',via:'oral',generico:'Sí',nombre:'Amoxicilina Genfar',units:'21',envase:'blíster',pu:'0.27',rs:'ARC009',atc:'J01CA04',atclbl:'Amoxicilina — Penicilinas',estado:'pendiente',sns:'Sí',pais:'Ecuador',chapId:'c11',subId:'s1101',clinData:{Indicaciones:'Infecciones ORL, respiratorias, urinarias.','Embarazo y lactancia':'Categoría B. Segura.',Interacciones:'Anticonceptivos orales (reduce eficacia).'}},
+  {id:'dm10',vtm:'sertralina',conc:'50 mg',laboratorio:'MK S.A.',ff:'Comprimidos recubiertos',via:'oral',generico:'Sí',nombre:'Sertralina MK',units:'30',envase:'blíster',pu:'0.31',rs:'ARC010',atc:'N06AB06',atclbl:'Sertralina — ISRS',estado:'pendiente',sns:'Sí',pais:'Ecuador',chapId:'c10',subId:'s1001',clinData:{Generalidades:'ISRS de primera línea.',Precauciones:'Riesgo suicida en <25 años. No suspender bruscamente.','Embarazo y lactancia':'Usar si beneficio > riesgo.'}},
 ];
 
 // ═══════════════════════════════════════════
@@ -5711,7 +5711,7 @@ firebase.initializeApp(firebaseConfig);
 const _db   = firebase.firestore();
 const _auth = firebase.auth();
 
-console.log('✅ Firebase conectado correctamente');
+// Firebase conectado
 
 // ── Estado de autenticación ──────────────────────────────────────────────
 let currentUser = null;
@@ -5769,7 +5769,7 @@ async function syncMedicamentosToSupabase(){
       chapter_id: med.chapId||med.data?.chapId||'',
     });
   }
-  console.log('Supabase sync completado');
+  // Supabase sync completado
 }
 
 // ── Carga inicial desde Firestore ─────────────────────────────────────────
@@ -7394,9 +7394,32 @@ function getClinData(){
 }
 function g2(id){const el=document.getElementById(id);return el?el.value:'';}
 
+
+function validarGTIN(gtin){
+  if(!gtin) return true; // opcional
+  const s = gtin.replace(/\D/g,'');
+  if(![8,12,13,14].includes(s.length)) return false;
+  const digits = s.split('').map(Number);
+  const check = digits.pop();
+  const sum = digits.reverse().reduce((acc,d,i)=>acc+d*(i%2===0?3:1),0);
+  return (10-(sum%10))%10 === check;
+}
 function guardar(){
   // Verificar que sea editor
   if(!isEditor){ notify('⚠️ Inicia sesión para guardar medicamentos', true); return; }
+
+  // Validar fecha vencimiento RS
+  const venc = document.getElementById('f-iso11615-vencimiento')?.value;
+  if(venc && new Date(venc) < new Date()){
+    notify('⚠️ La fecha de vencimiento del RS ya ha caducado. Verifica el estado regulatorio.', true);
+  }
+  // Validar GTIN si existe
+  const gtinVal = document.getElementById('f-gtin')?.value;
+  if(gtinVal && !validarGTIN(gtinVal)){
+    notify('❌ El código GTIN/EAN no es válido (dígito de control incorrecto)', true);
+    return;
+  }
+
 
   const lab=g('f-lab'),ff=g('f-ff'),gen=g('f-gen');
   const vias=getVias();
@@ -7472,7 +7495,7 @@ function guardar(){
 
   const cd=getClinData();
   const m={
-    id:editId||Date.now().toString(),
+    id:editId||((typeof crypto !== 'undefined' && crypto.randomUUID) ? crypto.randomUUID() : (Date.now().toString(36)+Math.random().toString(36).slice(2))),
     vtm,conc,laboratorio:lab,ff,
     via:viaStr, vias,
     esCombo: tipoPA === 'combo',
@@ -7483,7 +7506,7 @@ function guardar(){
     atc: atcChips.length ? atcChips[0].code : '',
     atclbl: atcChips.length ? atcChips[0].lbl : '',
     atcs: atcChips.length > 1 ? atcChips.map(c=>c.code) : undefined,
-    estado:'autorizado',sns:'No',
+    estado:'pendiente',sns:'No',
     vmp,vmpp,amp,ampp,chapId,subId,clinData:cd
   };
   const _wasEdit=!!editId;
@@ -7500,19 +7523,32 @@ function guardar(){
   // Guardar en Firebase Firestore
   (async()=>{
     try {
+      const _userEmail = currentUser ? currentUser.email : 'desconocido';
       if(_wasEdit){
         await _db.collection('medicamentos').doc(_editId).update({
           data: m, vtm: m.vtm, amp: m.amp||m.nombre||m.vtm,
-          laboratorio: m.laboratorio, estado: m.estado||'autorizado',
-          updatedAt: firebase.firestore.FieldValue.serverTimestamp()
+          laboratorio: m.laboratorio, estado: m.estado||'pendiente',
+          updatedAt: firebase.firestore.FieldValue.serverTimestamp(),
+          updatedBy: _userEmail
+        });
+        await _db.collection('auditLog').add({
+          accion:'UPDATE', medId:_editId, vtm:m.vtm, amp:m.amp||m.nombre||m.vtm,
+          usuario:_userEmail, timestamp:firebase.firestore.FieldValue.serverTimestamp()
         });
         db = db.map(x=>x.id===_editId ? {...m, id:_editId} : x);
       } else {
-        const newId = Date.now().toString();
+        const newId = (typeof crypto !== 'undefined' && crypto.randomUUID) ? crypto.randomUUID() : (Date.now().toString(36) + Math.random().toString(36).slice(2));
         await _db.collection('medicamentos').doc(newId).set({
           data: m, vtm: m.vtm, amp: m.amp||m.nombre||m.vtm,
-          laboratorio: m.laboratorio, estado: m.estado||'autorizado',
-          createdAt: firebase.firestore.FieldValue.serverTimestamp()
+          laboratorio: m.laboratorio, estado: m.estado||'pendiente',
+          createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+          createdBy: _userEmail,
+          updatedAt: firebase.firestore.FieldValue.serverTimestamp(),
+          updatedBy: _userEmail
+        });
+        await _db.collection('auditLog').add({
+          accion:'CREATE', medId:newId, vtm:m.vtm, amp:m.amp||m.nombre||m.vtm,
+          usuario:_userEmail, timestamp:firebase.firestore.FieldValue.serverTimestamp()
         });
         m.id = newId;
         db.unshift({...m, id: newId});
@@ -7683,11 +7719,22 @@ function delMed(id){
   if(!confirm(`¿Eliminar "${m.amp||m.vtm}"?`))return;
   (async()=>{
     try {
-      await _db.collection('medicamentos').doc(id).delete();
+      const _delUser = currentUser ? currentUser.email : 'desconocido';
+      // Borrado lógico: marcar como eliminado en lugar de destruir
+      await _db.collection('medicamentos').doc(id).update({
+        deletedAt: firebase.firestore.FieldValue.serverTimestamp(),
+        deletedBy: _delUser,
+        estado: 'eliminado'
+      });
+      // Registro de auditoría
+      await _db.collection('auditLog').add({
+        accion:'DELETE', medId:id, vtm:m.vtm, amp:m.amp||m.nombre||m.vtm,
+        usuario:_delUser, timestamp:firebase.firestore.FieldValue.serverTimestamp()
+      });
       db=db.filter(x=>x.id!==id);
       rDb();rC2();
       if(aSub) showSubView();
-      notify('Eliminado',true);
+      notify('Eliminado');
     } catch(e){
       notify('Error al eliminar: '+(e.message||e), true);
     }
@@ -9480,7 +9527,7 @@ function confirmarImport(){
     const via=g('via');
     const vias=via?via.split(/[,/;]+/).map(s=>s.trim()).filter(Boolean):[];
     const m={
-      id:Date.now().toString()+Math.random(),
+      id:(typeof crypto!=='undefined'&&crypto.randomUUID)?crypto.randomUUID():(Date.now().toString(36)+Math.random().toString(36).slice(2)),
       vtm:(vtm||nombre||'').toLowerCase().trim(), nombre, conc:g('conc'), ff:(g('ff')||'').toLowerCase().trim(),
       via:vias.join(' / '), vias,
       laboratorio:g('laboratorio'), rs:g('rs'),
@@ -9489,7 +9536,7 @@ function confirmarImport(){
       generico:g('generico')||'', cnmb:g('cnmb')||'',
       atc:g('atc'), atclbl:g('atclbl'),
       chapId, subId, clinData,
-      estado:'autorizado',
+      estado:'pendiente',
     };
     const vmp=m.vtm&&m.ff&&m.conc?`${m.vtm} ${m.conc} ${m.ff}`:'';
     const amp=vmp&&m.laboratorio?(m.nombre?`${m.nombre} ${m.conc} (${m.laboratorio})`:vmp+` — ${m.laboratorio}`):'';
@@ -9529,7 +9576,7 @@ function importJSON(raw){
     if(!m.vtm&&!m.principioActivo&&!m.nombre) return;
     if(!m.vtm) m.vtm=m.principioActivo||m.nombre||'';
     if(!db.find(x=>x.id===m.id)){
-      db.push({...m,id:m.id||Date.now().toString()+Math.random(),clinData:m.clinData||{}});a++;
+      db.push({...m,id:m.id||((typeof crypto!=='undefined'&&crypto.randomUUID)?crypto.randomUUID():(Date.now().toString(36)+Math.random().toString(36).slice(2))),clinData:m.clinData||{}});a++;
     }
   });
   save();
@@ -9541,7 +9588,7 @@ function importJSON(raw){
 function showImportErr(msg){
   document.getElementById('impres').innerHTML=`<span class="badge br" style="font-size:12px;padding:6px 12px">Error: ${msg}</span>`;
 }
-function parseCSV(text){const l=text.trim().split('\n');const h=l[0].split(',').map(x=>x.trim().replace(/"/g,''));return l.slice(1).map(line=>{const v=line.split(',').map(x=>x.trim().replace(/"/g,''));const o={};h.forEach((k,i)=>o[k]=v[i]||'');if(!o.id)o.id=Date.now().toString()+Math.random();return o;});}
+function parseCSV(text){const l=text.trim().split('\n');const h=l[0].split(',').map(x=>x.trim().replace(/"/g,''));return l.slice(1).map(line=>{const v=line.split(',').map(x=>x.trim().replace(/"/g,''));const o={};h.forEach((k,i)=>o[k]=v[i]||'');if(!o.id)o.id=(typeof crypto!=='undefined'&&crypto.randomUUID)?crypto.randomUUID():(Date.now().toString(36)+Math.random().toString(36).slice(2));return o;});}
 function loadDemo(){let a=0;DEMO.forEach(m=>{if(!db.find(x=>x.id===m.id)){db.push({...m});a++;}});save();document.getElementById('impres').innerHTML=`<span class="badge bg" style="font-size:12px;padding:5px 10px">✓ ${a} demo cargados · Total: ${db.length}</span>`;notify(`${a} medicamentos demo cargados`);rDash();}
 // ═══════════════════════════════════════════
 // EXPORT FIELDS CONFIG
@@ -9992,7 +10039,7 @@ document.getElementById('modal').addEventListener('click',e=>{if(e.target===docu
 let nt;
 function notify(msg,err=false){const el=document.getElementById('notif');document.getElementById('nmsg').textContent=msg;document.getElementById('ndot').className='ndot '+(err?'r':'g');el.classList.add('on');clearTimeout(nt);nt=setTimeout(()=>el.classList.remove('on'),3000);}
 function g(id){const el=document.getElementById(id);return el?el.value.trim():'';}
-function esc(t){return(t||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function esc(t){return(t||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');}
 
 // INIT
 (function(){
