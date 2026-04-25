@@ -237,12 +237,13 @@ tr:hover td{background:var(--bg3)}
 ::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:var(--bdr2);border-radius:2px}
 #pgn{display:flex;justify-content:center;gap:5px;margin-top:11px;align-items:center;font-size:12px;color:var(--tx3)}
 
-/* ── FORM TABS ──────────────────────────────────────── */
-.ftabs{display:flex;gap:0;border-bottom:2px solid var(--bdr);margin-bottom:18px;}
-.ftab{padding:8px 18px;font-size:12px;font-weight:600;cursor:pointer;border:none;background:none;color:var(--tx3);border-bottom:2px solid transparent;margin-bottom:-2px;transition:all .15s;}
-.ftab.act{color:var(--gdp);border-bottom-color:var(--gdp);}
-.ftab:hover:not(.act){color:var(--tx);}
-.ftpanel{display:none !important;}.ftpanel.act{display:block !important;}
+/* VFE FORM TABS */
+.fnav{display:flex;gap:2px;margin-bottom:0;}
+.fntab{padding:7px 14px;font-size:11px;font-weight:600;cursor:pointer;border:1.5px solid var(--bdr);border-bottom:none;background:var(--bg2);color:var(--tx3);border-radius:6px 6px 0 0;transition:all .12s;position:relative;bottom:-1px;white-space:nowrap;}
+.fntab.act{background:#fff;color:var(--gdp);}
+.fntab:hover:not(.act){color:var(--tx);}
+.fnbody{border:1.5px solid var(--bdr);border-radius:0 6px 6px 6px;padding:16px 18px;background:#fff;}
+.fnpanel{display:none !important;}.fnpanel.act{display:block !important;}
 </style>
 <style type="text/css" id="operaUserStyle">
   video {
@@ -4114,16 +4115,15 @@ tr:hover td{background:var(--bg3)}
     <!-- NUEVO / EDITAR -->
     <div class="view" id="view-nuevo">
       <div class="fwrap">
-
-                <!-- FORM TABS -->
-        <div class="ftabs">
-          <button class="ftab act" onclick="switchTab(0,this)">📋 Datos básicos</button>
-          <button class="ftab" onclick="switchTab(1,this)">🔬 Estándares ISO</button>
-          <button class="ftab" onclick="switchTab(2,this)">🩺 Datos clínicos</button>
+        <div class="fnav">
+          <button class="fntab act" onclick="fnSwitch(0,this)">🧬 Identificación</button>
+          <button class="fntab" onclick="fnSwitch(1,this)">💊 Presentación</button>
+          <button class="fntab" onclick="fnSwitch(2,this)">📋 Registro</button>
+          <button class="fntab" onclick="fnSwitch(3,this)">🩺 Clínica</button>
         </div>
+        <div class="fnbody">
 
-        <!-- TAB 1: DATOS BÁSICOS -->
-        <div class="ftpanel act" id="ftpanel-0">
+          <div class="fnpanel act" id="fnp-0">
 <div class="fsec">Datos obligatorios <span class="fsec-badge">REQUERIDOS</span></div>
         <div class="fgrid">
           <!-- SELECTOR COMBINACIÓN -->
@@ -4164,24 +4164,15 @@ tr:hover td{background:var(--bg3)}
           </div>
           <div class="fg" id="wrap-mono-conc" style="">
             <label class="flbl">CONCENTRACIÓN / DOSIS <span class="req">*</span></label>
-            <div style="display:flex;gap:6px;align-items:center">
-              <input class="finp" id="f-conc" placeholder="Ej. 10" oninput="vtmAutocomplete();autoGen()" style="flex:1">
-              <select class="fsel" id="f-conc-ucum" onchange="autoGen()" style="width:130px;flex-shrink:0" title="Unidad UCUM — ISO 11240">
-                <option value="mg">mg</option>
-                <option value="g">g</option>
-                <option value="mcg">mcg (µg)</option>
-                <option value="mg/mL">mg/mL</option>
-                <option value="mcg/mL">mcg/mL</option>
-                <option value="g/100mL">g/100 mL</option>
-                <option value="mg/5mL">mg/5 mL</option>
-                <option value="UI">UI</option>
-                <option value="UI/mL">UI/mL</option>
-                <option value="mg/dosis">mg/dosis</option>
-                <option value="mcg/dosis">mcg/dosis</option>
-                <option value="%">%</option>
-                <option value="mg/g">mg/g</option>
-                <option value="mmol/L">mmol/L</option>
-                <option value="mEq">mEq</option>
+            <div style="display:flex;gap:6px;align-items:flex-start">
+              <input class="finp" id="f-conc" placeholder="Ej. 10" oninput="autoGen()" style="flex:1">
+              <select class="fsel" id="f-conc-ucum" onchange="autoGen()" style="width:110px;flex-shrink:0" title="ISO 11240 · UCUM">
+                <option value="mg">mg</option><option value="g">g</option><option value="mcg">mcg</option>
+                <option value="mg/mL">mg/mL</option><option value="mcg/mL">mcg/mL</option>
+                <option value="g/100mL">g/100mL</option><option value="mg/5mL">mg/5mL</option>
+                <option value="UI">UI</option><option value="UI/mL">UI/mL</option>
+                <option value="mg/dosis">mg/dosis</option><option value="%">%</option>
+                <option value="mg/g">mg/g</option><option value="mEq">mEq</option>
               </select>
             </div>
             <div style="font-size:10px;color:var(--tx3);margin-top:3px">ISO 11240 · UCUM — usa punto decimal (Ej: 2.5 no 2,5)</div>
@@ -4299,7 +4290,8 @@ tr:hover td{background:var(--bg3)}
         </div>
 
         <!-- AUTO-GENERADOS -->
-        <div class="fsec" style="margin-top:20px">Clasificación estructural automática <span class="fsec-badge">AUTO-GENERADO</span></div>
+        
+<div class="fsec" style="margin-top:20px">Clasificación estructural automática <span class="fsec-badge">AUTO-GENERADO</span></div>
         <div class="auto-box">
           <div class="auto-box-title">
             <span class="auto-badge">✦ AUTO</span>
@@ -4366,52 +4358,65 @@ tr:hover td{background:var(--bg3)}
           </table>
         </div>
 
-        <div class="fsec">Presentación y precio</div>
+        
+<div class="fsec">Código ATC <span class="fsec-badge">OPCIONAL</span></div>
+        <div class="fgrid">
+          <div class="fg full">
+            <label class="flbl">CÓDIGO(S) ATC <span class="opt">OPCIONAL — puede tener varios</span>
+              <span id="atc-auto-badge" style="display:none;background:#e0f2fe;color:#0369a1;font-family:var(--mono);font-size:9px;padding:1px 6px;border-radius:10px;margin-left:4px">AUTO</span>
+            </label>
+            <div id="atc-chips" style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:6px;min-height:0"></div>
+            <div style="display:flex;gap:6px;align-items:flex-start">
+              <div style="position:relative;flex:1">
+                <input class="finp" id="f-atc-inp" placeholder="Escribe código ATC (ej. C07AB03) o nombre INN…" style="font-family:var(--mono);font-size:12px" autocomplete="off" oninput="atcInputSearch(this.value)" onkeydown="atcInputKeydown(event)">
+                <div id="atc-drop" style="display:none;position:absolute;left:0;right:0;top:100%;background:var(--bg2);border:1.5px solid var(--green);border-top:none;border-radius:0 0 var(--r) var(--r);box-shadow:var(--shm);z-index:100;max-height:220px;overflow-y:auto"></div>
+              </div>
+              <button type="button" onclick="atcAddManual()" class="btn btn-g bsm" style="flex-shrink:0;margin-top:1px">＋ Añadir</button>
+            </div>
+            <div style="font-size:10px;color:var(--tx3);margin-top:4px;line-height:1.5">
+              Un medicamento puede tener varios códigos ATC (ej. Aspirina: B01AC06 + N02BA01).
+              Escribe el código o nombre INN → selecciona del desplegable. Si no aparece, escribe el código y pulsa <b>Enter</b> o <b>＋ Añadir</b>.
+            </div>
+            <input type="hidden" id="f-atc">
+            <input type="hidden" id="f-atclbl">
+          </div>
+        </div>
+
+        
+
+<div class="fsec">Clasificación — Capítulo y subcapítulos</div>
+        <div id="class-chain" style="display:flex;flex-direction:column;gap:10px"><div class="fgrid" style="grid-template-columns: 1fr;"><div class="fg"><label class="flbl">CAPÍTULO <span class="req">*</span></label><select class="fsel" id="cc-chap"><option value="">— Selecciona un capítulo —</option><option value="c01">1 Sistema Cardiovascular</option><option value="c02">2 Sangre y Coagulación</option><option value="c03">3 Sistema Gastrointestinal</option><option value="c04">4 Sistema Respiratorio</option><option value="c05">5 Dolor y Fiebre</option><option value="c06">6 Patología Osteoarticular</option><option value="c07">7 Sistema Hormonal</option><option value="c08">8 Ginecología y Obstetricia</option><option value="c09">9 Sistema Urogenital</option><option value="c10">10 Sistema Nervioso</option><option value="c11">11 Infecciones</option><option value="c12">12 Inmunidad</option><option value="c13">13 Dermatología</option><option value="c14">14 Oftalmología</option><option value="c15">15 Otorrinolaringología</option><option value="c16">16 Anestésicos</option><option value="c17">17 Antídotos y Quelantes</option><option value="c18">18 Medicamentos Diversos</option></select></div></div></div>
+
+        
+          </div>
+
+          <div class="fnpanel" id="fnp-1">
+<div class="fsec">Presentación y precio</div>
+        <!-- Fila 1: Nombre comercial + Unidades + Unidad de presentación -->
         <div class="fgrid g3">
           <div class="fg">
             <label class="flbl">NOMBRE COMERCIAL</label>
             <input class="finp" id="f-nombre" placeholder="Ej. Tenormin" oninput="autoGen()">
           </div>
           <div class="fg">
-            <label class="flbl">UNIDAD DE PRESENTACIÓN <span class="opt">ISO 11239 — unidad individual administrada</span></label>
-            <select class="fsel" id="f-upres" onchange="autoGen()">
-              <option value="">— Selecciona —</option>
-              <optgroup label="Sólidos orales">
-                <option>comprimido</option>
-                <option>cápsula</option>
-                <option>gragea</option>
-                <option>granulo</option>
-                <option>polvo oral</option>
-              </optgroup>
-              <optgroup label="Parenterales">
-                <option>vial</option>
-                <option>ampolla</option>
-                <option>jeringa precargada</option>
-                <option>bolsa IV</option>
-                <option>cartucho</option>
-              </optgroup>
-              <optgroup label="Inhalados">
-                <option>inhalador dosis medida</option>
-                <option>cápsula para inhalación</option>
-                <option>ampolla para nebulización</option>
-              </optgroup>
-              <optgroup label="Tópicos / otros">
-                <option>tubo</option>
-                <option>parche</option>
-                <option>supositorio</option>
-                <option>óvulo vaginal</option>
-                <option>sobre</option>
-                <option>pluma inyectora</option>
-                <option>dispositivo intrauterino</option>
-              </optgroup>
-            </select>
-          </div>
-          <div class="fg">
             <label class="flbl">UNIDADES POR PRESENTACIÓN</label>
             <input class="finp" id="f-units" type="number" min="1" placeholder="Ej. 28" oninput="autoGen();calcPrecio()">
           </div>
           <div class="fg">
-            <label class="flbl">TIPO DE ENVASE <span class="opt">ISO 11239 · Packaging</span></label>
+            <label class="flbl">UNIDAD DE PRESENTACIÓN <span class="opt">ISO 11239</span></label>
+            <select class="fsel" id="f-upres" onchange="autoGen()">
+              <option value="">— Selecciona —</option>
+              <optgroup label="Sólidos orales"><option>comprimido</option><option>cápsula</option><option>gragea</option><option>polvo oral</option></optgroup>
+              <optgroup label="Parenterales"><option>vial</option><option>ampolla</option><option>jeringa precargada</option><option>bolsa IV</option></optgroup>
+              <optgroup label="Inhalados"><option>inhalador dosis medida</option><option>cápsula para inhalación</option></optgroup>
+              <optgroup label="Tópicos/otros"><option>tubo</option><option>parche</option><option>supositorio</option><option>óvulo vaginal</option><option>sobre</option></optgroup>
+            </select>
+          </div>
+        </div>
+        <!-- Fila 2: Tipo de envase + Volumen total -->
+        <div class="fgrid g3" style="margin-top:11px">
+          <div class="fg">
+            <label class="flbl">TIPO DE ENVASE</label>
             <select class="fsel" id="f-envase" onchange="autoGen()">
               <option value="">— Selecciona —</option>
               <option>blíster</option><option>frasco</option><option>tubo</option><option>vial</option>
@@ -4419,10 +4424,10 @@ tr:hover td{background:var(--bg3)}
               <option>inhalador</option><option>sobre</option><option>caja</option>
             </select>
           </div>
-          <div class="fg">
+          <div class="fg" style="grid-column:span 2">
             <label class="flbl">VOLUMEN TOTAL DEL ENVASE <span class="opt">OPCIONAL</span></label>
-            <div style="display:flex;gap:6px">
-              <input class="finp" id="f-vol" type="number" step="0.1" min="0" placeholder="Ej. 150" oninput="autoGen()" style="flex:1">
+            <div style="display:flex;gap:6px;align-items:flex-start">
+              <input class="finp" id="f-vol" type="number" step="0.1" min="0" placeholder="Ej. 150" oninput="autoGen()" style="width:110px;flex-shrink:0">
               <select class="fsel" id="f-vol-unit" onchange="autoGen()" style="width:80px;flex-shrink:0">
                 <option value="mL">mL</option>
                 <option value="L">L</option>
@@ -4430,11 +4435,11 @@ tr:hover td{background:var(--bg3)}
                 <option value="mg">mg</option>
                 <option value="UI">UI</option>
               </select>
+              <span style="font-size:10px;color:var(--tx3);padding-top:4px;line-height:1.5">
+                Tamaño del frasco/ampolla/tubo completo → aparece en VMPP y AMPP.<br>
+                <b>Nota:</b> Para jarabes/soluciones escribe la concentración como <span style="font-family:var(--mono);color:var(--gdp)">250 mg/5 mL</span> en el campo de concentración.
+              </span>
             </div>
-            <span style="font-size:10px;color:var(--tx3);margin-top:2px">
-              Tamaño del frasco/ampolla/tubo completo → aparece en VMPP y AMPP.<br>
-              <b>Nota:</b> Para jarabes/soluciones escribe la concentración como <span style="font-family:var(--mono);color:var(--gdp)">250 mg/5 mL</span> en el campo de concentración.
-            </span>
           </div>
         </div>
 
@@ -4507,180 +4512,180 @@ tr:hover td{background:var(--bg3)}
           </div>
         </div>
 
-                </div>
-
-        <!-- TAB 2: ESTÁNDARES ISO -->
-        <div class="ftpanel" id="ftpanel-1">
-<div class="fsec">Datos regulatorios <span class="fsec-badge">OPCIONALES</span></div>
-        <div class="fgrid">
-          <div class="fg">
-            <label class="flbl">REGISTRO SANITARIO <span class="opt">OPCIONAL</span></label>
-            <input class="finp" id="f-rs" placeholder="Ej. ARCSA-01-2024-123456">
-          </div>
-          <div class="fg">
-            <label class="flbl">FORMA QUÍMICA DE LA SUSTANCIA <span class="opt">ISO 11238 — sal o base</span></label>
-            <select class="fsel" id="f-iso11238-forma">
-              <option value="">— Selecciona —</option>
-              <optgroup label="Base / ácido libre">
-                <option value="base libre">base libre</option>
-                <option value="ácido libre">ácido libre</option>
-              </optgroup>
-              <optgroup label="Sales">
-                <option value="clorhidrato">clorhidrato</option>
-                <option value="sulfato">sulfato</option>
-                <option value="bromhidrato">bromhidrato</option>
-                <option value="maleato">maleato</option>
-                <option value="fumarato">fumarato</option>
-                <option value="fosfato">fosfato</option>
-                <option value="sodio">sodio (sal sódica)</option>
-                <option value="potasio">potasio (sal potásica)</option>
-                <option value="calcio">calcio (sal cálcica)</option>
-                <option value="mesilato">mesilato</option>
-                <option value="besilato">besilato</option>
-                <option value="tartrato">tartrato</option>
-                <option value="acetato">acetato</option>
-                <option value="succinato">succinato</option>
-                <option value="lactato">lactato</option>
-              </optgroup>
-              <optgroup label="Ésteres / profármacos">
-                <option value="éster etílico">éster etílico</option>
-                <option value="éster metílico">éster metílico</option>
-                <option value="éster propílico">éster propílico</option>
-                <option value="pivoxilo">pivoxilo</option>
-                <option value="mofetilo">mofetilo</option>
-              </optgroup>
-              <optgroup label="Hidratos / solvatos">
-                <option value="monohidrato">monohidrato</option>
-                <option value="dihidrato">dihidrato</option>
-                <option value="anhidro">anhidro</option>
-              </optgroup>
-              <optgroup label="Otros">
-                <option value="mezcla racémica">mezcla racémica</option>
-                <option value="enantiómero R">enantiómero R</option>
-                <option value="enantiómero S">enantiómero S</option>
-                <option value="no aplica">no aplica</option>
-              </optgroup>
-            </select>
-          </div>
-          <div class="fg">
-            <label class="flbl">ESTADO FÍSICO <span class="opt">ISO 11238</span></label>
-            <select class="fsel" id="f-iso11238-estado">
-              <option value="">— Selecciona —</option>
-              <option value="sólido cristalino">sólido cristalino</option>
-              <option value="sólido amorfo">sólido amorfo</option>
-              <option value="líquido">líquido</option>
-              <option value="gas">gas</option>
-              <option value="semisólido">semisólido</option>
-            </select>
-          </div>
-          <div class="fg full">
-            <label class="flbl">CÓDIGO(S) ATC <span class="opt">OPCIONAL — puede tener varios</span>
-              <span id="atc-auto-badge" style="display:none;background:#e0f2fe;color:#0369a1;font-family:var(--mono);font-size:9px;padding:1px 6px;border-radius:10px;margin-left:4px">AUTO</span>
-            </label>
-            <div id="atc-chips" style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:6px;min-height:0"></div>
-            <div style="display:flex;gap:6px;align-items:flex-start">
-              <div style="position:relative;flex:1">
-                <input class="finp" id="f-atc-inp" placeholder="Escribe código ATC (ej. C07AB03) o nombre INN…" style="font-family:var(--mono);font-size:12px" autocomplete="off" oninput="atcInputSearch(this.value)" onkeydown="atcInputKeydown(event)">
-                <div id="atc-drop" style="display:none;position:absolute;left:0;right:0;top:100%;background:var(--bg2);border:1.5px solid var(--green);border-top:none;border-radius:0 0 var(--r) var(--r);box-shadow:var(--shm);z-index:100;max-height:220px;overflow-y:auto"></div>
-              </div>
-              <button type="button" onclick="atcAddManual()" class="btn btn-g bsm" style="flex-shrink:0;margin-top:1px">＋ Añadir</button>
-            </div>
-            <div style="font-size:10px;color:var(--tx3);margin-top:4px;line-height:1.5">
-              Un medicamento puede tener varios códigos ATC (ej. Aspirina: B01AC06 + N02BA01).
-              Escribe el código o nombre INN → selecciona del desplegable. Si no aparece, escribe el código y pulsa <b>Enter</b> o <b>＋ Añadir</b>.
-            </div>
-            <input type="hidden" id="f-atc">
-            <input type="hidden" id="f-atclbl">
-          </div>
-        </div>
-
-        <div class="fsec">Clasificación — Capítulo y subcapítulos</div>
-        <div id="class-chain" style="display:flex;flex-direction:column;gap:10px"><div class="fgrid" style="grid-template-columns: 1fr;"><div class="fg"><label class="flbl">CAPÍTULO <span class="req">*</span></label><select class="fsel" id="cc-chap"><option value="">— Selecciona un capítulo —</option><option value="c01">1 Sistema Cardiovascular</option><option value="c02">2 Sangre y Coagulación</option><option value="c03">3 Sistema Gastrointestinal</option><option value="c04">4 Sistema Respiratorio</option><option value="c05">5 Dolor y Fiebre</option><option value="c06">6 Patología Osteoarticular</option><option value="c07">7 Sistema Hormonal</option><option value="c08">8 Ginecología y Obstetricia</option><option value="c09">9 Sistema Urogenital</option><option value="c10">10 Sistema Nervioso</option><option value="c11">11 Infecciones</option><option value="c12">12 Inmunidad</option><option value="c13">13 Dermatología</option><option value="c14">14 Oftalmología</option><option value="c15">15 Otorrinolaringología</option><option value="c16">16 Anestésicos</option><option value="c17">17 Antídotos y Quelantes</option><option value="c18">18 Medicamentos Diversos</option></select></div></div></div>
-
         
-          <!-- ISO 11615 — Ciclo de vida del producto -->
-          <div class="fsec" style="margin-top:20px">Ciclo de vida del producto <span class="fsec-badge">ISO 11615</span></div>
+          <div class="fsec" style="margin-top:20px">Forma química y estado físico <span class="fsec-badge">ISO 11238</span></div>
           <div class="fgrid">
             <div class="fg">
-              <label class="flbl">TITULAR DE LA AUTORIZACIÓN <span class="opt">ISO 11615</span></label>
-              <input class="finp" id="f-iso11615-titular" placeholder="Ej. Pfizer S.A.">
+              <label class="flbl">FORMA QUÍMICA <span class="opt">ISO 11238 — sal, base, éster</span></label>
+              <select class="fsel" id="f-iso11238-forma">
+                <option value="">— Selecciona —</option>
+                <optgroup label="Base/ácido"><option>base libre</option><option>ácido libre</option></optgroup>
+                <optgroup label="Sales"><option>clorhidrato</option><option>sulfato</option><option>maleato</option><option>fumarato</option><option>fosfato</option><option>sal sódica</option><option>sal potásica</option><option>sal cálcica</option><option>mesilato</option><option>besilato</option><option>tartrato</option><option>acetato</option></optgroup>
+                <optgroup label="Ésteres"><option>mofetilo</option><option>pivoxilo</option><option>éster etílico</option></optgroup>
+                <optgroup label="Hidratos"><option>monohidrato</option><option>dihidrato</option><option>anhidro</option></optgroup>
+                <optgroup label="Otros"><option>mezcla racémica</option><option>enantiómero R</option><option>enantiómero S</option><option>no aplica</option></optgroup>
+              </select>
             </div>
+            <div class="fg">
+              <label class="flbl">ESTADO FÍSICO <span class="opt">ISO 11238</span></label>
+              <select class="fsel" id="f-iso11238-estado">
+                <option value="">— Selecciona —</option>
+                <option>sólido cristalino</option><option>sólido amorfo</option>
+                <option>líquido</option><option>gas</option><option>semisólido</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="fnpanel" id="fnp-2">
+
+          <!-- ══ REGISTRO SANITARIO ECUADOR (ARCSA) ══ -->
+          <div class="fsec">Registro Sanitario Ecuador <span class="fsec-badge">ARCSA / ISO 11615</span></div>
+          <div class="fgrid g3">
+            <div class="fg">
+              <label class="flbl">N° REGISTRO SANITARIO <span class="req">*</span></label>
+              <input class="finp" id="f-rs" placeholder="Ej. ARCSA-01-2024-123456" oninput="autoGen()">
+            </div>
+            <div class="fg">
+              <label class="flbl">TITULAR DEL RS <span class="opt">ISO 11615</span></label>
+              <input class="finp" id="f-iso11615-titular" placeholder="Ej. Pfizer Ecuador S.A.">
+            </div>
+            <div class="fg">
+              <label class="flbl">TIPO DE RS</label>
+              <select class="fsel" id="f-rs-tipo">
+                <option value="">— Selecciona —</option>
+                <option>Innovador</option>
+                <option>Genérico</option>
+                <option>Biotecnológico</option>
+                <option>Homeopático</option>
+                <option>Natural/fitoterapéutico</option>
+                <option>Dispositivo médico</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="fgrid" style="margin-top:11px">
             <div class="fg">
               <label class="flbl">FECHA DE AUTORIZACIÓN <span class="opt">ISO 11615</span></label>
               <input class="finp" id="f-iso11615-fecha" type="date">
             </div>
             <div class="fg">
+              <label class="flbl">FECHA DE VENCIMIENTO RS <span class="opt">ISO 11615</span></label>
+              <input class="finp" id="f-iso11615-vencimiento" type="date">
+            </div>
+            <div class="fg">
               <label class="flbl">ESTADO REGULATORIO <span class="opt">ISO 11615</span></label>
               <select class="fsel" id="f-iso11615-estado">
                 <option value="">— Selecciona —</option>
-                <option value="autorizado">Autorizado</option>
-                <option value="suspendido">Suspendido</option>
-                <option value="retirado">Retirado del mercado</option>
-                <option value="en revisión">En revisión regulatoria</option>
-                <option value="caducado">Registro caducado</option>
+                <option>Autorizado</option>
+                <option>Suspendido</option>
+                <option>Retirado del mercado</option>
+                <option>En revisión</option>
+                <option>Caducado</option>
               </select>
-            </div>
-            <div class="fg">
-              <label class="flbl">NÚMERO DE PROCEDIMIENTO <span class="opt">ISO 11615</span></label>
-              <input class="finp" id="f-iso11615-proc" placeholder="Ej. ARCSA-2024-0123">
             </div>
             <div class="fg">
               <label class="flbl">PAÍS DE AUTORIZACIÓN <span class="opt">ISO 11615</span></label>
               <select class="fsel" id="f-iso11615-pais">
-                <option value="Ecuador">Ecuador</option>
-                <option value="Colombia">Colombia</option>
-                <option value="Perú">Perú</option>
-                <option value="Estados Unidos">Estados Unidos (FDA)</option>
-                <option value="Unión Europea">Unión Europea (EMA)</option>
-                <option value="Reino Unido">Reino Unido (MHRA)</option>
-                <option value="Otro">Otro</option>
+                <option>Ecuador</option><option>Colombia</option><option>Perú</option>
+                <option>Estados Unidos (FDA)</option><option>Unión Europea (EMA)</option><option>Reino Unido (MHRA)</option>
               </select>
             </div>
             <div class="fg">
-              <label class="flbl">FECHA DE VENCIMIENTO RS <span class="opt">ISO 11615</span></label>
-              <input class="finp" id="f-iso11615-vencimiento" type="date">
+              <label class="flbl">N° PROCEDIMIENTO <span class="opt">ISO 11615</span></label>
+              <input class="finp" id="f-iso11615-proc" placeholder="Ej. ARCSA-2024-0123">
+            </div>
+            <div class="fg">
+              <label class="flbl">CONDICIÓN DE VENTA</label>
+              <select class="fsel" id="f-rs-condicion">
+                <option value="">— Selecciona —</option>
+                <option>Venta libre (OTC)</option>
+                <option>Bajo receta médica</option>
+                <option>Bajo receta especial (psicotrópico)</option>
+                <option>Uso hospitalario</option>
+                <option>Uso restringido</option>
+              </select>
             </div>
           </div>
 
-          <!-- ISO 11616 — PhPID -->
+          <!-- ══ FABRICANTE Y CADENA DE SUMINISTRO ══ -->
+          <div class="fsec" style="margin-top:20px">Fabricante y cadena de suministro <span class="fsec-badge">ISO 11615</span></div>
+          <div class="fgrid g3">
+            <div class="fg">
+              <label class="flbl">FABRICANTE</label>
+              <input class="finp" id="f-rs-fabricante" placeholder="Ej. Pfizer Manufacturing Belgium">
+            </div>
+            <div class="fg">
+              <label class="flbl">PAÍS DE FABRICACIÓN</label>
+              <input class="finp" id="f-rs-pais-fab" placeholder="Ej. Bélgica">
+            </div>
+            <div class="fg">
+              <label class="flbl">IMPORTADOR / DISTRIBUIDOR</label>
+              <input class="finp" id="f-rs-importador" placeholder="Ej. Representaciones Médicas Cia. Ltda.">
+            </div>
+          </div>
+
+          <!-- ══ IDENTIFICADOR FARMACÉUTICO GLOBAL ══ -->
           <div class="fsec" style="margin-top:20px">Identificador farmacéutico global <span class="fsec-badge">ISO 11616</span></div>
           <div class="fgrid">
-            <div class="fg">
-              <label class="flbl">PhPID — PHARMACEUTICAL PRODUCT IDENTIFIER <span class="opt">ISO 11616</span></label>
-              <input class="finp" id="f-phpid" placeholder="Ej. PhPID-C08CA01-5mg-comprimido" oninput="this.value=this.value.toUpperCase()">
-              <div style="font-size:10px;color:var(--tx3);margin-top:3px">Identificador único que combina: sustancia + concentración + forma farmacéutica. Independiente del fabricante.</div>
+            <div class="fg full">
+              <label class="flbl">PhPID NIVEL 1 — Sustancia + Forma farmacéutica <span class="opt">ISO 11616</span></label>
+              <input class="finp" id="f-phpid-l1" placeholder="Ej. amlodipino comprimido recubierto con película">
             </div>
             <div class="fg">
-              <label class="flbl">PHPID NIVEL 1 — Sustancia + FF <span class="opt">ISO 11616</span></label>
-              <input class="finp" id="f-phpid-l1" placeholder="Ej. amlodipino comprimido recubierto">
+              <label class="flbl">PhPID NIVEL 2 — + Concentración <span class="opt">ISO 11616</span></label>
+              <input class="finp" id="f-phpid-l2" placeholder="Ej. amlodipino comp. recubierto 5 mg">
             </div>
             <div class="fg">
-              <label class="flbl">PHPID NIVEL 2 — Sustancia + FF + Concentración <span class="opt">ISO 11616</span></label>
-              <input class="finp" id="f-phpid-l2" placeholder="Ej. amlodipino comprimido recubierto 5 mg">
+              <label class="flbl">PhPID NIVEL 3 — + Unidades <span class="opt">ISO 11616</span></label>
+              <input class="finp" id="f-phpid-l3" placeholder="Ej. amlodipino comp. recubierto 5 mg caja 30">
             </div>
             <div class="fg">
-              <label class="flbl">PHPID NIVEL 3 — Sustancia + FF + Conc + Unidad <span class="opt">ISO 11616</span></label>
-              <input class="finp" id="f-phpid-l3" placeholder="Ej. amlodipino comprimido recubierto 5 mg caja 30">
+              <label class="flbl">PhPID CÓDIGO <span class="opt">ISO 11616</span></label>
+              <input class="finp" id="f-phpid" placeholder="Ej. PhPID-C08CA01-5MG-COMP" oninput="this.value=this.value.toUpperCase()">
             </div>
           </div>
-        </div>
 
-        <!-- TAB 3: DATOS CLÍNICOS -->
-        <div class="ftpanel" id="ftpanel-2">
+          <!-- ══ CÓDIGOS DE BARRAS E IDENTIFICADORES ══ -->
+          <div class="fsec" style="margin-top:20px">Códigos e identificadores de producto</div>
+          <div class="fgrid g3">
+            <div class="fg">
+              <label class="flbl">CÓDIGO GTIN / EAN</label>
+              <input class="finp" id="f-gtin" placeholder="Ej. 7861234567890" style="font-family:var(--mono);font-size:12px">
+            </div>
+            <div class="fg">
+              <label class="flbl">CÓDIGO CNMB <span class="opt">OPCIONAL</span></label>
+              <input class="finp" id="f-cnmb-codigo" placeholder="Ej. 01.01.001" style="font-family:var(--mono);font-size:12px">
+            </div>
+            <div class="fg">
+              <label class="flbl">PRECIO MÁXIMO AL CONSUMIDOR <span class="opt">USD</span></label>
+              <input class="finp" id="f-pmc" type="number" step="0.01" min="0" placeholder="Ej. 12.50">
+            </div>
+          </div>
+
+          <!-- ══ OBSERVACIONES REGULATORIAS ══ -->
+          <div class="fsec" style="margin-top:20px">Observaciones regulatorias</div>
+          <div class="fgrid">
+            <div class="fg full">
+              <label class="flbl">OBSERVACIONES / RESTRICCIONES ESPECIALES <span class="opt">OPCIONAL</span></label>
+              <textarea class="fta" id="f-rs-obs" placeholder="Ej. Sujeto a farmacovigilancia intensiva. No intercambiable con genéricos sin autorización médica." rows="3"></textarea>
+            </div>
+          </div>
+
+          </div>
+
+          <div class="fnpanel" id="fnp-3">
 <div class="fsec">Secciones clínicas <span class="fsec-badge">SELECCIONA LAS QUE APLICAN</span></div>
         <div class="ctw" id="ctogs"><button class="ct " onclick="togCS(&#39;Generalidades&#39;,this)">Generalidades</button><button class="ct " onclick="togCS(&#39;Rol del medicamento&#39;,this)">Rol del medicamento</button><button class="ct " onclick="togCS(&#39;Embarazo y lactancia&#39;,this)">Embarazo y lactancia</button><button class="ct " onclick="togCS(&#39;Interacciones&#39;,this)">Interacciones</button><button class="ct " onclick="togCS(&#39;Precauciones&#39;,this)">Precauciones</button><button class="ct " onclick="togCS(&#39;Indicaciones&#39;,this)">Indicaciones</button><button class="ct " onclick="togCS(&#39;Contraindicaciones&#39;,this)">Contraindicaciones</button><button class="ct " onclick="togCS(&#39;Efectos adversos&#39;,this)">Efectos adversos</button><button class="ct " onclick="togCS(&#39;Dosificación&#39;,this)">Dosificación</button><button class="ct " onclick="togCS(&#39;Farmacocinética&#39;,this)">Farmacocinética</button></div>
         <div id="cfields"></div>
 
-        <div style="display:flex;gap:9px;margin-top:18px">
-          <button class="btn btn-p" onclick="guardar()">Guardar medicamento</button>
-          <button class="btn btn-g" onclick="limpiar()">Limpiar formulario</button>
-        </div>
-      </div>
-        </div>
+        
+          </div>
 
-        <div style="display:flex;gap:9px;margin-top:18px">
-          <button class="btn btn-p" onclick="guardar()">Guardar medicamento</button>
-          <button class="btn btn-g" onclick="limpiar()">Limpiar formulario</button>
+          <div style="display:flex;gap:9px;margin-top:18px">
+            <button class="btn btn-p" onclick="guardar()">Guardar medicamento</button>
+            <button class="btn btn-g" onclick="limpiar()">Limpiar formulario</button>
+          </div>
+
         </div>
       </div>
     </div>
@@ -4729,7 +4734,7 @@ tr:hover td{background:var(--bg3)}
     <div class="mdf"><div class="mdf-l">AMPP — PAQUETE REAL</div><div class="mdf-v">Diapresan D 80 mg + 12,5 mg comprimido recubierto con película (Bagó), caja 30</div></div>
     <div class="mdf"><div class="mdf-l">LABORATORIO</div><div class="mdf-v">Bagó</div></div>
     <div class="mdf">
-      <div class="mdf-l">FORMA FARMACÉUTICA <span class="opt">EDQM — descripción técnica completa</span></div>
+      <div class="mdf-l">FORMA FARMACÉUTICA</div>
       <div class="mdf-v">comprimido recubierto con película</div>
       <div style="margin-top:5px;display:flex;align-items:center;gap:6px;flex-wrap:wrap"><span style="display:inline-flex;align-items:center;gap:5px;padding:3px 9px;background:#f0faf0;border:1.5px solid #a8d896;border-radius:20px;font-size:11px;font-family:var(--mono);cursor:default" title="Film-coated tablet">
     <svg width="10" height="10" viewBox="0 0 10 10"><circle cx="5" cy="5" r="4.5" fill="#2563eb" opacity=".15"></circle><circle cx="5" cy="5" r="2.5" fill="#2563eb"></circle></svg>
@@ -7217,9 +7222,22 @@ function guardar(){
 
   if(tipoPA === 'mono'){
     vtm = g('f-vtm');
-    const concVal=g('f-conc'); const concUnit=(document.getElementById('f-conc-ucum')?.value)||'mg';
-    conc = concVal ? concVal+' '+concUnit : '';
-    if(!vtm||!concVal){notify('Principio activo y concentración son obligatorios',true);return;}
+    conc = g('f-conc');
+    const concUcum=(document.getElementById('f-conc-ucum')?.value)||'mg';
+    const upres=(document.getElementById('f-upres')?.value)||'';
+    const iso11238Forma=(document.getElementById('f-iso11238-forma')?.value)||'';
+    const iso11238Estado=(document.getElementById('f-iso11238-estado')?.value)||'';
+    const iso11615Titular=(document.getElementById('f-iso11615-titular')?.value)||'';
+    const iso11615Fecha=(document.getElementById('f-iso11615-fecha')?.value)||'';
+    const iso11615Estado=(document.getElementById('f-iso11615-estado')?.value)||'';
+    const iso11615Proc=(document.getElementById('f-iso11615-proc')?.value)||'';
+    const iso11615Pais=(document.getElementById('f-iso11615-pais')?.value)||'Ecuador';
+    const iso11615Venc=(document.getElementById('f-iso11615-vencimiento')?.value)||'';
+    const phpidL1=(document.getElementById('f-phpid-l1')?.value)||'';
+    const phpidL2=(document.getElementById('f-phpid-l2')?.value)||'';
+    const phpidL3=(document.getElementById('f-phpid-l3')?.value)||'';
+    const phpid=(document.getElementById('f-phpid')?.value)||'';
+    if(!vtm||!conc){notify('Principio activo y concentración son obligatorios',true);return;}
   } else {
     const cd = getComboData();
     if(cd.pas.length < 2 || cd.pas.some(p=>!p)){notify('Ingresa todos los principios activos de la combinación',true);return;}
@@ -7277,22 +7295,8 @@ function guardar(){
     esCombo: tipoPA === 'combo',
     comboData,
     generico:gen,cnmb:g('f-cnmb'),nombre,
-    units,envase,vol,volUnit,volStr,pu,pp,rango,farmPrices,
-    upres:g('f-upres')||'',
-    iso11238Forma:(document.getElementById('f-iso11238-forma')?.value)||'',
-    iso11238Estado:(document.getElementById('f-iso11238-estado')?.value)||'',
-    concUcum:(document.getElementById('f-conc-ucum')?.value)||'mg',
-    iso11615Titular:(document.getElementById('f-iso11615-titular')?.value)||'',
-    iso11615Fecha:(document.getElementById('f-iso11615-fecha')?.value)||'',
-    iso11615Estado:(document.getElementById('f-iso11615-estado')?.value)||'',
-    iso11615Proc:(document.getElementById('f-iso11615-proc')?.value)||'',
-    iso11615Pais:(document.getElementById('f-iso11615-pais')?.value)||'Ecuador',
-    iso11615Vencimiento:(document.getElementById('f-iso11615-vencimiento')?.value)||'',
-    phpid:(document.getElementById('f-phpid')?.value)||'',
-    phpidL1:(document.getElementById('f-phpid-l1')?.value)||'',
-    phpidL2:(document.getElementById('f-phpid-l2')?.value)||'',
-    phpidL3:(document.getElementById('f-phpid-l3')?.value)||'',
-    rs:g('f-rs'),
+    units,envase,upres,concUcum,iso11238Forma,iso11238Estado,iso11615Titular,iso11615Fecha,iso11615Estado,iso11615Proc,iso11615Pais,iso11615Venc,phpidL1,phpidL2,phpidL3,phpid,vol,volUnit,volStr,pu,pp,rango,farmPrices,
+    rs:g('f-rs'), rsTipo:g('f-rs-tipo'), rsCondicion:g('f-rs-condicion'), rsFabricante:g('f-rs-fabricante'), rsPaisFab:g('f-rs-pais-fab'), rsImportador:g('f-rs-importador'), gtin:g('f-gtin'), cnmbCodigo:g('f-cnmb-codigo'), pmc:g('f-pmc'), rsObs:g('f-rs-obs'),
     atc: atcChips.length ? atcChips[0].code : '',
     atclbl: atcChips.length ? atcChips[0].lbl : '',
     atcs: atcChips.length > 1 ? atcChips.map(c=>c.code) : undefined,
@@ -7361,7 +7365,7 @@ function limpiar(){
   // Campos de texto
   atcChips = []; renderAtcChips();
   const atcInp = document.getElementById('f-atc-inp'); if(atcInp) atcInp.value='';
-  ['f-vtm','f-conc','f-lab','f-nombre','f-units','f-vol','f-rs','f-atc','f-atclbl','f-upres','f-iso11238-forma','f-iso11238-estado','f-iso11615-titular','f-iso11615-fecha','f-iso11615-estado','f-iso11615-proc','f-iso11615-vencimiento','f-phpid','f-phpid-l1','f-phpid-l2','f-phpid-l3'].forEach(id=>{
+  ['f-vtm','f-conc','f-lab','f-nombre','f-units','f-vol','f-rs','f-atc','f-atclbl','f-upres','f-iso11238-forma','f-iso11238-estado','f-iso11615-titular','f-iso11615-fecha','f-iso11615-estado','f-iso11615-proc','f-iso11615-vencimiento','f-rs-tipo','f-rs-condicion','f-rs-fabricante','f-rs-pais-fab','f-rs-importador','f-gtin','f-cnmb-codigo','f-pmc','f-rs-obs','f-phpid-l1','f-phpid-l2','f-phpid-l3','f-phpid'].forEach(id=>{
     const el=document.getElementById(id); if(el)el.value='';
   });
   const vus=document.getElementById('f-vol-unit'); if(vus)vus.value='mL';
@@ -7441,11 +7445,7 @@ function editMed(id){
     // Restore common fields
     [['f-lab',m.laboratorio],['f-ff',m.ff],
      ['f-gen',m.generico],['f-cnmb',m.cnmb],['f-nombre',m.nombre],
-     ['f-units',m.units],['f-envase',m.envase],['f-upres',m.upres],['f-iso11238-forma',m.iso11238Forma],['f-iso11238-estado',m.iso11238Estado],['f-conc-ucum',m.concUcum],
-     ['f-iso11615-titular',m.iso11615Titular],['f-iso11615-fecha',m.iso11615Fecha],
-     ['f-iso11615-estado',m.iso11615Estado],['f-iso11615-proc',m.iso11615Proc],
-     ['f-iso11615-pais',m.iso11615Pais],['f-iso11615-vencimiento',m.iso11615Vencimiento],
-     ['f-phpid',m.phpid],['f-phpid-l1',m.phpidL1],['f-phpid-l2',m.phpidL2],['f-phpid-l3',m.phpidL3],['f-vol',m.vol],['f-pu',m.pu],['f-pp',m.pp],
+     ['f-units',m.units],['f-envase',m.envase],['f-vol',m.vol],['f-pu',m.pu],['f-pp',m.pp],
      ['f-rs',m.rs],['f-atc',''],['f-atclbl','']
     ].forEach(([k,v])=>{const el=document.getElementById(k);if(el)el.value=v||'';});
     const vus=document.getElementById('f-vol-unit');if(vus&&m.volUnit)vus.value=m.volUnit;
@@ -8992,13 +8992,7 @@ document.addEventListener('mousedown', function(e){
 });
 
 
-function switchTab(idx, btn){
-  document.querySelectorAll('.ftab').forEach(b=>b.classList.remove('act'));
-  document.querySelectorAll('.ftpanel').forEach(p=>p.classList.remove('act'));
-  btn.classList.add('act');
-  const panel=document.getElementById('ftpanel-'+idx);
-  if(panel) panel.classList.add('act');
-}
+function fnSwitch(idx,btn){document.querySelectorAll('.fntab').forEach(b=>b.classList.remove('act'));document.querySelectorAll('.fnpanel').forEach(p=>p.classList.remove('act'));btn.classList.add('act');const panel=document.getElementById('fnp-'+idx);if(panel)panel.classList.add('act');}
 
 function verMed(id){
   const m=db.find(x=>x.id===id);if(!m)return;
@@ -9081,7 +9075,7 @@ function verMed(id){
     <div class="mdf"><div class="mdf-l">CÓDIGO ATC</div><div class="mdf-v mo">${m.atc||'—'}</div></div>
     <div class="mdf span2"><div class="mdf-l">DESCRIPCIÓN ATC</div><div class="mdf-v">${m.atclbl||'—'}</div></div>
     <div class="mdf"><div class="mdf-l">REGISTRO SANITARIO</div><div class="mdf-v mo">${m.rs||'—'}</div></div>
-    <div class="mdf"><div class="mdf-l">UNIDADES / ENVASE</div><div class="mdf-v">${m.units?m.units+' '+m.envase:'—'}${m.upres?' · '+m.upres:''}</div></div>
+    <div class="mdf"><div class="mdf-l">UNIDADES / ENVASE</div><div class="mdf-v">${m.units?m.units+' '+m.envase:'—'}</div></div>
     <div class="mdf"><div class="mdf-l" title="Mediana de precios de farmacias (excluye Farmaprecios)">PRECIO REFERENCIAL <span style="font-size:9px;color:var(--tx3);font-family:var(--mono)">(MEDIANA)</span></div><div class="mdf-v" style="font-weight:800;color:var(--gdp);font-size:16px">${m.pp?'$ '+parseFloat(m.pp).toFixed(2):'—'}</div></div>
     <div class="mdf"><div class="mdf-l">PRECIO UNITARIO</div><div class="mdf-v">${m.pu?'$ '+parseFloat(m.pu).toFixed(2):'—'}</div></div>
     ${m.rango?`<div class="mdf"><div class="mdf-l">RANGO DE PRECIOS</div><div class="mdf-v" style="color:var(--tx3)">${m.rango}</div></div>`:''}
