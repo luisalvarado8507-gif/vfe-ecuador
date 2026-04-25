@@ -168,6 +168,14 @@ tr:hover td{background:var(--bg3)}
 .finp:focus,.fsel:focus,.fta:focus{border-color:var(--green);background:#fff}
 .finp.ro{background:var(--bg3);color:var(--tx2);cursor:default;border-style:dashed}
 .fta{resize:vertical;min-height:68px;line-height:1.6}
+.csec-block{background:var(--bg2);border:1.5px solid var(--bdr);border-radius:var(--r);padding:14px 16px;margin-bottom:12px}
+.csec-title{font-size:12px;font-weight:700;color:var(--green);letter-spacing:.04em;margin-bottom:10px;text-transform:uppercase}
+.inter-table{width:100%;border-collapse:collapse;font-size:12px}
+.inter-table th{background:var(--bg3,#f0f4f0);padding:5px 8px;text-align:left;font-weight:600;color:var(--tx2);border-bottom:1.5px solid var(--bdr)}
+.inter-table td{padding:4px 6px;border-bottom:1px solid var(--bdr);vertical-align:middle}
+.inter-table tr:last-child td{border-bottom:none}
+.inter-inp,.inter-mec{padding:4px 7px!important;font-size:12px!important;min-height:unset!important}
+.inter-grav{padding:4px 7px!important;font-size:12px!important}
 
 /* auto-generated fields */
 .auto-box{background:var(--gg2);border:1.5px dashed var(--green);border-radius:var(--rl);padding:13px 14px;margin-top:4px}
@@ -7209,7 +7217,180 @@ function buildForm(){
 }
 
 function togCS(name,btn){actCS=actCS.includes(name)?actCS.filter(s=>s!==name):[...actCS,name];btn.classList.toggle('on');rCF();}
-function rCF(){document.getElementById('cfields').innerHTML=actCS.map(s=>`<div class="fg full" style="margin-bottom:7px"><label class="flbl">${s.toUpperCase()}</label><textarea class="fta" id="cf-${s.replace(/\s/g,'_')}" placeholder="${s}…"></textarea></div>`).join('');}
+
+function rCF(){
+  const el=document.getElementById('cfields');
+  el.innerHTML=actCS.map(s=>renderCS(s)).join('');
+}
+
+function renderCS(s){
+  const id=s.replace(/\s/g,'_');
+  if(s==='Dosificación') return `
+  <div class="csec-block">
+    <div class="csec-title">💊 DOSIFICACIÓN</div>
+    <div class="fgrid g3" style="margin-bottom:8px">
+      <div class="fg"><label class="flbl">ADULTOS</label><textarea class="fta" id="cf-dos-adulto" rows="3" placeholder="Ej. 5–10 mg/día en dosis única oral"></textarea></div>
+      <div class="fg"><label class="flbl">PEDIÁTRICA</label><textarea class="fta" id="cf-dos-pediatrico" rows="3" placeholder="Ej. 0.1 mg/kg/día (máx. 5 mg)"></textarea></div>
+      <div class="fg"><label class="flbl">INSUFICIENCIA RENAL</label><textarea class="fta" id="cf-dos-renal" rows="3" placeholder="Ej. Reducir 50% si ClCr <30 mL/min"></textarea></div>
+    </div>
+    <div class="fgrid g3">
+      <div class="fg"><label class="flbl">INSUFICIENCIA HEPÁTICA</label><textarea class="fta" id="cf-dos-hepatico" rows="2" placeholder="Ej. Usar con precaución, reducir dosis"></textarea></div>
+      <div class="fg"><label class="flbl">ADULTOS MAYORES</label><textarea class="fta" id="cf-dos-geriatrico" rows="2" placeholder="Ej. Iniciar con mitad de dosis"></textarea></div>
+      <div class="fg"><label class="flbl">VÍA / FRECUENCIA / DURACIÓN</label><textarea class="fta" id="cf-dos-via" rows="2" placeholder="Ej. VO, 1 vez/día, máx. 12 semanas"></textarea></div>
+    </div>
+  </div>`;
+
+  if(s==='Interacciones') return `
+  <div class="csec-block">
+    <div class="csec-title">⚡ INTERACCIONES MEDICAMENTOSAS</div>
+    <div id="inter-table-wrap">
+      <table class="inter-table" id="inter-table">
+        <thead><tr>
+          <th>Fármaco / Grupo</th>
+          <th>Gravedad</th>
+          <th>Mecanismo / Efecto</th>
+          <th style="width:36px"></th>
+        </tr></thead>
+        <tbody id="inter-tbody"></tbody>
+      </table>
+    </div>
+    <button class="btn btn-g" style="margin-top:6px;font-size:12px" onclick="addInterRow()">+ Añadir interacción</button>
+    <div class="fg full" style="margin-top:10px">
+      <label class="flbl">INTERACCIONES CON ALIMENTOS / OTROS <span class="opt">OPCIONAL</span></label>
+      <textarea class="fta" id="cf-inter-otros" rows="2" placeholder="Ej. Evitar jugo de pomelo (inhibe CYP3A4). Separar 2h de antiácidos."></textarea>
+    </div>
+  </div>`;
+
+  if(s==='Indicaciones') return `
+  <div class="csec-block">
+    <div class="csec-title">✅ INDICACIONES</div>
+    <div class="fgrid">
+      <div class="fg full"><label class="flbl">INDICACIONES APROBADAS (FICHA TÉCNICA)</label><textarea class="fta" id="cf-ind-aprobadas" rows="3" placeholder="Ej. Hipertensión arterial. Angina de pecho estable."></textarea></div>
+      <div class="fg full"><label class="flbl">USO OFF-LABEL DOCUMENTADO <span class="opt">OPCIONAL</span></label><textarea class="fta" id="cf-ind-offlabel" rows="2" placeholder="Ej. Profilaxis de migraña (evidencia nivel B)"></textarea></div>
+    </div>
+  </div>`;
+
+  if(s==='Contraindicaciones') return `
+  <div class="csec-block">
+    <div class="csec-title">🚫 CONTRAINDICACIONES</div>
+    <div class="fgrid g3">
+      <div class="fg"><label class="flbl">ABSOLUTAS</label><textarea class="fta" id="cf-ci-absolutas" rows="3" placeholder="Ej. Hipersensibilidad al fármaco. Embarazo."></textarea></div>
+      <div class="fg"><label class="flbl">RELATIVAS</label><textarea class="fta" id="cf-ci-relativas" rows="3" placeholder="Ej. Insuficiencia renal severa. Edad <12 años."></textarea></div>
+      <div class="fg"><label class="flbl">ADVERTENCIAS ESPECIALES</label><textarea class="fta" id="cf-ci-advertencias" rows="3" placeholder="Ej. Monitorizar función renal al inicio del tratamiento."></textarea></div>
+    </div>
+  </div>`;
+
+  if(s==='Efectos adversos') return `
+  <div class="csec-block">
+    <div class="csec-title">⚠️ EFECTOS ADVERSOS</div>
+    <div class="fgrid g3">
+      <div class="fg"><label class="flbl">MUY FRECUENTES / FRECUENTES <span class="opt">>1/100</span></label><textarea class="fta" id="cf-ea-frecuentes" rows="3" placeholder="Ej. Cefalea, mareo, tos seca."></textarea></div>
+      <div class="fg"><label class="flbl">POCO FRECUENTES <span class="opt">1/100–1/1000</span></label><textarea class="fta" id="cf-ea-pf" rows="3" placeholder="Ej. Hipotensión, edema periférico."></textarea></div>
+      <div class="fg"><label class="flbl">RAROS / MUY RAROS <span class="opt"><1/1000</span></label><textarea class="fta" id="cf-ea-raros" rows="3" placeholder="Ej. Angioedema, insuficiencia renal aguda."></textarea></div>
+    </div>
+  </div>`;
+
+  if(s==='Embarazo y lactancia') return `
+  <div class="csec-block">
+    <div class="csec-title">🤰 EMBARAZO Y LACTANCIA</div>
+    <div class="fgrid">
+      <div class="fg"><label class="flbl">CATEGORÍA FDA / EMA</label>
+        <select class="fsel" id="cf-emb-cat">
+          <option value="">— Selecciona —</option>
+          <option>Categoría A — Sin riesgo</option>
+          <option>Categoría B — Sin evidencia de riesgo</option>
+          <option>Categoría C — Riesgo no descartado</option>
+          <option>Categoría D — Evidencia de riesgo</option>
+          <option>Categoría X — Contraindicado</option>
+          <option>No clasificado</option>
+        </select>
+      </div>
+      <div class="fg"><label class="flbl">EMBARAZO</label><textarea class="fta" id="cf-emb-embarazo" rows="3" placeholder="Ej. Contraindicado en el 1er trimestre. Usar solo si beneficio supera riesgo."></textarea></div>
+      <div class="fg"><label class="flbl">LACTANCIA</label><textarea class="fta" id="cf-emb-lactancia" rows="3" placeholder="Ej. Se excreta en leche materna. Evitar o suspender lactancia."></textarea></div>
+    </div>
+  </div>`;
+
+  if(s==='Precauciones') return `
+  <div class="csec-block">
+    <div class="csec-title">⚠️ PRECAUCIONES</div>
+    <div class="fg full"><textarea class="fta" id="cf-precauciones" rows="4" placeholder="Ej. Monitorizar presión arterial. Precaución en pacientes con diabetes. No suspender bruscamente."></textarea></div>
+  </div>`;
+
+  if(s==='Farmacocinética') return `
+  <div class="csec-block">
+    <div class="csec-title">🔬 FARMACOCINÉTICA</div>
+    <div class="fgrid g3">
+      <div class="fg"><label class="flbl">ABSORCIÓN / BIODISPONIBILIDAD</label><textarea class="fta" id="cf-fk-absorcion" rows="2" placeholder="Ej. Biodisponibilidad oral 60–65%"></textarea></div>
+      <div class="fg"><label class="flbl">DISTRIBUCIÓN / Vd / UNIÓN A PROTEÍNAS</label><textarea class="fta" id="cf-fk-distribucion" rows="2" placeholder="Ej. Vd 21 L/kg. UP 97%."></textarea></div>
+      <div class="fg"><label class="flbl">METABOLISMO / ENZIMAS CYP</label><textarea class="fta" id="cf-fk-metabolismo" rows="2" placeholder="Ej. Hepático, CYP3A4. Metabolito activo: normlodipino."></textarea></div>
+      <div class="fg"><label class="flbl">SEMIVIDA (t½)</label><input class="finp" id="cf-fk-t12" placeholder="Ej. 35–50 h"></div>
+      <div class="fg"><label class="flbl">EXCRECIÓN</label><textarea class="fta" id="cf-fk-excrecion" rows="2" placeholder="Ej. Renal 60%, fecal 20–25%."></textarea></div>
+      <div class="fg"><label class="flbl">INICIO / PICO / DURACIÓN ACCIÓN</label><textarea class="fta" id="cf-fk-onset" rows="2" placeholder="Ej. Inicio 1–2h, pico 6–12h, duración 24h."></textarea></div>
+    </div>
+  </div>`;
+
+  if(s==='Generalidades') return `
+  <div class="csec-block">
+    <div class="csec-title">📋 GENERALIDADES / MECANISMO DE ACCIÓN</div>
+    <div class="fg full"><textarea class="fta" id="cf-generalidades" rows="4" placeholder="Ej. Bloqueador de los canales de calcio tipo dihidropiridina. Inhibe la entrada de calcio en células musculares lisas vasculares y cardíacas, produciendo vasodilatación arteriolar."></textarea></div>
+  </div>`;
+
+  if(s==='Rol del medicamento') return `
+  <div class="csec-block">
+    <div class="csec-title">🎯 ROL DEL MEDICAMENTO</div>
+    <div class="fg full"><textarea class="fta" id="cf-rol" rows="4" placeholder="Ej. Primera línea en hipertensión y angina estable. Especialmente indicado en adultos mayores y pacientes con angina vasospástica."></textarea></div>
+  </div>`;
+
+  // Fallback genérico
+  return `<div class="csec-block"><div class="csec-title">${s.toUpperCase()}</div><div class="fg full"><textarea class="fta" id="cf-${id}" rows="3" placeholder="${s}…"></textarea></div></div>`;
+}
+
+function addInterRow(){
+  const tbody=document.getElementById('inter-tbody');
+  if(!tbody) return;
+  const tr=document.createElement('tr');
+  tr.innerHTML=`
+    <td><input class="finp inter-inp" placeholder="Ej. Verapamilo, IBPs, AINEs…" style="width:100%"></td>
+    <td><select class="fsel inter-grav" style="width:100%">
+      <option value="">—</option>
+      <option value="grave" style="color:#c0392b">🔴 Grave</option>
+      <option value="moderada" style="color:#e67e22">🟠 Moderada</option>
+      <option value="leve" style="color:#27ae60">🟢 Leve</option>
+      <option value="desconocida">⬜ Desconocida</option>
+    </select></td>
+    <td><input class="finp inter-mec" placeholder="Mecanismo o efecto clínico…" style="width:100%"></td>
+    <td><button onclick="this.closest('tr').remove()" style="background:none;border:none;color:var(--tx3);cursor:pointer;font-size:16px;padding:2px 4px">✕</button></td>`;
+  tbody.appendChild(tr);
+}
+
+function getInteracciones(){
+  const rows=[...document.querySelectorAll('#inter-tbody tr')];
+  return rows.map(r=>({
+    farmaco: r.querySelector('.inter-inp')?.value||'',
+    gravedad: r.querySelector('.inter-grav')?.value||'',
+    mecanismo: r.querySelector('.inter-mec')?.value||''
+  })).filter(r=>r.farmaco);
+}
+
+function getClinData(){
+  const cd={};
+  actCS.forEach(s=>{
+    const id=s.replace(/\s/g,'_');
+    if(s==='Dosificación') cd[id]={adulto:g2('cf-dos-adulto'),pediatrico:g2('cf-dos-pediatrico'),renal:g2('cf-dos-renal'),hepatico:g2('cf-dos-hepatico'),geriatrico:g2('cf-dos-geriatrico'),via:g2('cf-dos-via')};
+    else if(s==='Interacciones') cd[id]={tabla:getInteracciones(),otros:g2('cf-inter-otros')};
+    else if(s==='Indicaciones') cd[id]={aprobadas:g2('cf-ind-aprobadas'),offlabel:g2('cf-ind-offlabel')};
+    else if(s==='Contraindicaciones') cd[id]={absolutas:g2('cf-ci-absolutas'),relativas:g2('cf-ci-relativas'),advertencias:g2('cf-ci-advertencias')};
+    else if(s==='Efectos adversos') cd[id]={frecuentes:g2('cf-ea-frecuentes'),pf:g2('cf-ea-pf'),raros:g2('cf-ea-raros')};
+    else if(s==='Embarazo y lactancia') cd[id]={cat:g2('cf-emb-cat'),embarazo:g2('cf-emb-embarazo'),lactancia:g2('cf-emb-lactancia')};
+    else if(s==='Precauciones') cd[id]={texto:g2('cf-precauciones')};
+    else if(s==='Farmacocinética') cd[id]={absorcion:g2('cf-fk-absorcion'),distribucion:g2('cf-fk-distribucion'),metabolismo:g2('cf-fk-metabolismo'),t12:g2('cf-fk-t12'),excrecion:g2('cf-fk-excrecion'),onset:g2('cf-fk-onset')};
+    else if(s==='Generalidades') cd[id]={texto:g2('cf-generalidades')};
+    else if(s==='Rol del medicamento') cd[id]={texto:g2('cf-rol')};
+    else cd[id]=g2('cf-'+id);
+  });
+  return cd;
+}
+function g2(id){const el=document.getElementById(id);return el?el.value:'';}
 
 function guardar(){
   // Verificar que sea editor
@@ -7287,7 +7468,7 @@ function guardar(){
     ampp = amp ? buildPaquete(amp, units, envase, volStr) : '';
   }
 
-  const cd={};actCS.forEach(s=>{const ta=document.getElementById('cf-'+s.replace(/\s/g,'_'));if(ta&&ta.value.trim())cd[s]=ta.value.trim();});
+  const cd=getClinData();
   const m={
     id:editId||Date.now().toString(),
     vtm,conc,laboratorio:lab,ff,
